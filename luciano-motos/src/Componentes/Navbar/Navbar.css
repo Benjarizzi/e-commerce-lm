@@ -84,14 +84,20 @@
 .boton-hamburguesa{
     color:rgb(255, 0, 0) ;
 }
+
+.menu-hamburguesa a{
+    text-decoration: none;
+}
+.menu-hamburguesa h5{
+    margin-left: .4rem;
+    margin-top: 1rem;
+}
+.span-menu{
+    margin-left: 1rem;
+}
 @media screen and (max-width:1335px){
     .nav-izquierda a{
         margin-right: 1rem;
-    }
-}
-@media screen and(max-width:1091px){
-    .nav-izquierda a{
-      
     }
 }
 @media screen and (max-width:1174px){
@@ -103,6 +109,11 @@
     }
     .nav-izquierda{
         padding-left: 1.3rem;
+    }
+}
+@media screen and (max-width:913px){
+    .nav-derecha a{
+        margin: 5px;
     }
 }
 @media screen and (max-width:777px){
@@ -128,6 +139,7 @@
         padding: 0;
     }
 }
+
 @media screen and (max-width:600px){
     .contenedor-nav{
         height: 15%;
