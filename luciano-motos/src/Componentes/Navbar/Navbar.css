@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2? family= Kanit:wght@300 & display=swap');
+
+.contenedor-nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(26, 23, 23, 0.963);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 13%;
+
+}
+/*Links derecha*/
+.nav-derecha{
+    align-items: center;
+    display: flex;
+}
+.nav-derecha li{
+    display: inline;
+    text-align: center;
+    
+}
+.nav-derecha a{
+    text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin-right: 2rem;
+  color: rgb(180, 180, 186);
+  
+  text-transform: uppercase;
+  font-weight:600;
+  font-family: 'Kanit', sans-serif;
+    transition: .6s;
+}
+.nav-derecha a:hover{
+    
+    color: rgb(255, 0, 0);
+}
+
+/*Links izquierda*/
+.nav-izquierda{
+    align-items: center;
+    display: flex;
+}
+
+.nav-izquierda li{
+    display: inline;
+}
+.nav-izquierda a{
+    text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin-right: 2rem;
+  color: rgb(180, 180, 186);
+  text-transform: uppercase;
+  font-weight:600;
+  font-family: 'Kanit', sans-serif;
+  transition: .6s;
+}
+.nav-izquierda a:hover{
+    color: rgb(255, 0, 0);
+}
+/*Logo*/
+.logo-nav{
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+
