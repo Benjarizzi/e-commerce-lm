@@ -1,0 +1,9 @@
+.contenedor-cards{
+    padding-top: 9rem;
+    padding-bottom:5rem; 
+    padding-left:1rem ;
+    padding-right:1rem ;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
