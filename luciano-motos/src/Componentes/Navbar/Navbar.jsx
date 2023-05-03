@@ -27,7 +27,7 @@ const Navbar = () => {
 
                 <Grid item xs={6} md={3} sm={3} className="logo-nav">
                     <Box sx={{justifyContent:"end"}}>
-                        <Link to="/"><img src="" alt="LOGO" /></Link>
+                        <Link to="/"><img src="../../../luciano-logo-color-_1_.png" alt=""  /></Link>
                     </Box>
                 </Grid>
 
@@ -62,12 +62,12 @@ const Navbar = () => {
 
                     <Box  role="presentation" onClick={handleClick} sx={{ display: { xs:"none",  md:"contents" , sm:"contents" }  }}>
                         <ul>
-                            <Link to="/bicicletas"><li>Bicicletas</li></Link>
-                            <Link to="/motos"><li>Motos</li></Link>
-                            <Link to="/cascos"><li>Cascos</li></Link>
-                            <Link to="/equipamiento"><li>Equipamiento</li></Link>
-                            <Link to="/indumentaria"><li>Indumentaria</li></Link>
-                        </ul>
+                            <Link to="/bicicletas" classname="nav-link"><li>Bicicletas</li></Link>
+                            <Link to="/motos" classname="nav-link"><li>Motos</li></Link>
+                            <Link to="/cascos" classname="nav-link"><li>Cascos</li></Link>
+                            <Link to="/equipamiento" classname="nav-link"><li>Equipamiento</li></Link>
+                            <Link to="/indumentaria" classname="nav-link"><li>Indumentaria</li></Link>
+                        </ul> 
                     </Box>
 
                 </Grid>
@@ -82,6 +82,7 @@ const Navbar = () => {
                 </Grid>
 
             </Grid>
+            
         </Box>
 
         <Outlet/>

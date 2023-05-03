@@ -10,6 +10,7 @@
     left: 0;
     height: 13%;
     overflow: hidden;
+    z-index: 5000;
 }
 
 /*Links derecha*/
@@ -76,9 +77,13 @@
     padding-left: 4rem;
     color: white;
     justify-content: start;
+   
 }
 .logo-nav img{
     cursor: pointer;
+    width: 130px;
+    height: 95px;
+    
 }
 /*Menu hamburguesa*/
 .boton-hamburguesa{
@@ -94,6 +99,12 @@
 }
 .span-menu{
     margin-left: 1rem;
+}
+.contenedor-nav .nav-izquierda .nav-link:active,
+.contenedor-nav .nav-izquierda .nav-link:active,
+.contenedor-nav .nav-izquierda .nav-link:focus {
+  color: #fff;
+  background-color: #007bff;
 }
 @media screen and (max-width:1335px){
     .nav-izquierda a{

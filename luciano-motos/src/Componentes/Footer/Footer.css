@@ -1,5 +1,5 @@
 .contenedor-footer{
-    background-color: rgb(255, 0, 0);
+    background-color: #323f83;
     width: 100%;
     left: 0;
     height: 80%;
@@ -7,6 +7,7 @@
     position: absolute;
     color: rgb(180, 180, 186);
 }
+
 .contenedor-suscripcion{
     text-align: center;
 }
@@ -21,7 +22,7 @@
 
 }
 .formulario button{
-    background-color: rgb(0, 0, 255);
+    background-color: #c31420;
     color: white;
     font-weight: 600;
     transition: 1s;
@@ -29,7 +30,7 @@
 }
 .formulario button:hover{
     background-color: white;
-    color: rgb(0, 0, 255);
+    color: #c31420;
     border: solid 1px rgb(0, 0, 0);
 }
 .arrepentimiento{
@@ -58,18 +59,26 @@
     padding: 1rem;
     color: white;
     align-items: center;
-    padding-top: 8rem;
+    padding-top: 1rem;
 }
 .contenedor-info img{
-    padding-left: 5rem;
+    width: 300px;
+    height: 200px;
+    padding-left: 3rem;
 }
 .links-redes{
-    padding-right: 2rem;
+    padding-right: 5rem;
 }
 .links-redes a{
-    margin: .6rem;
+    margin: 1rem;
     color: white;
 } 
+.boton-whatsapp{
+    font-size: 40px;
+    color: rgb(11, 213, 0)!important;
+    
+    
+}
 .contenedor-ayuda{
  padding-top: 3rem;
  margin-top:30px ;
@@ -96,6 +105,4 @@
     font-size: 19px;
     font-weight: lighter;
 }
-.img-footer{
-  
-}
+

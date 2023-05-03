@@ -1,14 +1,59 @@
 import "./Main.css";
+import {GiClothes} from "react-icons/gi"
+import PedalBikeIcon from '@mui/icons-material/PedalBike';
+import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
+import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports';
+import BackpackIcon from '@mui/icons-material/Backpack';
+import { Link } from "react-router-dom"
+import { Box, Grid } from "@mui/material";
 const Main = () => {
   return (
-    <div className="contenedor-main">
-        <div className="contenedor-img">
-            <img src="https://scontent.fros2-2.fna.fbcdn.net/v/t1.6435-9/65018214_470666300363550_5070070882743877632_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=973b4a&_nc_ohc=_aFcOkgUouMAX-kPKiY&_nc_ht=scontent.fros2-2.fna&oh=00_AfCWj5j4Hz_K10uv_P0JevpoJHQvSwKI1R9fJDN_juvJ1w&oe=6474E38E" alt="" className="img-main" />
-        </div>
-        <div className="contenedor-img">
-        <img src="https://scontent.fros2-2.fna.fbcdn.net/v/t1.6435-9/65018214_470666300363550_5070070882743877632_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=973b4a&_nc_ohc=_aFcOkgUouMAX-kPKiY&_nc_ht=scontent.fros2-2.fna&oh=00_AfCWj5j4Hz_K10uv_P0JevpoJHQvSwKI1R9fJDN_juvJ1w&oe=6474E38E" alt="" className="img-main" />
-        </div>
-    </div>
+
+    <Box className="container">
+
+      <Grid className="contenedor-main" container>
+        <Grid item xs={12} md={12} sm={12} >
+          <Box className="contenedor-opciones">
+            <Box>
+              <Link>
+                <PedalBikeIcon style={{ fontSize: 50 }} />
+                <p>Bicicletas</p>
+              </Link>
+            </Box>
+            <Box>
+              <Link>
+                <TwoWheelerIcon style={{ fontSize: 50 }} />
+                <p>Motos</p>
+              </Link>
+            </Box>
+            <Box>
+              <Link>
+                <SportsMotorsportsIcon style={{ fontSize: 50 }} />
+                <p>Cascos</p>
+              </Link>
+            </Box>
+            <Box>
+              <Link>
+                <BackpackIcon style={{ fontSize: 50 }} />
+                <p>Equipamiento</p>
+              </Link>
+            </Box>
+            <Box>
+              <Link>
+                <GiClothes style={{ fontSize: 50 }} />
+                <p>Indumentaria</p>
+              </Link>
+            </Box>
+
+          </Box>
+
+        </Grid>
+        
+          
+        
+      </Grid>
+
+    </Box>
   )
 }
 

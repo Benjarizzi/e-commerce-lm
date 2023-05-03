@@ -3,6 +3,7 @@ import "./Footer.css";
 import { Outlet,Link } from "react-router-dom"
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import BotonWhatsapp from "../BotonWhatsapp/BotonWhatsapp";
 const Footer = () => {
     return (
         <>
@@ -19,8 +20,7 @@ const Footer = () => {
                         <input type="text" placeholder="Nombre" />
                         <input type="email" placeholder="Email" />
                         <button>SUSCRIBIRME</button>
-                        <button className="arrepentimiento">CANCELAR SUSCRIPCIÓN</button>
-                    </div>
+                                            </div>
 
                 </div>
 
@@ -46,12 +46,16 @@ const Footer = () => {
                 <div className="contenedor-info">
 
                     <div className="img-footer">
-                        <img src="" alt="LOGO" className="img-footer" />
+                       <Link to="/">
+                       <img src="../../../../luciano-logo-color-_1_.png" alt="LOGO" />
+                       </Link> 
                     </div>
 
                     <div className="links-redes">
-                        <Link to="/instagramLM"><InstagramIcon /></Link>
-                        <Link to="/facebookLM"><FacebookIcon /></Link>
+                        <Link to="https://www.instagram.com/lucianomotos.cdg/"><InstagramIcon /></Link>
+                        <Link to="https://www.facebook.com/pages/category/motorcycles/Luciano-Motos-CDG-470665053697008/"><FacebookIcon /></Link>
+                        <BotonWhatsapp/>
+       
                     </div>
                 </div>
 
