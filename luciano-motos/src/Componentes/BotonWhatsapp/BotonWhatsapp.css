@@ -6,8 +6,6 @@
     overflow: hidden;
     position: absolute;
     color: rgb(180, 180, 186);
-
-    display: none;
 }
 
 .contenedor-suscripcion{
@@ -107,4 +105,3 @@
     font-size: 19px;
     font-weight: lighter;
 }
-

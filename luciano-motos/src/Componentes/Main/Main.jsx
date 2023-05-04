@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import "./Main.css";
 import {GiClothes} from "react-icons/gi"
 import PedalBikeIcon from '@mui/icons-material/PedalBike';
@@ -71,4 +69,3 @@ const Main = () => {
 }
 
 export default Main
->>>>>>> Stashed changes
