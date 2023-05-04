@@ -1,0 +1,12 @@
+.carousel_container {
+    overflow-x: hidden;
+}
+.carousel_img {
+    object-fit: cover;
+    height: 500px;
+    width: -webkit-fill-available;
+}
+.slick-prev,
+.slick-next {
+  display: none !important;
+}

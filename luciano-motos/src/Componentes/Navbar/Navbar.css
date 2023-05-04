@@ -1,89 +1,67 @@
 @import url('https://fonts.googleapis.com/css2? family= Kanit:wght@300 & display=swap');
 
-.contenedor-nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(26, 23, 23, 0.963);
-    width: 100%;
+.header {
     position: fixed;
+<<<<<<< Updated upstream
     top: 0;
     left: 0;
     height: 13%;
 
-}
-
-/*Links derecha*/
-.nav-derecha {
-    align-items: center;
+=======
+    left: 0px;
+    top: 0px;
     display: flex;
-    justify-content: end;
-    padding-right: 1rem;
+    width: -webkit-fill-available;
+    height: 60px;
+    background-color: rgba(26, 23, 23, 0.963);
+    z-index: 5000;
+>>>>>>> Stashed changes
 }
 
-.nav-derecha li {
-    display: inline;
-    text-align: center;
-}
-
-.nav-derecha a {
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    margin-right: 2rem;
-    color: rgb(180, 180, 186);
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: 'Kanit', sans-serif;
-    transition: .6s;
-}
-
-.nav-derecha a:hover {
-
-    color: rgb(255, 0, 0);
-}
-
-/*Links izquierda*/
-.nav-izquierda {
-    align-items: center;
+.header_nav_container {
     display: flex;
-    justify-content: center;
-}
-
-.nav-izquierda li {
-    display: inline;
-}
-
-.nav-izquierda a {
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    margin-right: 2rem;
-    color: rgb(180, 180, 186);
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: 'Kanit', sans-serif;
-    transition: .6s;
-}
-
-.nav-izquierda a:hover {
-    color: rgb(255, 0, 0);
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 /*Logo*/
-.logo-nav {
+.brand_logo {
     display: flex;
     align-items: center;
-    padding-left: 4rem;
     color: white;
     justify-content: start;
+<<<<<<< Updated upstream
 }
 .logo-nav img{
     cursor: pointer;
+=======
+    background-image: url(http://localhost:3000/icons/luciano.png);
+    width: 100px;
+    height: 60px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+>>>>>>> Stashed changes
 }
 /*Menu hamburguesa*/
-.boton-hamburguesa{
-    color:rgb(255, 0, 0) ;
+.hamburger_container {
+    width: fit-content;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
 }
+.hamburger_btn_container {
+    color: rgb(255, 0, 0);
+    height: 60px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.hamburger_btn {
+    height: 24px;
+}
+
 
 .menu-hamburguesa a{
     text-decoration: none;
@@ -95,6 +73,7 @@
 .span-menu{
     margin-left: 1rem;
 }
+<<<<<<< Updated upstream
 @media screen and (max-width:1335px){
     .nav-izquierda a{
         margin-right: 1rem;
@@ -139,9 +118,45 @@
         padding: 0;
     }
 }
+=======
+>>>>>>> Stashed changes
 
-@media screen and (max-width:600px){
-    .contenedor-nav{
-        height: 15%;
+.nav {
+    display: flex;
+    padding-left: 0px;
+    height: -webkit-fill-available;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+}
+.nav a {
+    padding: 0px;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    color: rgb(180, 180, 186);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Kanit', sans-serif;
+    transition: .6s;
+    list-style: none;
+}
+.nav a:hover {
+    cursor: pointer;
+    color: red;
+}
+@media only screen and (max-width: 768px) and (max-device-aspect-ratio: 1 / 1), (max-aspect-ratio: 1 / 1) {
+  
+    .brand_logo {
+        position: absolute;
+        left: 0px;
     }
+    .header_nav_container {
+        justify-content: flex-end;
+    }
+    .hamburger_container {
+        display: flex;
+    }
+
 }

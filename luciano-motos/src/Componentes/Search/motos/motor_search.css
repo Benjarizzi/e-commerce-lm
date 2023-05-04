@@ -1,0 +1,26 @@
+.search_container {
+    position: relative;
+    top: 150px;
+    width: -webkit-fill-available;
+    left: 0px;
+}
+.search_selector {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.search_container input:checked + .search_container {
+    border-color: #323f83;
+}
+.search_container  .MuiRadio-root {
+    display:none;
+}
+.brand_icon {
+    width: 90px;
+    display: block;
+    object-fit: contain;
+    height: 40px;
+}
