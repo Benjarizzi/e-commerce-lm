@@ -66,8 +66,17 @@
     height: 200px;
     padding-left: 3rem;
 }
+.img-footer{
+    width: 200px;
+    height: 100px;
+    display: block;
+    object-fit: contain;
+    align-items: start;
+    text-align: start;
+}
 .links-redes{
     padding-right: 5rem;
+    display: flex;
 }
 .links-redes a{
     margin: 1rem;
@@ -82,8 +91,11 @@
 .contenedor-ayuda{
  padding-top: 3rem;
  margin-top:30px ;
+ display: flex;
+ align-items: center;
+ text-align: start;
 }
-.contenedor-ayuda ul{
+.contenedor-ayuda {
     display: flex;
     list-style: none;
     align-items: center;
@@ -106,3 +118,9 @@
     font-weight: lighter;
 }
 
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
