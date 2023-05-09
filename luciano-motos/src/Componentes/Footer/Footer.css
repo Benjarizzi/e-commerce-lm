@@ -1,13 +1,15 @@
 .contenedor-footer{
     background-color: #323f83;
-    width: 100%;
+    width: -webkit-fill-available;
+    height: fit-content !important;
     left: 0;
+    top:100%;
+    position: relative;
     height: 80%;
     overflow: hidden;
-    position: absolute;
+    margin-top: auto;
     color: rgb(180, 180, 186);
-
-    display: none;
+    font-family: 'Kanit', sans-serif;
 }
 
 .contenedor-suscripcion{
@@ -68,8 +70,17 @@
     height: 200px;
     padding-left: 3rem;
 }
+.img-footer{
+    width: 200px;
+    height: 100px;
+    display: block;
+    object-fit: contain;
+    align-items: start;
+    text-align: start;
+}
 .links-redes{
     padding-right: 5rem;
+    display: flex;
 }
 .links-redes a{
     margin: 1rem;
@@ -84,8 +95,12 @@
 .contenedor-ayuda{
  padding-top: 3rem;
  margin-top:30px ;
+ display: flex;
+ align-items: center;
+ text-align: start;
+ padding: 35px;
 }
-.contenedor-ayuda ul{
+.contenedor-ayuda {
     display: flex;
     list-style: none;
     align-items: center;
@@ -108,3 +123,14 @@
     font-weight: lighter;
 }
 
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.copyright p {
+    margin: 5px;
+    color:white !important;
+    text-decoration: none !important;
+}

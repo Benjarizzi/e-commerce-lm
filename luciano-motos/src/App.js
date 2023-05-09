@@ -5,14 +5,14 @@ import Motos from './Componentes/Motos/Motos';
 import Navbar from './Componentes/Navbar/Navbar';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Ubicacion from './Componentes/Ubicacion/Ubicacion';
-
+import { Box } from "@mui/material";
 
 
 
 
 function App() {
   return (
-    <div>
+    <Box sx={{width: "-webkit-fill-available",height: "-webkit-fill-available",display:"block",position:"relative"}}>
       <BrowserRouter>
       <Navbar />
       <Routes>
@@ -26,7 +26,9 @@ function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
-    </div>
+    
+    </Box>
+    
   );
 }
 

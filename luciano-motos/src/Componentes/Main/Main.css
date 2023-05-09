@@ -55,6 +55,21 @@
     margin: 3px;
 }
 
+
+.search_box {
+    position: absolute;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    bottom: 130px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.search_box--show {
+    opacity: 1;
+}
+
+
 .contenedor-opciones{
     display: flex;
     justify-content: space-around;
@@ -73,3 +88,6 @@
     display: flex;
 }
 
+.contenedor-footer {
+    top:1200px;
+}

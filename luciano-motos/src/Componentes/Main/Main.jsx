@@ -1,4 +1,5 @@
 import "./Main.css";
+import "../global/global.css";
 import {GiClothes} from "react-icons/gi"
 import PedalBikeIcon from '@mui/icons-material/PedalBike';
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
@@ -7,22 +8,38 @@ import BackpackIcon from '@mui/icons-material/Backpack';
 import { Link } from "react-router-dom"
 import { Box, Grid } from "@mui/material";
 import ImageCarousel from "../CarouselLanding/carousel";
+import MotosCarousel from "../CarouselLanding/motos_carousel";
+import { useState } from "react";
+import MotoSearch from "../Search/motos/motor_search"
 
 const images = [];
-
+const motos_c = [{"brand":"Honda","model":"XR150","year":"2022","url":"https://http2.mlstatic.com/D_NQ_NP_934472-MLA53362059718_012023-W.webp"}];
 for (let i = 0; i <= 12; i++) {
   images.push({ url: `http://localhost:3000/img/landing_${i}.jpg` });
 }
 console.log(images)
 
 const Main = () => {
+
+  const [isMotoSearchDisplayed, setIsMotoSearchDisplayed] = useState(false);
+
+const handleMotoSearchDisplay = ()  => {
+  setIsMotoSearchDisplayed(true);
+}
+
+
   return (
 
     <Box className="landing_container">
 <Box sx={{ width: "100%", height: "500px", margin: "0 auto" }}>
       <ImageCarousel images={images} />
     </Box>
-      <Grid className="landing_navigate_container" container>
+      <Grid className="landing_navigate_container" container sx={{justifyContent:"center"}}>
+      {isMotoSearchDisplayed && (
+          <div className={`search_box ${isMotoSearchDisplayed ? 'search_box--show' : ''}`}>
+            <MotoSearch />
+          </div>
+        )}
         <Grid item xs={12} md={12} sm={12} sx={{display: "flex",justifyContent:"center", alignItems:"center" ,backgroundColor: "#0d0d0d8a"}}>
           <Box className="navigate_options_container">
             <Box className="navigate_item">
@@ -31,7 +48,7 @@ const Main = () => {
                 <p>Bicicletas</p>
               </Link>
             </Box>
-            <Box className="navigate_item">
+            <Box className="navigate_item" onClick={handleMotoSearchDisplay}>
               <Link>
                 <TwoWheelerIcon style={{ fontSize: 40, color: "#fff"}} />
                 <p>Motos</p>
@@ -63,7 +80,7 @@ const Main = () => {
           
         
       </Grid>
-
+      <MotosCarousel images={motos_c}  />
     </Box>
   )
 }
