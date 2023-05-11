@@ -24,12 +24,11 @@ function App() {
               <Route path='/home' element={<Main />} />
               <Route path='/motos' element={<Motos />} />
               <Route path='/itemlist' element={<ItemListContainer />} />
+              <Route path='/ubicacion' element={<Ubicacion />} />
 
             </Route>
           </Route>
-          <Route path='/ubicacion' element={<Ubicacion />} />
-
-
+          
           <Route path="*" element={<Link to="/">La ruta a la que ingresaste no existe si quieres puedes volver a inicio clickeando aquí</Link>} />
 
         </Routes>
