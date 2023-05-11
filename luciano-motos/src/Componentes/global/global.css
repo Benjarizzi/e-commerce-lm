@@ -1,0 +1,17 @@
+body {
+    background-color: #ededed;
+    width: -webkit-fill-available;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0px;
+}
+#root {
+    width: -webkit-fill-available;
+    height: max-content;
+    position: absolute;
+    display: block;
+    flex-direction: column;
+    min-height: 100vh;
+}

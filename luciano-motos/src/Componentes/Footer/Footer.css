@@ -1,11 +1,15 @@
 .contenedor-footer{
     background-color: #323f83;
-    width: 100%;
+    width: -webkit-fill-available;
+    height: fit-content !important;
     left: 0;
+    top:100%;
+    position: relative;
     height: 80%;
     overflow: hidden;
-    position: absolute;
+    margin-top: auto;
     color: rgb(180, 180, 186);
+    font-family: 'Kanit', sans-serif;
 }
 
 .contenedor-suscripcion{
@@ -94,6 +98,7 @@
  display: flex;
  align-items: center;
  text-align: start;
+ padding: 35px;
 }
 .contenedor-ayuda {
     display: flex;
@@ -123,4 +128,9 @@
     justify-content: center;
     align-items: center;
     color: white;
+}
+.copyright p {
+    margin: 5px;
+    color:white !important;
+    text-decoration: none !important;
 }

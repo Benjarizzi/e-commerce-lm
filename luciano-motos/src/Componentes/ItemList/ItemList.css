@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css2? family= Kanit:wght@300 & display=swap');
+<<<<<<< HEAD
 .contenedor-tarjetita {
     padding: 0;
     box-sizing: border-box;
 }
 
 .card {
+=======
+
+.cards_container {
+    display: flex;
+    justify-content: space-evenly;
+    width: -webkit-fill-available;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card {
+    background-color: white;
+>>>>>>> tomas
     border: 1px solid #ddd;
     border-radius: 15px;
     text-align: center;
@@ -12,6 +27,10 @@
     position: relative;
     font-family: 'Kanit', sans-serif;
     transition: 0.8s ease;
+<<<<<<< HEAD
+=======
+    margin: 5px;
+>>>>>>> tomas
 }
 .card:hover{
     box-shadow: 2px 2px 2px 2px rgba(85, 84, 84, 0.26);
@@ -23,7 +42,12 @@
 
 .card-content img {
     width: 100%;
+<<<<<<< HEAD
     object-fit: cover;
+=======
+    height: 150px;
+    object-fit: contain;
+>>>>>>> tomas
     border-top-right-radius:1rem ;
     border-top-left-radius:1rem ;
 }
