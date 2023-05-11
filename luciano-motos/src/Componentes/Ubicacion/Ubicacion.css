@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2? family= Kanit:wght@300 & display=swap');
+
+.contenedor-ubicacion {
+    margin-top: 60px;
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.mapa {
+    width: 100%;
+    height: 500px;
+}
+.info-izquierda{
+    text-align: center;
+    display: block;
+    align-self: center;
+    background-color: #323f83;
+    height: 100%;
+   
+}
+.info-izquierda h1{
+    color: white;
+    font-size: 60px;
+}
+.info-izquierda h3{
+    color: white;
+    font-size: 25px;
+}
+.cont-iconos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.icono1{
+    color: white;
+    font-size: 3rem;
+}
