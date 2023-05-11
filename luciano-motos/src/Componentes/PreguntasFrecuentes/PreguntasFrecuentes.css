@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2? family= Kanit:wght@300 & display=swap');
+dl {
+    margin: 0;
+    padding: 0;
+}
+dt {
+    font-weight: bold;
+    margin: 20px 0 5px 0;
+}
+dd {
+    margin: 0 0 20px 0;
+}
+.contenedor-pf{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-align: start;
+}
+.contenedor-pf h1{
+    text-align: center;
+}
+/* Estilos para simular una conversación en Twitter */
+dl.twitter-conversation {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-top:60px;
+    overflow: hidden;
+    width: 100%;
+    font-family: 'Kanit', sans-serif;
+}
+dt.tweet {
+    align-items: center;
+    color: #1da1f2;
+    display: flex;
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+dt.tweet:before {
+    content: "\f099";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+dd.tweet {
+    background-color: #f5f8fa;
+    border-radius: 4px;
+    color: #14171a;
+    font-size: 16px;
+    padding: 20px;
+}
+dd.tweet:before {
+    content: "\f10e";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+dd.tweet:last-child {
+    border-radius: 0 0 4px 4px;
+}
+/* Estilos para los botones de acciones */
+.tweet-actions {
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.tweet-actions button {
+    background-color: transparent;
+    border: none;
+    color: #f21d1d;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+}
+.tweet-actions button:hover {
+    text-decoration: underline;
+}
+.tweet-actions button:focus {
+    text-shadow: 0 0 0 2px #1da1f2;
+}
+.tweet-actions .reply {
+    margin-right: 10px;
+}
+.tweet-actions .like {
+    margin-left: 10px;
+}
+/* Estilos para las respuestas */
+dd.tweet .response {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px;
+}
+dd.tweet .response:before {
+    content: "\f10e";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+dd.tweet .response:last-child {
+    margin-bottom: 0;
+}
+/* Estilos para las imágenes */
+.tweet-image {
+    border-radius: 50%;
+    height: 50px;
+    margin-right: 10px;
+    width: 50px;
+}
+/* Estilos para los nombres de usuario */
+.tweet-username {
+    color: #657786;
+    font-size: 14px;
+}

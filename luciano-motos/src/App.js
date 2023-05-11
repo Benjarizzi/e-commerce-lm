@@ -6,6 +6,10 @@ import Navbar from './Componentes/Navbar/Navbar';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Ubicacion from './Componentes/Ubicacion/Ubicacion';
 import { Box, dividerClasses } from "@mui/material";
+import PreguntasFrecuentes from './Componentes/PreguntasFrecuentes/PreguntasFrecuentes';
+import Nosotros from './Componentes/Nosotros/Nosotros';
+import MediosDePago from './Componentes/Medios de Pago/MediosDePago';
+import ItemDetail from './Componentes/ItemDetail/ItemDetail';
 
 
 
@@ -25,10 +29,14 @@ function App() {
               <Route path='/motos' element={<Motos />} />
               <Route path='/itemlist' element={<ItemListContainer />} />
               <Route path='/ubicacion' element={<Ubicacion />} />
+              <Route path='/preguntasfrecuentes' element={<PreguntasFrecuentes />} />
 
             </Route>
           </Route>
-          
+          <Route path='/detalle' element={<ItemDetail/>} />
+
+          <Route path='/nosotros' element={<Nosotros/>} />
+          <Route path='/mediosdepago' element={<MediosDePago/>} />
           <Route path="*" element={<Link to="/">La ruta a la que ingresaste no existe si quieres puedes volver a inicio clickeando aquí</Link>} />
 
         </Routes>

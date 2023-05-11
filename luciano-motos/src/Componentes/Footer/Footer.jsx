@@ -38,9 +38,9 @@ const Footer = () => {
                         <Grid item xs={3}>
                             <Box>
                                 <h3>AYUDA</h3>
-                                <Link to="/medios-de-pago"><li>Medios de Pago</li></Link>
-                                <Link to="/preguntas-frecuentes"><li>Preguntas Frecuentes</li></Link>
-                                <Link to="/politica-de-devolucion"><li>Politica de Devolucion</li></Link>
+                                <Link to="/mediosdepago"><li>Medios de Pago</li></Link>
+                                <Link to="/preguntasfrecuentes"><li>Preguntas Frecuentes</li></Link>
+                                <Link to="/politicadedevolucion"><li>Politica de Devolucion</li></Link>
                             </Box>
                         </Grid>
                         <Grid item xs={3}>
