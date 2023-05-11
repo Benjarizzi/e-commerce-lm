@@ -2,10 +2,10 @@ import { Box, Button, Grid, Menu, MenuItem,  Fade } from "@mui/material"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import "./Navbar.css";
 import * as React from 'react';
 import CartWidget from "../CartWidget/CartWidget";
+import { Outlet, Link } from "react-router-dom"
 
 const Navbar = () => {
 
