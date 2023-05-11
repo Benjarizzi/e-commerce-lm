@@ -76,8 +76,8 @@ const Navbar = () => {
                             TransitionComponent={Fade}className="menu-hamburguesa" sx={{display:{md:"none"}}} >
                             <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><PersonIcon/><span className="span-menu">Log In</span></MenuItem></Link>
                             <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><ShoppingCartIcon/><span className="span-menu">Carrito</span></MenuItem></Link>
-                            <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><h5>BICICLETAS</h5></MenuItem></Link>
-                            <Link to="/motos"><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><h5>MOTOS</h5></MenuItem></Link>
+                            <Link to="*"><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><h5>BICICLETAS</h5></MenuItem></Link>
+                            <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><h5>MOTOS</h5></MenuItem></Link>
                             <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><h5>CASCOS</h5></MenuItem></Link>
                             <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><h5>EQUIPAMIENTO</h5></MenuItem></Link>
                             <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><h5>INDUMENTARIA</h5></MenuItem></Link>

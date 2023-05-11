@@ -8,6 +8,7 @@ import BotonWhatsapp from "../BotonWhatsapp/BotonWhatsapp";
 import { Box, Grid } from "@mui/material";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import PlaceIcon from "@mui/icons-material/Place";
 
 const Footer = () => {
     return (
@@ -54,11 +55,13 @@ const Footer = () => {
                         </Grid>
                         <Grid item xs={3}>
                             <Box>
-                                <h3>CONTACTOS</h3>
-                                <Link to="/contacto"><li>Contacto</li></Link>
+                                <h3>SOBRE NOSOTROS</h3>
                                 <Link to="/nosotros"><li>Nosotros</li></Link>
-                                <Link to="/horarios"><li>Horarios</li></Link>
-                                <Link to="/ubicacion"><li>Ubicacion</li></Link>
+                                <Link to="/horarios"><li>Horarios: Lunes-Sabado: hs: 08:30-12:30 & 16:00-20:00</li></Link>
+                                <Box className="ubi-footer">
+                                <Link to="/ubicacion"><li>Ubicacion </li></Link>
+                                <PlaceIcon />
+                                </Box>
 
                             </Box>
                         </Grid>

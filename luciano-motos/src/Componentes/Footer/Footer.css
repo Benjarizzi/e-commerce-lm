@@ -122,6 +122,10 @@
     font-size: 19px;
     font-weight: lighter;
 }
+.ubi-footer{
+    display: flex;
+    align-items:end;
+}
 
 .copyright{
     display: flex;
