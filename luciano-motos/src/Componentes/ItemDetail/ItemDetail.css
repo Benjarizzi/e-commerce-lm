@@ -2,10 +2,10 @@
 
 .contenedor-detail{
     margin-top: 60px;
-    background-color: rgb(247, 247, 247);
     width:100%;
     height: max-content;
     font-family: 'Kanit', sans-serif;
+    background-color: white;
 }
 .contenedor-arriba{
     display: flex;
@@ -26,4 +26,48 @@
 }
 .contenedor-abajo{
     display: flex;
+    justify-content: space-around;
+    text-align:start;
+}
+.contenedor-abajo .ficha-tecnica{
+    background-color: white;
+}
+.simulador-credito{
+    text-align: center;
+    background-color: white;
+    height: max-content;
+    color: red;
+    padding: 1rem;
+}
+.simulador-credito img{
+    width: 200px;
+    height: 40px;
+}
+.simulador-credito button{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    font-size: 15px;
+}
+.caract-principales{
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+.caract-principales button{
+    background-color: white;
+}
+.boton-consultar{
+    background-color: #25d366;
+    color: white;
+    padding: .5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: max-content;
+    
 }

@@ -1,6 +1,8 @@
 import React from 'react'
-import "./ItemDetail.css"
-import { Grid } from '@mui/material'
+import "./ItemDetail.css";
+import { Grid } from '@mui/material';
+import { Link } from "react-router-dom";
+import {MdOutlineWhatsapp} from "react-icons/md"
 const ItemDetail = () => {
     return (
         <div>
@@ -14,11 +16,11 @@ const ItemDetail = () => {
                             <div >
                                 <img src="https://http2.mlstatic.com/D_NQ_NP_2X_833308-MLA46012313284_052021-F.webp" alt="" />
                             </div>
-                            <div style={{ backgroundColor: "white", width: "100%", textAlign: "center" }}>
+                            <div className='caract-principales'>
                                 <h2>honda xr 150l</h2>
                                 <p>2023-0km</p>
                                 <h3>$1.000.000</h3>
-                                <button>Consultar</button>
+                                <Link to="https://api.whatsapp.com/send?phone=123456789" target='_blank'><button><div className='boton-consultar'><MdOutlineWhatsapp/> <p>Consultar</p></div></button></Link>
                             </div>
 
                         </div>
@@ -26,7 +28,7 @@ const ItemDetail = () => {
                     <Grid item xs={12}>
                         <div className='contenedor-abajo'>
 
-                        <div>
+                        <div className='ficha-tecnica'>
                                 <h3>ficha técnica</h3>
                                 <p>Motor:	                Monocilíndrico, 4 tiempos, 2 válvulas, OHC y refrigerado por aire</p>
                                 <p>Cilindrada:	            149.15 cm3</p>
@@ -48,13 +50,14 @@ const ItemDetail = () => {
                                 <p>Peso en seco:        	119 kg</p>
                             </div>
                             
-                            <div>
+                            <div className='simulador-credito'>
                                 <h3>Simulá tu crédito online</h3>
                                 <p>Completás tus datos y los del vehículo.</p>
                                 <p>Ingresás tu pago inicial y la cant de cuotas de tu preferencia.</p>
                                 <p>Obtenés una respuesta inmediata para saber si tu crédito está aprobado.</p>
-                                <p>trabajamos con "SANTANDER RIO"</p>
-                                <button>Simular Crédito</button>
+                                <p>trabajamos con:  </p>
+                                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/238px-Banco_Santander_Logotipo.svg.png" alt="" /></p>
+                                <a href="https://autoloans.santanderautos.com.ar/portalsanriopublico/#/home/identification" target='_blank'><button>Simular Crédito</button></a>
                             </div>
                            
                         </div>
