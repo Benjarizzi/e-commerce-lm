@@ -1,0 +1,18 @@
+{
+    "bicicletas":[
+        {
+            "id": "1",
+            "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2LPM4-iD_pJIErjxmxCnrCQUhGlHYg4-M0xrWX07Tz9fUfWLkLYk0Q3lGpaYcLP4xyHI&usqp=CAU",
+            "nombre": "Bicicleta 1",
+            "precio": "$ 70.000",
+            "descripcion": "Venzo, rod 29"
+        },
+        {
+            "id": "2",
+            "imagen": "https://kamikazebikes.com.ar/uploads/1670884176_MTIxNTZFLmpwZw==.jpg",
+            "nombre": "Bicicleta 2",
+            "precio": "$ 79.000",
+            "descripcion": "Venzo, rod 27"
+        }
+    ]
+}

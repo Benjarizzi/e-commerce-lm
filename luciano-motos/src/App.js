@@ -10,6 +10,7 @@ import PreguntasFrecuentes from './Componentes/PreguntasFrecuentes/PreguntasFrec
 import Nosotros from './Componentes/Nosotros/Nosotros';
 import MediosDePago from './Componentes/Medios de Pago/MediosDePago';
 import ItemDetail from './Componentes/ItemDetail/ItemDetail';
+import Bicicletas_container from './Componentes/Bicicletas/Bicicletas_container';
 
 
 
@@ -26,10 +27,11 @@ function App() {
               <Route path='/cart' element={<h1>Este es el carrito</h1>} />
               <Route path='/' element={<Main />} />
               <Route path='/home' element={<Main />} />
-              <Route path='/motos' element={<Motos />} />
+              <Route path='/Motos' element={<Motos />} />
               <Route path='/itemlist' element={<ItemListContainer />} />
               <Route path='/ubicacion' element={<Ubicacion />} />
               <Route path='/preguntasfrecuentes' element={<PreguntasFrecuentes />} />
+              <Route path='/bicicletas' element={<Bicicletas_container />} />
 
             </Route>
           </Route>
