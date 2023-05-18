@@ -1,12 +1,16 @@
 import React from 'react'
 import "./Bicicletas.css"
-const Bicicletas = ({nombre, precio, descripcion, imagen}) => {
+const Bicicletas = ({nombre, precio, descripcion, img}) => {
     return (
+       
         <div className='product-card'>
-            <img src={imagen} alt="imagen" />
+            <img src={img} alt="imagen" />
             <h3>{nombre}</h3>
-            <p>{precio}</p>
+            <h2>{precio}</h2>
             <p>{descripcion}</p>
+            <div>
+            <button>Ver detalle</button>
+            </div>
         </div>
     )
 }

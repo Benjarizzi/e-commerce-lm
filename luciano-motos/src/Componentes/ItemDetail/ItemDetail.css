@@ -32,6 +32,19 @@
 .contenedor-abajo .ficha-tecnica{
     background-color: white;
 }
+.ficha-tecnica{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+    
+}
+.f-t-derecha{
+    text-align: start;
+}
+.f-t-izquierda{
+    text-align: end;
+}
 .simulador-credito{
     text-align: center;
     background-color: white;
@@ -40,7 +53,7 @@
     padding: 1rem;
 }
 .simulador-credito img{
-    width: 200px;
+    width: 230px;
     height: 40px;
 }
 .simulador-credito button{

@@ -22,7 +22,7 @@ const Bicicletas_container = () => {
 
   return (
     <div className="bicicletas-section">
-      <h2>Bicicletas</h2>
+    
       <div className="product-cards">
         {productos.map((producto, index) => (
           <Bicicletas
@@ -30,6 +30,7 @@ const Bicicletas_container = () => {
             nombre={producto.nombre}
             precio={producto.precio}
             descripcion={producto.descripcion}
+            img={producto.img}
           />
         ))}
       </div>
