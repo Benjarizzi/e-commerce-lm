@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./carousel.css";
 import { Box, Typography, RadioGroup, FormControlLabel, FormGroup, Radio, Button, Switch } from "@mui/material";
+import {Link} from "react-router-dom"
 
 const ImageCarousel = ({ images }) => {
   const settings = {
@@ -26,7 +27,7 @@ const ImageCarousel = ({ images }) => {
             <div className="carousel_info">
                 <h>{image.brand} {image.model}</h>
                 <p>{image.year}</p>
-                <Button sx={{color:"white",backgroundColor:"#323f83"}}>Conocela</Button>
+                <Link to="/detalle"><Button sx={{color:"white",backgroundColor:"#323f83"}}>Conocela</Button></Link>
             </div>
           <img className="carousel_img" src={image.url} />
         </div>

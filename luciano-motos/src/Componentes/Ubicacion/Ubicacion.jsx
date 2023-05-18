@@ -5,6 +5,9 @@ import "./Ubicacion.css"
 
 const Ubicacion = () => {
   return (
+    <div>
+
+      
     <div className="contenedor-ubicacion">
       <Grid container>
 
@@ -26,8 +29,13 @@ const Ubicacion = () => {
 
       </Grid>
 
-
     </div>
+    <div className="otross">
+      <h1>lorem</h1>
+    </div>
+    </div>
+
+    
   )
 }
 

@@ -2,19 +2,17 @@
 
 .landing_container {
     width: -webkit-fill-available;
-    position: absolute;
     left: 0px;
     top: 60px;
 }
 .landing_navigate_container {
     display: flex;
-    position: absolute;
-    top: 0px;
+    bottom: 0px;
     left: 0px;
-    height: 500px;
+    height: 100px;
+    
 }
 .navigate_options_container {
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -25,12 +23,14 @@
     bottom: 0px;
     background-color: #323f83bd;
     height: 100px;
+    margin-bottom: 0px;
 }
 .navigate_item {
     border-radius: 8px;
     padding: 5px;
     margin: 10px;
     transition: 0.2s linear;
+    
 }
 .navigate_item a {
     display: flex;
@@ -91,3 +91,43 @@
 .contenedor-footer {
     top:1200px;
 }
+.sumate-a-nosotros{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(26, 23, 23, 0.963);
+    color: red;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+}
+
+.sumate-items{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.sumate-contenedor-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.boton button{
+    background-color: transparent;
+    color: #c31420;
+    font-size: 17px;
+    text-transform: uppercase;
+    transition: .5s;
+    
+}
+.boton button:hover{
+    color: #ff0011;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
