@@ -5,33 +5,40 @@
     left: 0px;
     top: 60px;
 }
+
 .landing_navigate_container {
     display: flex;
     bottom: 0px;
     left: 0px;
     height: 100px;
-    
+
 }
+
 .navigate_options_container {
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: space-around;
-    width: 100%; 
+    width: 100%;
     overflow: hidden;
     z-index: 5000;
     bottom: 0px;
-    background-color: #323f83bd;
+    background-color: transparent;
     height: 100px;
     margin-bottom: 0px;
+    background-color: #c9031096;
 }
+
 .navigate_item {
     border-radius: 8px;
     padding: 5px;
     margin: 10px;
     transition: 0.2s linear;
-    
+    justify-content: space-between;
+    display: flex;
+    padding-left: 83px;
 }
+
 .navigate_item a {
     display: flex;
     flex-direction: column;
@@ -39,18 +46,22 @@
     align-items: center;
     text-decoration: unset;
     font-family: 'Kanit', sans-serif;
-    color:white;
+    color: white;
     font-weight: 300;
     text-transform: uppercase;
     font-size: 14px;
     transition: 0.2s linear;
+
 }
+
 .navigate_item svg {
     transition: 0.2s linear;
 }
+
 .navigate_item:hover svg {
     font-size: 45px !important;
 }
+
 .navigate_item p {
     margin: 3px;
 }
@@ -65,21 +76,23 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+
 .search_box--show {
     opacity: 1;
 }
 
 
-.contenedor-opciones{
+.contenedor-opciones {
     display: flex;
     justify-content: space-around;
     background-color: rgba(255, 0, 0, 0.675);
-    width: 100%; 
+    width: 100%;
     overflow: hidden;
     z-index: 5000;
     margin-top: 20px;
 }
-.contenedor-opciones a{
+
+.contenedor-opciones a {
     color: white;
     text-decoration: none;
     text-align: center;
@@ -89,45 +102,210 @@
 }
 
 .contenedor-footer {
-    top:1200px;
+    top: 1200px;
 }
-.sumate-a-nosotros{
+
+.sumate-a-nosotros {
     width: 100%;
     height: 200px;
     background-color: rgba(26, 23, 23, 0.963);
     color: red;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
+    padding-top: 120px;
 }
 
-.sumate-items{
-display: flex;
-flex-direction: column;
-align-items: center;
+.sumate-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.sumate-contenedor-items{
+
+.sumate-contenedor-items {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+
 }
-.boton{
+
+.boton {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
+
 }
-.boton button{
+
+.boton button {
     background-color: transparent;
     color: #c31420;
     font-size: 17px;
     text-transform: uppercase;
     transition: .5s;
-    
+
 }
-.boton button:hover{
+
+.boton button:hover {
     color: #ff0011;
     text-decoration: underline;
     cursor: pointer;
 }
 
+.contenedor-mas-destacado {
+    padding: 40px;
+    background-color: rgba(26, 23, 23, 0.963);
+    font-family: 'Kanit', sans-serif;
+}
+
+.cambiar-color {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+    font-size: 50px;
+    word-spacing: 1rem;
+    background: linear-gradient(to right, #c31420, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: cambiar-color 3s linear infinite;
+    text-decoration: underline;
+    padding-top: 80px;
+
+}
+
+@keyframes cambiar-color {
+    0% {
+        text-shadow: 0 0 1px #c31420, 0 0 2px #c31420, 0 0 3px #c31420, 0 0 4px #c31420;
+    }
+
+    50% {
+        text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px white;
+    }
+
+    100% {
+        text-shadow: 0 0 1px #c31420, 0 0 2px #c31420, 0 0 3px #c31420, 0 0 4px #c31420;
+    }
+}
+
+.contenedor-motos {
+    display: flex;
+    padding: 120px;
+}
+
+
+
+.mas-destacado-items {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.963);
+    border: none;
+}
+
+.mas-destacado-logo {
+    width: 500px;
+    height: 400px;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.mas-destacado-logo p {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    left: 3%;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 1;
+}
+.img-bicicletas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+.p-bicicletas{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    top: 30%!important;
+    left: 2%!important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.img-motos{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+.p-motos{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    left: 5%!important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 1;
+}
+
+.img-cascos{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+.p-cascos{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    left: 50%!important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 1;
+}
+.img-equip{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+.p-equip{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    left: 13%!important;
+    top: 28%!important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 1;
+}
+.img-indu{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+.p-indu{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    left: 15%!important;
+    top: 28%!important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 1;
+}

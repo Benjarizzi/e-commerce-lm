@@ -101,8 +101,49 @@ const Main = () => {
         </div>
 
       </div>
-      <div>
-        <h1>HOLA</h1>
+      <div className="contenedor-mas-destacado">
+        <div><h1 className="cambiar-color">Lo más destacado</h1></div>
+
+        <div className="contenedor-motos">
+          <div className="mas-destacado-logo">
+            <p className="p-bicicletas">Bicicletas</p>
+            <img src="https://www.gastronosfera.com/sites/default/files/field/image/bici.jpg" alt="" className="img-bicicletas" />
+          </div>
+          <div className="mas-destacado-items"></div>
+        </div>
+
+        <div className="contenedor-motos">
+          <div className="mas-destacado-logo">
+            <p className="p-motos">motos</p>
+            <img src="https://www.moto1pro.com/sites/default/files/husqvarna_svartpilen_125_2021.jpg" alt="" className="img-motos"/>
+          </div>
+          <div className="mas-destacado-items"></div>
+        </div>
+
+        <div className="contenedor-motos">
+          <div className="mas-destacado-logo">
+            <p className="p-cascos">cascos</p>
+            <img src="https://noticias.amv.es/wp-content/uploads/cascos-de-moto-caducan.jpeg" className="img-cascos"/>
+            </div>
+          <div className="mas-destacado-items"></div>
+        </div>
+
+        <div className="contenedor-motos">
+          <div className="mas-destacado-logo">
+            <p className="p-equip">equipamiento</p>
+            <img  src="https://blog.comprotumoto.com/wp-content/uploads/2020/08/kappa_moto_usada_00-627x376.jpg" className="img-equip"/>
+            </div>
+          <div className="mas-destacado-items"></div>
+        </div>
+
+        <div className="contenedor-motos">
+          <div className="mas-destacado-logo">
+            <p className="p-indu">indumentaria</p>
+            <img src="https://www.moto1pro.com/sites/default/files/consejos-cuidados-equipamiento-moto-1.jpg"  className="img-indu"/>
+            </div>
+          <div className="mas-destacado-items"></div>
+        </div>
+
       </div>
 
     </Box>
