@@ -30,7 +30,7 @@ const Footer = () => {
 
                 </div>
 
-                <Link to="/home" sx={{ display: "flex", justifyContent: "center" }}>
+                <Link to="/" sx={{ display: "flex", justifyContent: "center" }}>
                     <img src="/icons/luciano.png" alt="LOGO" className="img-footer" />
                 </Link>
                 <div className="contenedor-ayuda">
