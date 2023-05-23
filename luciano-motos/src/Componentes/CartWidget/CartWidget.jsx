@@ -3,7 +3,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const CartWidget = () => {
   return (
     <div>
-        <ShoppingCartIcon/>
+        <ShoppingCartIcon style={{fontSize:"32px"}}/>
     </div>
   )
 }

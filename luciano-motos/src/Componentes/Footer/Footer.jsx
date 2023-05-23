@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import PlaceIcon from "@mui/icons-material/Place";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import ReactTooltip from 'react-tooltip';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
 
@@ -78,10 +78,10 @@ const Footer = () => {
                         <Grid item xs={3}>
                             <Box>
                                 <Box className="links-redes" sx={{ alignItems: "center" }}>
-                                    <Link to="https://www.instagram.com/lucianomotos.cdg/"><InstagramIcon /></Link>
-                                    <Link to="https://www.facebook.com/pages/category/motorcycles/Luciano-Motos-CDG-470665053697008/"><FacebookIcon /></Link>
+                                    <Link to="https://www.instagram.com/lucianomotos.cdg/" ><InstagramIcon style={{fontSize:"40px"}} /></Link>
+                                    <Link to="https://www.facebook.com/pages/category/motorcycles/Luciano-Motos-CDG-470665053697008/"><FacebookIcon style={{fontSize:"40px"}} /></Link>
+                                    <Link to="*"><EmailIcon style={{fontSize:"40px"}} /></Link>
                                     <Link to="https://api.whatsapp.com/send?phone=123456789" className="whatsapp-button" style={{ fontSize: "24px" }} target="_blank"><FontAwesomeIcon icon={faWhatsapp} color="white" /></Link>
-
                                 </Box>
                             </Box>
                         </Grid>

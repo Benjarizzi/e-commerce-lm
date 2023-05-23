@@ -18,7 +18,6 @@ const Ubicacion = () => {
           <h3 style={{ textDecoration: "underline" }}>Blvd. Balcarce 845</h3>
           <div className="cont-iconos">
             <PlaceIcon  sx={{fontSize:"100px", color:"red"}} />
-            <EastIcon sx={{fontSize:"60px", color:"white"}} />
           </div>
         </Grid>
 
@@ -30,9 +29,7 @@ const Ubicacion = () => {
       </Grid>
 
     </div>
-    <div className="otross">
-      <h1>lorem</h1>
-    </div>
+   
     </div>
 
     

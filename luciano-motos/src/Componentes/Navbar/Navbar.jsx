@@ -27,7 +27,7 @@ const Navbar = () => {
 
                 <Grid item xs={6} md={3} sm={3} >
                     <Box className="brand_logo">
-                       
+                       <Link to="/" style={{alignItems:"center", display:"flex"}}><img src="http://localhost:3000/icons/luciano.png" alt="" /></Link>
                     </Box>
                 </Grid>
 
@@ -55,7 +55,7 @@ const Navbar = () => {
                 <Grid item xs={3} md={3} sm={3}  sx={{ display: "flex", alignItems: "center",justifyContent:"center"}}>
                     <Box>
                         <ul className="nav">
-                            <Link to="/registro"><li><PersonIcon/></li></Link>
+                            <Link to="/registro"><li><PersonIcon style={{fontSize:"38px"}}/></li></Link>
                             <Link to="/carrito"><li><CartWidget/></li></Link>
                         </ul>
                     </Box>

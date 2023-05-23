@@ -12,6 +12,7 @@ import MotosCarousel from "../CarouselLanding/motos_carousel";
 import { useState } from "react";
 import MotoSearch from "../Search/motos/motor_search"
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import ArticleIcon from '@mui/icons-material/Article';
 
 const images = [];
 const motos_c = [{ "brand": "Honda", "model": "XR150", "year": "2022", "url": "https://http2.mlstatic.com/D_NQ_NP_934472-MLA53362059718_012023-W.webp" }];
@@ -32,7 +33,7 @@ const Main = () => {
   return (
 
     <Box className="landing_container">
-      <Box sx={{ width: "100%", height: "500px", margin: "0 auto" }}>
+      <Box sx={{ width: "100%", height: "500px", margin: "0 auto", marginTop:"80px" }}>
         <ImageCarousel images={images} />
       </Box>
       <Grid className="landing_navigate_container" container sx={{ justifyContent: "center" }}>
@@ -79,15 +80,15 @@ const Main = () => {
         </Grid>
       </Grid>
 
-      <div className="sumate-a-nosotros">
+      <div className="sumate-a-nosotros" style={{borderTop: "solid  10px #9b0000cc"}}>
 
-        <div className="sumate-contenedor-items">
+        <div className="sumate-contenedor-items" >
 
           <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "45px" }}>
             <LibraryBooksIcon style={{ fontSize: "90px" }} />
           </Box>
           <div className="sumate-items" >
-            <div> <h2>Sumate a nuestra financiación con DNI</h2></div>
+            <div> <h2 style={{ fontSize:"40px" }}>Sumate a nuestra financiación con DNI</h2></div>
             <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/238px-Banco_Santander_Logotipo.svg.png" alt="" /></div>
           </div>
           <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "45px" }}>
@@ -101,6 +102,29 @@ const Main = () => {
         </div>
 
       </div>
+
+      <div className="sumate-a-nosotros">
+
+        <div className="sumate-contenedor-items">
+
+          <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "45px" }}>
+          <ArticleIcon style={{ fontSize: "90px", color:"white" }} />
+          </Box>
+          <div className="sumate-items" >
+            <div> <h2 style={{ fontSize:"40px", color:"white" }}>Contamos con servicio de gestoría</h2></div>
+          </div>
+          <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "45px" }}>
+            <ArticleIcon style={{ fontSize: "90px", color:"white" }} />
+          </Box>
+
+        </div>
+
+        <div className="boton">
+          <button style={{ color:"white" }}>saber mas</button>
+        </div>
+
+      </div>
+
       <div className="contenedor-mas-destacado">
         <div><h1 className="cambiar-color">Lo más destacado</h1></div>
 

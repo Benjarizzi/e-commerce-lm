@@ -12,6 +12,7 @@
 
 .contenedor-suscripcion{
     text-align: center;
+    padding-top: 30px;
 }
 .contenedor-suscripcion h2{
     color: white;
@@ -77,19 +78,15 @@
     text-align: start;
 }
 .links-redes{
-    padding-right: 5rem;
     display: flex;
+    justify-content: center;
+    
 }
 .links-redes a{
     margin: 1rem;
     color: white;
 } 
-.boton-whatsapp{
-    font-size: 40px;
-    color: rgb(11, 213, 0)!important;
-    
-    
-}
+
 .contenedor-ayuda{
  padding-top: 3rem;
  margin-top:30px ;
