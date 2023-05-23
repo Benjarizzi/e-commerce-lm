@@ -26,7 +26,7 @@
     background-color: transparent;
     height: 100px;
     margin-bottom: 0px;
-    background-color: #c9031096;
+    background-color: #9b0000cc;
 }
 
 .navigate_item {
@@ -46,7 +46,7 @@
     align-items: center;
     text-decoration: unset;
     font-family: 'Kanit', sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: 300;
     text-transform: uppercase;
     font-size: 14px;
@@ -112,7 +112,7 @@
     color: red;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
 .sumate-items {
@@ -168,7 +168,7 @@
     color: transparent;
     animation: cambiar-color 3s linear infinite;
     text-decoration: underline;
-    padding-top: 80px;
+    padding-top: 100px;
 
 }
 

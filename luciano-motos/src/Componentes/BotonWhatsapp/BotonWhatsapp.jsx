@@ -5,13 +5,13 @@ import "./BotonWhatsapp.css";
 const BotonWhatsapp = () => {
   return (
     <div>
-       <button class="whatsapp-button">
-      <Link to="https://api.whatsapp.com/send?phone=123456789"  target="_blank" >
-      <WhatsAppIcon /> 
-      </Link>
-    </button>
+      <button class="whatsapp-button">
+        <Link to="https://api.whatsapp.com/send?phone=123456789" target="_blank" >
+          <WhatsAppIcon />
+        </Link>
+      </button>
     </div>
-    
+
   )
 }
 export default BotonWhatsapp

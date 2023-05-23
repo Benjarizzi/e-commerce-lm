@@ -55,7 +55,7 @@ const Navbar = () => {
                 <Grid item xs={3} md={3} sm={3}  sx={{ display: "flex", alignItems: "center",justifyContent:"center"}}>
                     <Box>
                         <ul className="nav">
-                            <Link to="/login"><li><PersonIcon/></li></Link>
+                            <Link to="/registro"><li><PersonIcon/></li></Link>
                             <Link to="/carrito"><li><CartWidget/></li></Link>
                         </ul>
                     </Box>

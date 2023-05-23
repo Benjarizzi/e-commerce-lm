@@ -41,7 +41,7 @@ const Main = () => {
             <MotoSearch />
           </div>
         )}
-        <Grid item xs={12} md={12} sm={12} sx={{ display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#0d0d0d8a" }}>
+        <Grid item xs={12} md={12} sm={12} sx={{ display: "flex", justifyContent: "center", alignItems: "center",  }}>
           <Box className="navigate_options_container">
             <Box className="navigate_item">
               <Link>

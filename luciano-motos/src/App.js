@@ -11,6 +11,7 @@ import Nosotros from './Componentes/Nosotros/Nosotros';
 import MediosDePago from './Componentes/Medios de Pago/MediosDePago';
 import ItemDetail from './Componentes/ItemDetail/ItemDetail';
 import Bicicletas_container from './Componentes/Bicicletas/Bicicletas_container';
+import Register from './Componentes/Register/Register';
 
 
 
@@ -32,9 +33,12 @@ function App() {
               <Route path='/preguntasfrecuentes' element={<PreguntasFrecuentes />} />
               <Route path='/bicicletas' element={<Bicicletas_container />} />
               <Route path='/detalle' element={<ItemDetail/>} />
+              <Route path='/registro' element={<Register/>} />
 
             </Route>
           </Route>
+          
+          
           
 
           <Route path='/nosotros' element={<Nosotros/>} />

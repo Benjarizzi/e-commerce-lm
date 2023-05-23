@@ -9,8 +9,18 @@ import { Box, Grid } from "@mui/material";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import PlaceIcon from "@mui/icons-material/Place";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import ReactTooltip from 'react-tooltip';
 
 const Footer = () => {
+
+
+    const handleScrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
     return (
         <>
             <Outlet />
@@ -30,9 +40,9 @@ const Footer = () => {
 
                 </div>
 
-                <Link to="/" sx={{ display: "flex", justifyContent: "center" }}>
-                    <img src="/icons/luciano.png" alt="LOGO" className="img-footer" />
-                </Link>
+                <div style={{paddingLeft:"30px"}}>
+                <button onClick={handleScrollToTop} className="boton-volver-arriba"><KeyboardArrowUpIcon style={{fontSize:"2.8rem"}} /></button>
+                </div>
                 <div className="contenedor-ayuda">
                     <Grid container sx={{ alignItems: "flex-start", fontFamily: "Kanit" }}>
                         <Grid item xs={3}>
@@ -59,8 +69,8 @@ const Footer = () => {
                                 <Link to="/nosotros"><li>Nosotros</li></Link>
                                 <Link to="/horarios"><li>Horarios: Lunes-Sabado: hs: 08:30-12:30 & 16:00-20:00</li></Link>
                                 <Box className="ubi-footer">
-                                <Link to="/ubicacion"><li>Ubicacion </li></Link>
-                                <PlaceIcon />
+                                    <Link to="/ubicacion"><li>Ubicacion </li></Link>
+                                    <PlaceIcon />
                                 </Box>
 
                             </Box>
@@ -79,12 +89,12 @@ const Footer = () => {
                     </Grid>
 
                 </div>
-                <Grid item xs={12} sx={{ backgroundColor: "#1e264e" }}>
+                <Grid item xs={12} sx={{ backgroundColor: "#000000af" }}>
                     <div className="copyright">
                         <h4>Copyright 2023</h4>
                         <p>Luciano Motos</p>
                         <p>Todos los derechos reservados</p>
-                        <Link><p>Términos y condiciones</p></Link>
+                        <Link to="*"><p>Términos y condiciones</p></Link>
                     </div>
                 </Grid>
 
