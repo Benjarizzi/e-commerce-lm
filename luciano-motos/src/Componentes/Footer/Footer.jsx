@@ -11,6 +11,8 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import PlaceIcon from "@mui/icons-material/Place";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import EmailIcon from '@mui/icons-material/Email';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 const Footer = () => {
 
@@ -50,7 +52,7 @@ const Footer = () => {
                                 <h3>AYUDA</h3>
                                 <Link to="/mediosdepago"><li>Medios de Pago</li></Link>
                                 <Link to="/preguntasfrecuentes"><li>Preguntas Frecuentes</li></Link>
-                                <Link to="/politicadedevolucion"><li>Politica de Devolucion</li></Link>
+                                <Link to="/politicadedevolucion"><li>Politica de Devolución</li></Link>
                             </Box>
                         </Grid>
                         <Grid item xs={3}>
@@ -67,10 +69,22 @@ const Footer = () => {
                             <Box>
                                 <h3>SOBRE NOSOTROS</h3>
                                 <Link to="/nosotros"><li>Nosotros</li></Link>
-                                <Link to="/horarios"><li>Horarios: Lunes-Sabado: hs: 08:30-12:30 & 16:00-20:00</li></Link>
+                               
+                               
+
                                 <Box className="ubi-footer">
-                                    <Link to="/ubicacion"><li>Ubicacion </li></Link>
-                                    <PlaceIcon />
+                                <LocalPhoneIcon style={{paddingBottom:"3px"}}/>
+                                <Link to="/horarios"><li>+54 9 1234567890</li></Link>
+                                </Box>
+
+                                <Box className="ubi-footer">
+                                <PlaceIcon style={{paddingBottom:"3px"}}/>
+                                    <Link to="/ubicacion"><li>Ubicación </li></Link>
+                                </Box>
+
+                                <Box className="ubi-footer" >
+                                <CalendarMonthIcon />
+                                <li style={{color:"white"}}> Lunes-Sábado:  08:30-12:30 & 16:00-20:00 hs</li>
                                 </Box>
 
                             </Box>

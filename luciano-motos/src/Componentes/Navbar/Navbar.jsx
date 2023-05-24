@@ -1,13 +1,14 @@
 import { Box, Button, Grid, Menu, MenuItem,  Fade } from "@mui/material"
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
 import MenuIcon from '@mui/icons-material/Menu';
 import "./Navbar.css";
+import CartWidget from "../../Componentes/CartWidget/CartWidget"
+
 import * as React from 'react';
-import CartWidget from "../CartWidget/CartWidget";
+
 import { Outlet, Link } from "react-router-dom"
 
-const Navbar = () => {
+const Navbar = ({ onClose }) => {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -19,6 +20,7 @@ const Navbar = () => {
     };
     //Box es como un div
     //Grid es para acomodar los items en grillas
+
     return (
         <>
         <Box className="header">
@@ -56,7 +58,7 @@ const Navbar = () => {
                     <Box>
                         <ul className="nav">
                             <Link to="/registro"><li><PersonIcon style={{fontSize:"38px"}}/></li></Link>
-                            <Link to="/carrito"><li><CartWidget/></li></Link>
+                            <li><CartWidget/></li>
                         </ul>
                     </Box>
                     
@@ -75,7 +77,7 @@ const Navbar = () => {
                             onClose={handleClose}
                             TransitionComponent={Fade}className="menu-hamburguesa" sx={{display:{md:"none"}}} >
                             <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><PersonIcon/><span className="span-menu">Log In</span></MenuItem></Link>
-                            <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><ShoppingCartIcon/><span className="span-menu">Carrito</span></MenuItem></Link>
+                            <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><CartWidget /><span className="span-menu">Carrito</span></MenuItem></Link>
                             <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><h5>BICICLETAS</h5></MenuItem></Link>
                             <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><h5>MOTOS</h5></MenuItem></Link>
                             <Link to=""><MenuItem onClick={handleClose} sx={{color:"rgb(255, 0, 0)" }}><h5>CASCOS</h5></MenuItem></Link>

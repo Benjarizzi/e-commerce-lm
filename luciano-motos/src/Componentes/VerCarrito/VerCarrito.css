@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2? family= Kanit:wght@300 & display=swap');
+*{
+    font-family: 'Kanit', sans-serif;
+}
+.contenedor-ver-carrito{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.producto{
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    display: flex;
+}
+.contenedor-izquierda{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+   height: max-content;
+   padding: 10px;
+   padding-top: 0;
+   padding-bottom: 0;
+}
+
+.img-descr{
+text-align: center;
+
+}
+.img-descr img{
+    width: 150px;
+    height: 100px;
+}
+.p-c-s{
+    display: flex;
+    font-size: 25px;
+    text-transform: uppercase;
+    justify-content: end!important;
+    right: 0!important;
+    height: 100px;
+    
+}
+.p-c-s p{
+    padding: 25px;
+    padding-top:0 ;
+    padding-right: 0;
+}
+.boton-eliminar{
+    margin: 5px;
+    margin-right: 1px;
+    margin-left: 20px;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 5;
+    background-color: transparent;
+    font-size: 29px;
+    font-weight: 700;
+    color: red;
+}
+.opciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.opciones button{
+    background-color: transparent;
+    height: max-content;
+    width: max-content;
+    padding: 0;
+    top: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.contenedor-derecha{
+    background-color: rgb(141, 138, 138);
+    width: 100%;
+    height: max-content;
+}
+.contenedor-cupon{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+}

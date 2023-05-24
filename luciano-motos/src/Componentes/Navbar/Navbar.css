@@ -55,7 +55,7 @@
     height: 60px;
 }
 .hamburger_btn_container {
-    color: rgb(255, 0, 0);
+    color: rgb(255, 0, 0)!important;
     height: 60px;
     display: flex !important;
     align-items: center !important;
@@ -80,7 +80,6 @@
 .nav {
     display: flex;
     padding-left: 0px;
-  
     margin: 0px;
     align-items: center;
     justify-content: center;
