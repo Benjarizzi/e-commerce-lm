@@ -1,6 +1,6 @@
 import "./Main.css";
 import "../global/global.css";
-import { GiClothes } from "react-icons/gi"
+import CheckroomIcon from '@mui/icons-material/Checkroom';
 import PedalBikeIcon from '@mui/icons-material/PedalBike';
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports';
@@ -46,31 +46,31 @@ const Main = () => {
           <Box className="navigate_options_container">
             <Box className="navigate_item">
               <Link>
-                <PedalBikeIcon style={{ fontSize: 40, color: "#fff" }} />
+                <PedalBikeIcon style={{ fontSize: "30px", color: "#fff" }} />
                 <p>Bicicletas</p>
               </Link>
             </Box>
             <Box className="navigate_item" onClick={handleMotoSearchDisplay}>
               <Link>
-                <TwoWheelerIcon style={{ fontSize: 40, color: "#fff" }} />
+                <TwoWheelerIcon style={{ fontSize: "30px", color: "#fff" }} />
                 <p>Motos</p>
               </Link>
             </Box>
             <Box className="navigate_item">
               <Link>
-                <SportsMotorsportsIcon style={{ fontSize: 40, color: "#fff" }} />
+                <SportsMotorsportsIcon style={{ fontSize: "30px", color: "#fff" }} />
                 <p>Cascos</p>
               </Link>
             </Box>
             <Box className="navigate_item">
               <Link>
-                <BackpackIcon style={{ fontSize: 40, color: "#fff" }} />
+                <BackpackIcon style={{ fontSize: "30px", color: "#fff" }} />
                 <p>Equipamiento</p>
               </Link>
             </Box>
             <Box className="navigate_item">
               <Link>
-                <GiClothes style={{ fontSize: 40, color: "#fff" }} />
+                <CheckroomIcon style={{ fontSize: "30px", color: "#fff" }} />
                 <p>Indumentaria</p>
               </Link>
             </Box>
@@ -85,14 +85,14 @@ const Main = () => {
         <div className="sumate-contenedor-items" >
 
           <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "45px" }}>
-            <LibraryBooksIcon style={{ fontSize: "90px" }} />
+            <LibraryBooksIcon style={{ fontSize: "80px" }} />
           </Box>
           <div className="sumate-items" >
-            <div> <h2 style={{ fontSize:"40px" }}>Sumate a nuestra financiación con DNI</h2></div>
+            <div> <h2 style={{ fontSize:"30px" }}>Sumate a nuestra financiación con DNI</h2></div>
             <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/238px-Banco_Santander_Logotipo.svg.png" alt="" /></div>
           </div>
           <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "45px" }}>
-            <LibraryBooksIcon style={{ fontSize: "90px" }} />
+            <LibraryBooksIcon style={{ fontSize: "80px" }} />
           </Box>
 
         </div>
@@ -108,13 +108,13 @@ const Main = () => {
         <div className="sumate-contenedor-items">
 
           <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "45px" }}>
-          <ArticleIcon style={{ fontSize: "90px", color:"white" }} />
+          <ArticleIcon style={{ fontSize: "80px", color:"white" }} />
           </Box>
           <div className="sumate-items" >
-            <div> <h2 style={{ fontSize:"40px", color:"white" }}>Contamos con servicio de gestoría</h2></div>
+            <div> <h2 style={{ fontSize:"30px", color:"white" }}>Contamos con servicio de gestoría</h2></div>
           </div>
           <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "45px" }}>
-            <ArticleIcon style={{ fontSize: "90px", color:"white" }} />
+            <ArticleIcon style={{ fontSize: "80px", color:"white" }} />
           </Box>
 
         </div>

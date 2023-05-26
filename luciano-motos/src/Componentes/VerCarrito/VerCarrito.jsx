@@ -1,5 +1,7 @@
 import React from 'react'
 import "./VerCarrito.css"
+import DiscountIcon from '@mui/icons-material/Discount';
+import { Link } from 'react-router-dom';
 const VerCarrito = () => {
     return (
         <div>
@@ -12,7 +14,7 @@ const VerCarrito = () => {
 
                             <div style={{ display: "flex", alignItems: "center" }}>
                                 <img src="https://http2.mlstatic.com/D_NQ_NP_2X_833308-MLA46012313284_052021-F.webp" alt="" />
-                                <p style={{ paddingLeft: "10px", fontSize: "30px" }}>Honda xr 150L la mejor de todass</p>
+                                <p style={{ paddingLeft: "5px", fontSize: "15px" }}>Honda xr 150L la mejor de todass</p>
                             </div>
 
                         </div>
@@ -38,7 +40,7 @@ const VerCarrito = () => {
 
                             <div style={{ display: "flex", alignItems: "center" }}>
                                 <img src="https://http2.mlstatic.com/D_NQ_NP_2X_833308-MLA46012313284_052021-F.webp" alt="" />
-                                <p style={{ paddingLeft: "10px", fontSize: "30px" }}>Honda xr 150L la mejor de todass</p>
+                                <p style={{ paddingLeft: "5px", fontSize: "15px" }}>Honda xr 150L la mejor de todass</p>
                             </div>
 
                         </div>
@@ -64,7 +66,7 @@ const VerCarrito = () => {
 
                             <div style={{ display: "flex", alignItems: "center" }}>
                                 <img src="https://http2.mlstatic.com/D_NQ_NP_2X_833308-MLA46012313284_052021-F.webp" alt="" />
-                                <p style={{ paddingLeft: "10px", fontSize: "30px" }}>Honda xr 150L la mejor de todass</p>
+                                <p style={{ paddingLeft: "5px", fontSize: "15px" }}>Honda xr 150L la mejor de todass</p>
                             </div>
 
                         </div>
@@ -85,52 +87,34 @@ const VerCarrito = () => {
                         <button className='boton-eliminar'>x</button>
                     </div>
 
-                    <div className='producto'>
-                        <div className='img-descr'>
-
-                            <div style={{ display: "flex", alignItems: "center" }}>
-                                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_833308-MLA46012313284_052021-F.webp" alt="" />
-                                <p style={{ paddingLeft: "10px", fontSize: "30px" }}>Honda xr 150L la mejor de todass</p>
-                            </div>
-
-                        </div>
-                        <div className='p-c-s'>
-                            <div className='opciones'>
-                                <p>precio</p>
-                                <p>$10.000</p>
-                            </div>
-                            <div className='opciones'>
-                                <p>cantidad</p>
-                                <p><button>sumar/restar</button></p>
-                            </div>
-                            <div className='opciones'>
-                                <p>subtotal</p>
-                                <p>$10.000</p>
-                            </div>
-                        </div>
-                        <button className='boton-eliminar'>x</button>
-                    </div>
                 </div>
 
                 <div className='contenedor-derecha'>
 
                     <div className='contenedor-cupon'>
-                        <h1>Cupón</h1>
-                        <div><input type="text" /></div>
+                        <div className='descuento'>
+                            <DiscountIcon />
+                            <h1>Cupón de descuento</h1>
+                        </div>
+                        <div><input type="text" placeholder='Código del cupón'/></div>
                         <div><button>Aplicar Descuento</button></div>
                     </div>
 
-                    <div>
-                        <h1>Total del carrito</h1>
-                        <div>
-                            <p>subtotal</p>
-                            <p>$1000</p>
+                    <div className='contenedor-cupon'>
+                        <div className='titulo-total' >
+                            <h1>Total del carrito</h1>
                         </div>
-                        <div>
-                            <p>TOTAL</p>
-                            <p>$1000</p>
+                        <div className='subt-total'>
+                            <div className='subtotal'>
+                                <p>Subtotal</p>
+                                <p>$1000</p>
+                            </div>
+                            <div className='total'>
+                                <p>Total</p>
+                                <p>$1000</p>
+                            </div>
                         </div>
-                        <button>Finalizar compra</button>
+                       <Link to="/pagos" style={{textDecoration:"none"}}><div className='boton-finalizar'><button>Finalizar compra</button></div></Link> 
                     </div>
 
                 </div>

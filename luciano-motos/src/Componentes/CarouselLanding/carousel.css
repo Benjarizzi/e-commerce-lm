@@ -1,10 +1,13 @@
 .carousel_container {
     overflow-x: hidden;
+    
 }
 .carousel_img {
     object-fit: cover;
     height: 500px;
     width: -webkit-fill-available;
+    margin-top: 0;
+    top: 0;
 }
 .slick-prev,
 .slick-next {

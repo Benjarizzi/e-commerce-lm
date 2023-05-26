@@ -20,7 +20,18 @@ const ItemDetail = () => {
                                 <h2>honda xr 150l</h2>
                                 <p>2023-0km</p>
                                 <h3>$1.000.000</h3>
-                                <Link to="https://api.whatsapp.com/send?phone=123456789" target='_blank'><button><div className='boton-consultar'><MdOutlineWhatsapp /> <p>Consultar</p></div></button></Link>
+                                <div style={{ paddingTop: "60px" }}>
+                                    <div className='agregar-al-carrito'>
+                                        <div className='contador'>
+                                            <button>+</button>
+                                            <p>2</p>
+                                            <button>-</button>
+                                        </div>
+                                        <div className='boton-agregar'><button>Agregar al Carrito</button></div>
+                                    </div>
+
+                                </div>
+                                <div className='boton-consultar'><Link to="https://api.whatsapp.com/send?phone=123456789" target='_blank' style={{ textDecoration: "none" }}><button><MdOutlineWhatsapp style={{ paddingTop: "9px" }} /> <p>Consultar</p></button></Link></div>
                             </div>
 
                         </div>
@@ -31,7 +42,7 @@ const ItemDetail = () => {
                             <div>
                                 <div className='ficha-tecnica'>
                                     <div className='f-t-derecha'>
-                                        <h3>ficha técnica</h3>
+                                        <h3>ficha técnica:</h3>
                                         <p>Motor:	                </p>
                                         <p>Cilindrada:	            </p>
                                         <p>Relación de compresión:</p>
@@ -78,10 +89,12 @@ const ItemDetail = () => {
 
                             <div className='simulador-credito'>
                                 <h3>Simulá tu crédito online</h3>
-                                <p>Completás tus datos y los del vehículo.</p>
-                                <p>Ingresás tu pago inicial y la cant de cuotas de tu preferencia.</p>
-                                <p>Obtenés una respuesta inmediata para saber si tu crédito está aprobado.</p>
-                                <p>trabajamos con:  </p>
+                                <div className='info-credito'>
+                                    <p>Completás tus datos y los del vehículo.</p>
+                                    <p>Ingresás tu pago inicial y la cantidad de cuotas de tu preferencia.</p>
+                                    <p>Obtenés una respuesta inmediata para saber si tu crédito está aprobado.</p>
+                                    <p>trabajamos con:  </p>
+                                </div>
                                 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/238px-Banco_Santander_Logotipo.svg.png" alt="" /></p>
                                 <a href="https://autoloans.santanderautos.com.ar/portalsanriopublico/#/home/identification" target='_blank'><button>Simular Crédito</button></a>
                             </div>

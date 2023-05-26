@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Bicicletas.css"
+import { Link } from 'react-router-dom'
 const Bicicletas = ({nombre, precio, descripcion, img}) => {
     return (
        
@@ -9,7 +10,7 @@ const Bicicletas = ({nombre, precio, descripcion, img}) => {
             <h2>{precio}</h2>
             <p>{descripcion}</p>
             <div>
-            <button>Ver detalle</button>
+            <Link to="/detalle"><button>Ver detalle</button></Link>
             </div>
         </div>
     )

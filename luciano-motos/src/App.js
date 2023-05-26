@@ -13,6 +13,7 @@ import ItemDetail from './Componentes/ItemDetail/ItemDetail';
 import Bicicletas_container from './Componentes/Bicicletas/Bicicletas_container';
 import Register from './Componentes/Register/Register';
 import VerCarrito from './Componentes/VerCarrito/VerCarrito';
+import Pagos from './Componentes/Pagos/Pagos';
 
 
 
@@ -35,10 +36,12 @@ function App() {
               <Route path='/bicicletas' element={<Bicicletas_container />} />
               <Route path='/detalle' element={<ItemDetail/>} />
               <Route path='/registro' element={<Register/>} />
+              <Route path='/carrito' element={<VerCarrito/>} />
               
 
             </Route>
           </Route>
+          <Route path='/pagos' element={<Pagos/>} />
           
           
           

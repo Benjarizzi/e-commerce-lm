@@ -28,6 +28,10 @@ const Footer = () => {
             <Outlet />
             <div className="contenedor-footer">
 
+                <div style={{ paddingLeft: "20px", paddingTop:"15px" }} className="prueba">
+                    <button onClick={handleScrollToTop} className="boton-volver-arriba"><KeyboardArrowUpIcon style={{ fontSize: "2.8rem" }} /></button>
+                </div>
+
                 <div className="contenedor-suscripcion">
 
                     <div>
@@ -40,10 +44,6 @@ const Footer = () => {
                         <button>SUSCRIBIRME</button>
                     </div>
 
-                </div>
-
-                <div style={{paddingLeft:"30px"}}>
-                <button onClick={handleScrollToTop} className="boton-volver-arriba"><KeyboardArrowUpIcon style={{fontSize:"2.8rem"}} /></button>
                 </div>
                 <div className="contenedor-ayuda">
                     <Grid container sx={{ alignItems: "flex-start", fontFamily: "Kanit" }}>
@@ -69,22 +69,22 @@ const Footer = () => {
                             <Box>
                                 <h3>SOBRE NOSOTROS</h3>
                                 <Link to="/nosotros"><li>Nosotros</li></Link>
-                               
-                               
+
+
 
                                 <Box className="ubi-footer">
-                                <LocalPhoneIcon style={{paddingBottom:"3px"}}/>
-                                <Link to="/horarios"><li>+54 9 1234567890</li></Link>
+                                    <LocalPhoneIcon style={{ paddingBottom: "3px", }} />
+                                    <Link to="/horarios"><li>+54 9 1234567890</li></Link>
                                 </Box>
 
                                 <Box className="ubi-footer">
-                                <PlaceIcon style={{paddingBottom:"3px"}}/>
+                                    <PlaceIcon style={{ paddingBottom: "3px" }} />
                                     <Link to="/ubicacion"><li>Ubicación </li></Link>
                                 </Box>
 
                                 <Box className="ubi-footer" >
-                                <CalendarMonthIcon />
-                                <li style={{color:"white"}}> Lunes-Sábado:  08:30-12:30 & 16:00-20:00 hs</li>
+                                    <CalendarMonthIcon />
+                                    <li style={{ color: "white" }}> Lunes-Sábado:  08:30-12:30 & 16:00-20:00 hs</li>
                                 </Box>
 
                             </Box>
@@ -92,9 +92,9 @@ const Footer = () => {
                         <Grid item xs={3}>
                             <Box>
                                 <Box className="links-redes" sx={{ alignItems: "center" }}>
-                                    <Link to="https://www.instagram.com/lucianomotos.cdg/" ><InstagramIcon style={{fontSize:"40px"}} /></Link>
-                                    <Link to="https://www.facebook.com/pages/category/motorcycles/Luciano-Motos-CDG-470665053697008/"><FacebookIcon style={{fontSize:"40px"}} /></Link>
-                                    <Link to="*"><EmailIcon style={{fontSize:"40px"}} /></Link>
+                                    <Link to="https://www.instagram.com/lucianomotos.cdg/" ><InstagramIcon style={{ fontSize: "30px" }} /></Link>
+                                    <Link to="https://www.facebook.com/pages/category/motorcycles/Luciano-Motos-CDG-470665053697008/"><FacebookIcon style={{ fontSize: "30px" }} /></Link>
+                                    <Link to="*"><EmailIcon style={{ fontSize: "30px" }} /></Link>
                                     <Link to="https://api.whatsapp.com/send?phone=123456789" className="whatsapp-button" style={{ fontSize: "24px" }} target="_blank"><FontAwesomeIcon icon={faWhatsapp} color="white" /></Link>
                                 </Box>
                             </Box>

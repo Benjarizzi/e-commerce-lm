@@ -10,7 +10,7 @@
     display: flex;
     bottom: 0px;
     left: 0px;
-    height: 100px;
+    height: 80px;
 
 }
 
@@ -24,7 +24,7 @@
     z-index: 5000;
     bottom: 0px;
     background-color: transparent;
-    height: 100px;
+    height:80px;
     margin-bottom: 0px;
     background-color: #9b0000cc;
 }
@@ -49,7 +49,7 @@
     color: rgb(255, 255, 255);
     font-weight: 300;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
     transition: 0.2s linear;
 
 }
@@ -112,10 +112,10 @@
     color: red;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
-    padding-top: 230px;
-    padding-bottom: 250px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .sumate-items {
@@ -135,6 +135,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: transparent;
+    border: none;
 
 }
 
@@ -144,6 +146,8 @@
     font-size: 17px;
     text-transform: uppercase;
     transition: .5s;
+    background-color: transparent;
+    border: none;
 
 }
 
@@ -163,7 +167,7 @@
     text-align: center;
     text-transform: uppercase;
     font-family: 'Kanit', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     word-spacing: 1rem;
     background: linear-gradient(to right, #c31420, white);
     background-clip: text;
@@ -192,21 +196,21 @@
 
 .contenedor-motos {
     display: flex;
-    padding: 120px;
+    padding: 60px;
 }
 
 
 
 .mas-destacado-items {
     width: 100%;
-    height: 400px;
+    height: 350px;
     background-color: rgba(255, 255, 255, 0.963);
     border: none;
 }
 
 .mas-destacado-logo {
     width: 500px;
-    height: 400px;
+    height: 350px;
     background-color: transparent;
     border: none;
     overflow: hidden;

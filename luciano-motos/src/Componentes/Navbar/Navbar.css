@@ -10,6 +10,8 @@
     background-color: rgba(26, 23, 23, 0.963);
     z-index: 10000;
     align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .header_nav_container {
@@ -21,7 +23,7 @@
 .header_nav_container ul{
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 16px;
 }
 .header_nav_container li{
     margin-left:5px ;
@@ -41,8 +43,8 @@
 
 }
 .brand_logo img{
-    width: 190px;
-    height: 140px;
+    width: 150px;
+    height: 110px;
     
     
 }
