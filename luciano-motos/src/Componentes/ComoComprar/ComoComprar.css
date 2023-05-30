@@ -1,0 +1,14 @@
+.contenedor-como-comprar{
+    padding: 50px;
+}
+.primeros-pasos{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.iconoS{
+    width: 100%;
+}
+.iconoS a{
+    color: red!important;
+}

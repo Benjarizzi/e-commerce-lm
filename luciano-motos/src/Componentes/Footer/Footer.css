@@ -53,6 +53,13 @@
     border-radius: .3rem;
     border: none;
 }
+.contenedores{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-bottom: 30px;
+}
 
 .contenedor-info{
     display: flex;
@@ -78,6 +85,8 @@
 .links-redes{
     display: flex;
     justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 0;
     
 }
 .links-redes a{
@@ -149,4 +158,13 @@
     cursor: pointer;
     transition: 1s;
    
+}
+@media screen and (max-width: 830px) {
+    .contenedor-suscripcion{
+        margin-top: 35px;
+        
+    }
+    .formulario{
+        display: grid;
+    }
 }

@@ -47,15 +47,16 @@ const Footer = () => {
                 </div>
                 <div className="contenedor-ayuda">
                     <Grid container sx={{ alignItems: "flex-start", fontFamily: "Kanit" }}>
-                        <Grid item xs={3}>
+                        <Grid item xs={12} sm={6} md={4} className="contenedores">
                             <Box>
                                 <h3>AYUDA</h3>
+                                <Link to="/comocomprar"><li>Cómo comprar ?</li></Link>
                                 <Link to="/mediosdepago"><li>Medios de Pago</li></Link>
                                 <Link to="/preguntasfrecuentes"><li>Preguntas Frecuentes</li></Link>
                                 <Link to="/politicadedevolucion"><li>Politica de Devolución</li></Link>
                             </Box>
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item xs={12} sm={6} md={4} className="contenedores">
                             <Box>
                                 <h3>CATEGORIAS</h3>
                                 <Link><li>Bicicletas</li></Link>
@@ -65,7 +66,7 @@ const Footer = () => {
                                 <Link><li>Indumentaria</li></Link>
                             </Box>
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item xs={12} sm={6} md={4} className="contenedores">
                             <Box>
                                 <h3>SOBRE NOSOTROS</h3>
                                 <Link to="/nosotros"><li>Nosotros</li></Link>
@@ -89,7 +90,7 @@ const Footer = () => {
 
                             </Box>
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item xs={12}>
                             <Box>
                                 <Box className="links-redes" sx={{ alignItems: "center" }}>
                                     <Link to="https://www.instagram.com/lucianomotos.cdg/" ><InstagramIcon style={{ fontSize: "30px" }} /></Link>

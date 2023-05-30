@@ -1,0 +1,23 @@
+ .info-opciones{
+    height: 700px;
+ }
+ .info-opciones h3{
+   color: #011187!important;
+    left: 265px!important;
+    top: 95px!important;
+  position:absolute;
+  font-size: 28px;
+  
+ }
+ .contenedor-pedidos{
+    width: 100%;
+ }
+ .contenedor-pedidos h1{
+    color: #011187;
+    margin-bottom: 15px;
+ }
+ .contenedor-pedidos p{
+    font-size: 30px;
+ }
+
+ 

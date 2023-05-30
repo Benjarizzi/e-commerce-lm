@@ -19,20 +19,21 @@ const VerCarrito = () => {
 
                         </div>
                         <div className='p-c-s'>
-                            <div className='opciones'>
+                            <div className='opciones' id='opciones-precio'>
                                 <p>precio</p>
                                 <p>$10.000</p>
                             </div>
-                            <div className='opciones'>
+                            <div className='opciones' id='opciones-cantidad'>
                                 <p>cantidad</p>
                                 <p><button>sumar/restar</button></p>
                             </div>
-                            <div className='opciones'>
+                            <div className='opciones' id='opciones-subtotal'>
                                 <p>subtotal</p>
                                 <p>$10.000</p>
                             </div>
+                            <button className='boton-eliminar'>x</button>
                         </div>
-                        <button className='boton-eliminar'>x</button>
+                        
                     </div>
 
                     <div className='producto'>
@@ -45,20 +46,20 @@ const VerCarrito = () => {
 
                         </div>
                         <div className='p-c-s'>
-                            <div className='opciones'>
+                            <div className='opciones' id='opciones-precio'>
                                 <p>precio</p>
                                 <p>$10.000</p>
                             </div>
-                            <div className='opciones'>
+                            <div className='opciones' id='opciones-cantidad'>
                                 <p>cantidad</p>
                                 <p><button>sumar/restar</button></p>
                             </div>
-                            <div className='opciones'>
+                            <div className='opciones' id='opciones-subtotal'>
                                 <p>subtotal</p>
                                 <p>$10.000</p>
                             </div>
+                            <button className='boton-eliminar'>x</button>
                         </div>
-                        <button className='boton-eliminar'>x</button>
                     </div>
 
                     <div className='producto'>
@@ -71,20 +72,20 @@ const VerCarrito = () => {
 
                         </div>
                         <div className='p-c-s'>
-                            <div className='opciones'>
+                            <div className='opciones' id='opciones-precio'>
                                 <p>precio</p>
                                 <p>$10.000</p>
                             </div>
-                            <div className='opciones'>
+                            <div className='opciones' id='opciones-cantidad'>
                                 <p>cantidad</p>
                                 <p><button>sumar/restar</button></p>
                             </div>
-                            <div className='opciones'>
+                            <div className='opciones' id='opciones-subtotal'>
                                 <p>subtotal</p>
                                 <p>$10.000</p>
                             </div>
+                            <button className='boton-eliminar'>x</button>
                         </div>
-                        <button className='boton-eliminar'>x</button>
                     </div>
 
                 </div>
