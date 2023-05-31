@@ -2,13 +2,32 @@
     padding: 50px;
 }
 .primeros-pasos{
-    display: flex;
+    
     justify-content: space-evenly;
     width: 100%;
 }
-.iconoS{
+.segundos-pasos{
+    display: flex;
+    justify-content:space-evenly;
     width: 100%;
+    align-items: center;
 }
-.iconoS a{
-    color: red!important;
+.icono-abajo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-right: 350px;
+    width: 100%;
+    justify-content: end;
+    display: flex;
+    
+}
+.paso{
+    align-items: center;
+    text-align: center;
+    width: 500px;
+}
+.paso h4{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #011187;
 }
