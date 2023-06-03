@@ -1,0 +1,23 @@
+.contenedor-medios-de-pago{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 50px;
+}
+.contenedor-medios-de-pago h3{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.img-medios {
+    margin-top: 50px;
+    width:700px ;
+    height: 200px;
+    border-radius: 50px;
+}
+.tarjetas img{
+    width: 80px;
+    height: 50px;
+}

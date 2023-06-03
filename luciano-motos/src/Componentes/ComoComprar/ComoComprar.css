@@ -1,25 +1,32 @@
+.titulo{
+    margin-top: 80px;
+    padding-left: 100px;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(126, 124, 124, 0.178);
+    justify-content: start;
+    align-items: center;
+    display: flex;
+}
+.titulo h1{
+    color: #011187;
+}
 .contenedor-como-comprar{
-    padding: 50px;
+    padding: 80px;
 }
 .primeros-pasos{
-    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
 }
-.segundos-pasos{
-    display: flex;
-    justify-content:space-evenly;
-    width: 100%;
-    align-items: center;
-}
 .icono-abajo{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-right: 350px;
+    padding-bottom: 30px;
+    padding-top: 30px;
     width: 100%;
-    justify-content: end;
+    justify-content: center;
     display: flex;
-    
 }
 .paso{
     align-items: center;
@@ -30,4 +37,20 @@
     font-size: 30px;
     text-transform: uppercase;
     color: #011187;
+}
+@media screen and (max-width: 830px){
+    .titulo{
+        padding-left: 0;
+        justify-content: center;
+    }
+  .paso h4{
+    font-size:20px ;
+  }
+  .paso p{
+    font-size: 15px;
+  }
+  .paso{
+    padding-right:30px ;
+    padding-left: 30px;
+  }
 }

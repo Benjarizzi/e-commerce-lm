@@ -96,7 +96,7 @@ const ItemDetail = () => {
                                     <p>trabajamos con:  </p>
                                 </div>
                                 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/238px-Banco_Santander_Logotipo.svg.png" alt="" /></p>
-                                <a href="https://autoloans.santanderautos.com.ar/portalsanriopublico/#/home/identification" target='_blank'><button>Simular Crédito</button></a>
+                                <a href="https://www.santander.com.ar/personas/prendarios/motos" target='_blank'><button>Simular Crédito</button></a>
                             </div>
 
                         </div>

@@ -93,6 +93,14 @@
     margin: 1rem;
     color: white;
 } 
+.redes-sociales{
+    transition: 2s!;
+}
+.redes-sociales:hover{
+    transform: rotate(360deg);
+    transform-origin: center;
+    transition: transform 1s;
+}
 
 .contenedor-ayuda{
  padding-top: 3rem;
@@ -166,5 +174,14 @@
     }
     .formulario{
         display: grid;
+    }
+    .copyright{
+       font-size: 13px;
+       align-items: center;
+       
+    }
+    .copyright p{
+        font-size: 10px!important;
+        
     }
 }

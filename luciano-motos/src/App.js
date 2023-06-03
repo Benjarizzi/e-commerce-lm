@@ -48,6 +48,7 @@ function App() {
               <Route path='/micuenta/direcciones' element={<Direcciones />} />
               <Route path='/micuenta/formulario' element={<FormularioDirecciones />} />
               <Route path='/micuenta/detalles-de-la-cuenta' element={<DetallesDeCuenta />} />
+              <Route path='/comocomprar' element={<ComoComprar />} />
 
 
 
@@ -55,7 +56,7 @@ function App() {
             </Route>
           </Route>
           
-          <Route path='/comocomprar' element={<ComoComprar />} />
+          
 
 
 
