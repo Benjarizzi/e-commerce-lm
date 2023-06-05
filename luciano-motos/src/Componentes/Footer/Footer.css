@@ -8,6 +8,7 @@
     overflow: hidden;
     color: rgb(180, 180, 186);
     font-family: 'Kanit', sans-serif;
+    
 }
 
 .contenedor-suscripcion{
@@ -147,8 +148,12 @@
     align-items: center;
     color: white;
 }
+.copyright h4{
+    margin-right: 5px;
+}
 .copyright p {
     margin: 5px;
+    margin-left: 0;
     color:white !important;
     text-decoration: none !important;
     font-size: 15px;
@@ -179,9 +184,22 @@
        font-size: 13px;
        align-items: center;
        
+       
     }
     .copyright p{
         font-size: 10px!important;
         
     }
+}
+@media screen and (max-width: 446px){
+    .copyright{
+        font-size: 13px;
+        align-items: center;
+        padding-left: 20px;
+        
+     }
+     .copyright p{
+         font-size: 10px!important;
+         padding-left: 20px;
+     }
 }

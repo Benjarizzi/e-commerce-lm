@@ -20,6 +20,7 @@ import Direcciones from './Componentes/Micuenta/Direcciones';
 import FormularioDirecciones from './Componentes/Micuenta/FormularioDirecciones';
 import DetallesDeCuenta from './Componentes/Micuenta/DetallesDeCuenta';
 import ComoComprar from './Componentes/ComoComprar/ComoComprar';
+import PoliticaDeDevolucion from './Componentes/PoliticaDeDevolucion/PoliticaDeDevolucion';
 
 
 
@@ -29,10 +30,8 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-
           <Route element={<Navbar />}>
             <Route element={<Footer />}>
-
 
               <Route path='/' element={<Main />} />
               <Route path='/Motos' element={<Motos />} />
@@ -49,25 +48,15 @@ function App() {
               <Route path='/micuenta/formulario' element={<FormularioDirecciones />} />
               <Route path='/micuenta/detalles-de-la-cuenta' element={<DetallesDeCuenta />} />
               <Route path='/comocomprar' element={<ComoComprar />} />
-
-
-
+              <Route path='/mediosdepago' element={<MediosDePago />} />
+              <Route path='/politica-de-devolucion' element={<PoliticaDeDevolucion />}/>
+              <Route path='/nosotros' element={<Nosotros />} />
+              <Route path='/pagos' element={<Pagos />} />
 
             </Route>
           </Route>
-          
-          
-
-
-
-          <Route path='/nosotros' element={<Nosotros />} />
-          <Route path='/mediosdepago' element={<MediosDePago />} />
-          <Route path='/pagos' element={<Pagos />} />
-
           <Route path="*" element={<Link to="/">La ruta a la que ingresaste no existe si quieres puedes volver a inicio clickeando aquí</Link>} />
-
         </Routes>
-
       </BrowserRouter>
 
     </div>

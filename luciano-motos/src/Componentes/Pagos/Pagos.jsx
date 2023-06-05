@@ -2,7 +2,11 @@ import React from 'react'
 import "./Pagos.css"
 const Pagos = () => {
   return (
-    <div>Pagos</div>
+    <div>
+      <div className='contenedor-pagos'>
+        <p>En proceso.</p>
+      </div>
+      </div>
   )
 }
 

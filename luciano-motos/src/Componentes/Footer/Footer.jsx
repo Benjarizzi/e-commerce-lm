@@ -53,7 +53,7 @@ const Footer = () => {
                                 <Link to="/comocomprar"><li>Cómo comprar ?</li></Link>
                                 <Link to="/mediosdepago"><li>Medios de Pago</li></Link>
                                 <Link to="/preguntasfrecuentes"><li>Preguntas Frecuentes</li></Link>
-                                <Link to="/politicadedevolucion"><li>Politica de Devolución</li></Link>
+                                <Link to="/politica-de-devolucion"><li>Política de Devolución</li></Link>
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6} md={4} className="contenedores">
@@ -107,7 +107,7 @@ const Footer = () => {
                 <Grid item xs={12} sx={{ backgroundColor: "#000000af" }}>
                     <div className="copyright">
                         <h4>Copyright 2023</h4>
-                        <p>Luciano Motos</p>
+                        <h4>Luciano Motos</h4>
                         <p>Todos los derechos reservados</p>
                         <Link to="*"><p>Términos y condiciones</p></Link>
                     </div>

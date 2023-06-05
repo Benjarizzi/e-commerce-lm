@@ -9,6 +9,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import WestIcon from '@mui/icons-material/West';
 import EastIcon from '@mui/icons-material/East';
 import SouthIcon from '@mui/icons-material/South';
+import { Link } from 'react-router-dom';
 const ComoComprar = () => {
     return (
         <div>
@@ -22,7 +23,7 @@ const ComoComprar = () => {
                     <div className='paso'>
                         <PersonAddIcon style={{ fontSize: "40px", color: "#011187" }} />
                         <h4>01 | crear cuenta</h4>
-                        <p>Ingresa en este enlace y completá con tus datos.</p>
+                        <p>Ingresa en <Link to="/registro" style={{color:"#011187"}}>este enlace</Link> y completá con tus datos.</p>
                     </div>
                     <div className='icono-abajo'>
                         < SouthIcon style={{fontSize:"45px", color:"#011187"}}/>
@@ -31,7 +32,7 @@ const ComoComprar = () => {
                     <div className='paso'>
                         <DiscountIcon style={{ fontSize: "40px", color: "#011187" }} />
                         <h4>02 | Seleccionar productos</h4>
-                        <p>Visita nuestra tienda, elegi los productos que desees y agregalos al carrito de compra.</p>
+                        <p>Visita <Link to="/" style={{color:"#011187"}}>nuestra tienda</Link>, elegi los productos que desees y agregalos al carrito de compra.</p>
                     </div>
                     <div className='icono-abajo'>
                         < SouthIcon style={{fontSize:"45px", color:"#011187"}}/>
@@ -40,7 +41,7 @@ const ComoComprar = () => {
                     <div className='paso'>
                         <ShoppingCartIcon style={{ fontSize: "40px", color: "#011187" }} />
                         <h4>03 | carrito de compras</h4>
-                        <p>Verificá los productos seleccionados y agregados al carrito antes de finalizar el pedido.</p>
+                        <p>Verificá los productos seleccionados y agregados al <Link to="/carrito" style={{color:"#011187"}}>carrito</Link> antes de finalizar el pedido.</p>
                     </div>
 
                     <div className='icono-abajo'>
@@ -50,7 +51,7 @@ const ComoComprar = () => {
                     <div className='paso'>
                         <PostAddIcon style={{ fontSize: "40px", color: "#011187" }} />
                         <h4>04 | datos</h4>
-                        <p>Una vez verificado los productos, completá el pedido con tus datos personales para realiar la facturación y enviar el producto.</p>
+                        <p>Una vez verificado los productos, completá el pedido con tus datos personales para realizar la facturación y enviar el producto.</p>
                     </div>
 
                     <div className='icono-abajo'>
@@ -64,12 +65,12 @@ const ComoComprar = () => {
                     </div>
 
                     <div className='icono-abajo'>
-                        < SouthIcon style={{fontSize:"45px", color:"#011187"}}/>
+                        < SouthIcon style={{fontSize:"45px", color:" green"}}/>
                     </div>
 
                     <div className='paso'>
-                        <CheckCircleIcon style={{ fontSize: "40px", color: "#011187" }} />
-                        <h4>06 | finalizar compra</h4>
+                        <CheckCircleIcon style={{ fontSize: "40px", color: "green" }} />
+                        <h4 style={{color:"green"}}>06 | finalizar compra</h4>
                         <p>Completá el pedido y LISTO!. Una vez realizado recibirás un correo electrónico indicando los detalles de la compra.</p>
                     </div>
 

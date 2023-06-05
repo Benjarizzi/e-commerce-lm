@@ -2,7 +2,11 @@ import React from 'react'
 import "./Nosotros.css"
 const Nosotros = () => {
   return (
-    <div>Nosotros</div>
+    <div>
+      <div className='contenedor-nosotros'>
+        <p>En proceso.</p>
+      </div>
+      </div>
   )
 }
 

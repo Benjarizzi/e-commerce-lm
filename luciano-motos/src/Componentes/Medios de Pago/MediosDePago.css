@@ -3,21 +3,54 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    
-    padding: 50px;
+    padding-top: 40px;
+    padding-bottom: 120px;
+    text-align: center;
+   
 }
 .contenedor-medios-de-pago h3{
     font-size: 40px;
     text-transform: uppercase;
+    
 }
 
 .img-medios {
     margin-top: 50px;
     width:700px ;
     height: 200px;
-    border-radius: 50px;
+    border-radius: 5px;
+}
+.tarjetas{
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 .tarjetas img{
     width: 80px;
-    height: 50px;
+    height: 40px;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition: .4s;
+    filter: grayscale(100%) opacity(0.7);
+}
+.tarjetas img:hover{
+    filter: none;
+    
+}
+@media screen and (max-width: 800px){
+    .contenedor-medios-de-pago h3{
+        font-size: 20px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .img-medios{
+        width: 300px;
+        height: 100px;
+    }
+
+    .tarjetas img{
+        width:60px ;
+        height: 30px;
+    }
 }
