@@ -3,9 +3,7 @@ import "./DetallesDeCuenta.css";
 import Micuenta from './Micuenta';
 const DetallesDeCuenta = () => {
     return (
-        <div className='info-opciones'>
-            <h3>/ Detalles-de-la-cuenta</h3>
-            <Micuenta />
+    
             <div className='informacion'>
                 <div>
                     <h1>Información</h1>
@@ -32,7 +30,7 @@ const DetallesDeCuenta = () => {
                 </div>
 
             </div>
-        </div>
+      
     )
 }
 

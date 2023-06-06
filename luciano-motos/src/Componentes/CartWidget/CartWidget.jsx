@@ -26,7 +26,7 @@ const CartWidget = ({ onClose }) => {
 
   return (
     <div>
-      <button onClick={handleButtonClick} style={{ backgroundColor: "transparent", border: "none" }} ><li style={{ listStyle: "none" }}><ShoppingCartIcon style={{ fontSize: "28px" }} className="icono" /></li></button>
+      <button onClick={handleButtonClick} style={{ backgroundColor: "transparent", border: "none" }} ><li style={{ listStyle: "none" }}><ShoppingCartIcon style={{ fontSize: "30px" }} className="icono" /></li></button>
       {isModalOpen && (
         <div className="modal-container">
           <div className="overlay" onClick={closeModal} />

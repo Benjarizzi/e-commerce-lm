@@ -1,14 +1,8 @@
- .info-opciones{
-    height: 700px;
- }
- .info-opciones h3{
-   color: #011187!important;
-    left:17%!important;
-    top: 96px!important;
-  position:absolute;
-  font-size: 28px;
-  
- }
+.informacion{
+   position: absolute;
+   right: 0;
+   top: 500px;
+}
  .contenedor-pedidos{
     width: 100%;
  }

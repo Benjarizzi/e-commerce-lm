@@ -1,29 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react';
 import "./Direcciones.css";
-import Micuenta from './Micuenta';
 import { Link } from 'react-router-dom';
+import FormularioDirecciones from './FormularioDirecciones';
+
 const Direcciones = () => {
-    return (
-        <div className='info-opciones'>
-            <Micuenta />
-            <h3> / Direcciones</h3>
-            <div className='informacion'>
-                <h1>Direcciones</h1>
-                    <p>La siguiente direccion se utilizara en la página de pagos por defecto.</p>
-                    <div className='añadir-direccion'>
-                        <h4>Dirección de envío</h4>
+  const [contenido, setContenido] = useState([]);
 
-                        <div style={{display:"flex", alignItems:"center"}}>
-                        <Link to="/micuenta/formulario"><p>Añadir</p></Link>
-                        <button>Eliminar</button>
-                        </div>
-                        
-                        <p>Esta es la dirección que configuraste</p>{/**Acá iría la dirección que configuras desde el formulario */}
-                    </div>
-            </div>
+  const agregarContenido = () => {
+    setContenido([...contenido, { id: contenido.length + 1 }]);
+  };
 
+  return (
+    <div className='informacion'>
+      <h1>Direcciones</h1>
+      <p>La siguiente dirección se utilizará en la página de pagos por defecto.</p>
+      <div className='añadir-direccion'>
+        <h4>Dirección de envío</h4>
+
+        <div style={{ display: "block", alignItems: "center" }}>
+          <button style={{ color: "#011187" }} onClick={agregarContenido}>Añadir</button>
+          <button>Eliminar</button>
+          {contenido.map((item, index) => (
+            <FormularioDirecciones key={item.id} />
+          ))}
+
+          
         </div>
-    )
+
+        <p>Esta es la dirección que configuraste</p>{/**Acá iría la dirección que configuras desde el formulario */}
+      </div>
+    </div>
+  );
 }
 
-export default Direcciones
+export default Direcciones;

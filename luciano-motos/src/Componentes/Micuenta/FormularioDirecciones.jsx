@@ -4,12 +4,8 @@ import Micuenta from './Micuenta';
 
 const FormularioDirecciones = () => {
     return (
-        <div className='info-opciones'>
-            <Micuenta />
-            <div>
-                <h3> / Direcciones / Formulario</h3>
-            </div>
-            <div className='informacion'>
+        
+            <div >
                 <h2 style={{marginBottom:"19px"}}>Dirección de envío</h2>
                 <div>
                     <div className='contenedor-input'>
@@ -31,7 +27,7 @@ const FormularioDirecciones = () => {
                     <div className='boton-añadir'><button>Guardar cambios</button></div>
                 </div>
             </div>
-        </div>
+       
     )
 }
 

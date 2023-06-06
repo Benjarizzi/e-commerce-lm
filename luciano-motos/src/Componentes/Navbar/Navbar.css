@@ -2,6 +2,7 @@
 
 .header {
     position: fixed;
+    
     left: 0px;
     top: 0px;
     display: flex;
@@ -16,35 +17,28 @@
 
 .header_nav_container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
     align-items: center;
 }
-.header_nav_container ul{
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-}
-.header_nav_container li{
-    margin-left:5px ;
-    margin-right: 5px;
-}
+
 
 /*Logo*/
 .brand_logo {
     display: flex;
     align-items: center;
     color: white;
-    justify-content: end;
-    width: 100px;
-    height: 80px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    justify-content:start;
+    width: max-content;
+    height: max-content;
+   
 
 }
 .brand_logo img{
-    width: 150px;
-    height: 110px;
+    width: 220px;
+    height: 175px;
+    margin-top: 10px;
+    
     
     
 }
@@ -82,15 +76,15 @@
 .nav {
     display: flex;
     padding-left: 0px;
+    padding: 40px;
     margin: 0px;
     align-items: center;
-    justify-content: center;
+    
 }
 .nav a {
-    padding: 0px;
-    margin: 5px;
+    padding: 10px;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
     text-align: center;
     color: rgb(180, 180, 186);
     text-transform: uppercase;
@@ -105,13 +99,13 @@
 }
 @media only screen and (max-width: 768px) and (max-device-aspect-ratio: 1 / 1), (max-aspect-ratio: 1 / 1) {
   
-    .brand_logo {
-        position: absolute;
-        left: 100px;
-        top: 0;
+    .brand_logo img {
+    width: 170px;
+    height: 150px;
+    margin-top: 0;
     }
     .header_nav_container {
-        justify-content: flex-end;
+        justify-content: space-between;
     }
     .hamburger_container {
         display: flex;
@@ -126,7 +120,10 @@
     }
 }
 @media screen and (max-width: 877px){
-    .header_nav_container ul{
+    .nav a{
+        display: none;
+    }
+    .header_nav_container li{
         display: none;
     }
 }

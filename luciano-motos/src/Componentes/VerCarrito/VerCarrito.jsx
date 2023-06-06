@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const VerCarrito = () => {
     return (
         <div>
-            <div className='titulo'>
+            <div className='title'>
                     <h1>Carrito de compras</h1>
                 </div>
             <div className='contenedor-ver-carrito' style={{ display: "-webkit-flex", justifyContent: "space-between" }}>

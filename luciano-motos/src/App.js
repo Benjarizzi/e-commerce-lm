@@ -15,10 +15,7 @@ import Register from './Componentes/Register/Register';
 import VerCarrito from './Componentes/VerCarrito/VerCarrito';
 import Pagos from './Componentes/Pagos/Pagos';
 import Micuenta from './Componentes/Micuenta/Micuenta';
-import Pedidos from './Componentes/Micuenta/Pedidos';
-import Direcciones from './Componentes/Micuenta/Direcciones';
-import FormularioDirecciones from './Componentes/Micuenta/FormularioDirecciones';
-import DetallesDeCuenta from './Componentes/Micuenta/DetallesDeCuenta';
+
 import ComoComprar from './Componentes/ComoComprar/ComoComprar';
 import PoliticaDeDevolucion from './Componentes/PoliticaDeDevolucion/PoliticaDeDevolucion';
 
@@ -42,11 +39,7 @@ function App() {
               <Route path='/detalle' element={<ItemDetail />} />
               <Route path='/registro' element={<Register />} />
               <Route path='/carrito' element={<VerCarrito />} />
-              <Route path='/micuenta' element={<Micuenta />} />
-              <Route path='/micuenta/pedidos' element={<Pedidos />} />
-              <Route path='/micuenta/direcciones' element={<Direcciones />} />
-              <Route path='/micuenta/formulario' element={<FormularioDirecciones />} />
-              <Route path='/micuenta/detalles-de-la-cuenta' element={<DetallesDeCuenta />} />
+              <Route path='/micuenta' element={<Micuenta />} />       
               <Route path='/comocomprar' element={<ComoComprar />} />
               <Route path='/mediosdepago' element={<MediosDePago />} />
               <Route path='/politica-de-devolucion' element={<PoliticaDeDevolucion />}/>
