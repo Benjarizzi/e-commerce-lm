@@ -3,8 +3,8 @@
     width: max-content;
     height: max-content;
     position: absolute;
-    top: 160px;
-    left: 600px;
+    top: 10.3%;
+    left: 36%;
     padding: 40px;
 }
 .informacion h1{
@@ -20,7 +20,8 @@
 .añadir-direccion button{
     border: none;
     background-color: transparent;
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
     bottom: 0;
     padding: 0;
     margin-top: 10px;
@@ -28,4 +29,26 @@
     cursor: pointer;
     text-decoration: underline;
     font-size: 16px;
+}
+
+@media screen and (max-width: 1030px){
+    .informacion{
+        left: 40%;
+        position: inherit;
+    }
+}
+@media screen and (max-width: 772px){
+    .informacion{
+        position: inherit;
+       margin-top: 20px;
+       margin-bottom: 40px!important;
+       margin: 0;
+       align-items: center;
+       text-align: center;
+       width: 100%;
+       padding-left:15px ;
+       padding-right: 15px;
+    
+    }
+   
 }

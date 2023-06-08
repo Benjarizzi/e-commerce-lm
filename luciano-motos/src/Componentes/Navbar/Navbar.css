@@ -52,13 +52,15 @@
 }
 .hamburger_btn_container {
     color: rgb(255, 0, 0)!important;
-    height: 60px;
+    height: 80px;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+   
 }
 .hamburger_btn {
     height: 24px;
+    margin-right: 40px;
 }
 
 
@@ -76,7 +78,7 @@
 .nav {
     display: flex;
     padding-left: 0px;
-    padding: 40px;
+    padding: 60px;
     margin: 0px;
     align-items: center;
     
@@ -89,6 +91,7 @@
     color: rgb(180, 180, 186);
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 17px;
     font-family: 'Kanit', sans-serif;
     transition: .6s;
     list-style: none;
@@ -100,8 +103,8 @@
 @media only screen and (max-width: 768px) and (max-device-aspect-ratio: 1 / 1), (max-aspect-ratio: 1 / 1) {
   
     .brand_logo img {
-    width: 170px;
-    height: 150px;
+    width: 140px;
+    height: 130px;
     margin-top: 0;
     }
     .header_nav_container {

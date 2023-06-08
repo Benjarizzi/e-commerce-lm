@@ -13,7 +13,7 @@ const Ubicacion = () => {
 
         <Grid item  xs={12} xl={6} md={6} className="info-izquierda">
           <h1>Casa central</h1>
-          <h3>Ubicada en la localidad de Cañada de gomez</h3>
+          <h3>Ubicada en la localidad de Cañada de Gomez</h3>
           <h3>Provincia de Santa Fe</h3>
           <h3 style={{ textDecoration: "underline" }}>Blvd. Balcarce 845</h3>
           <div className="cont-iconos">

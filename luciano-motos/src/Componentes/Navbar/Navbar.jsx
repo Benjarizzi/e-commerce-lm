@@ -52,7 +52,7 @@ const Navbar = ({ onClose }) => {
                     <Grid item xs={3} md={4} sm={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <Box>
                             <div className="nav">
-                                <Link to="/registro"><li><PersonIcon style={{ fontSize: "26px" }} /></li></Link>
+                                <Link to="/registro"><li><PersonIcon style={{ fontSize: "32px" }} /></li></Link>
                                 <li style={{ listStyle: "none" }}><CartWidget /></li>
                             </div>
                         </Box>

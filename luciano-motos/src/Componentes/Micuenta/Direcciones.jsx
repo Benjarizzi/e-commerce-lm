@@ -15,7 +15,7 @@ const Direcciones = () => {
       <h1>Direcciones</h1>
       <p>La siguiente dirección se utilizará en la página de pagos por defecto.</p>
       <div className='añadir-direccion'>
-        <h4>Dirección de envío</h4>
+        
 
         <div style={{ display: "block", alignItems: "center" }}>
           <button style={{ color: "#011187" }} onClick={agregarContenido}>Añadir</button>

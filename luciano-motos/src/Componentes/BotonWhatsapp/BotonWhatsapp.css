@@ -20,3 +20,10 @@
 .whatsapp-button:hover{
     background-color: #25d365d3;
 }
+@media screen and (max-width: 772px){
+    .whatsapp-button{
+        width: 45px;
+        font-size: 25px!important;
+        right: 5px;
+    }
+}

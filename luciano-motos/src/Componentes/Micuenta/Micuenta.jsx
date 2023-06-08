@@ -37,12 +37,13 @@ const Micuenta = () => {
     };
 
     return (
-        <div style={{ width: "100%" }}>
+        <div>
 
             <div className='title'>
             <h1 id='titulo'>Mi cuenta {seccion && seccion !== "Mi cuenta" && "/"} {seccion}</h1>
             </div>
 
+            <div className='contenedor-padre'>
             <div className='container'>
                 <div className='info-user'>
 
@@ -60,9 +61,14 @@ const Micuenta = () => {
 
                 </div>
             </div>
-
             <div>{contenido}</div>
 
+                
+            </div>
+
+           
+
+           
         </div>
     )
 }

@@ -3,34 +3,34 @@ import "./DetallesDeCuenta.css";
 import Micuenta from './Micuenta';
 const DetallesDeCuenta = () => {
     return (
-    
-            <div className='informacion'>
+
+        <div className='informacion'>
+            <div>
+                <h1 style={{ marginBottom: "19px" }}>Informacion</h1>
                 <div>
-                    <h1>Información</h1>
-                    <div className='contenedor-input2'>
-                        <div className='contenedor-label-input'>
-                            <label>Nombre</label>
-                            <input type="text" placeholder='Nombre' />
-                        </div>
-                        <div className='contenedor-label-input'>
-                            <label>Apellidos</label>
-                            <input type="text" placeholder='Apellidos' />
-                        </div>
-
-                    </div>
-                  
                     <div className='contenedor-input'>
-                        <label >Dirección de correo electrónico</label>
-                        <input type="email" placeholder='Dirección de correo electrónico' />
+                        <input type="text" placeholder='nombre' />
                     </div>
-                
-                    
+                    <div className='contenedor-input'>
+                       
+                        <input type="text" placeholder='Apellidos' />
+                    </div>
+                    <div className='contenedor-input'>
+                        
+                        <input type="text" placeholder='Direccion de correo electronico' />
+                    </div>
                    
-                    <div className='boton-añadir'><button type='submit'>Guardar cambios</button></div>
+                    <div className='boton-añadir'><button>Guardar cambios</button></div>
                 </div>
-
             </div>
-      
+
+
+
+        </div>
+
+
+
+
     )
 }
 

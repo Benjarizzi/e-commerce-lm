@@ -163,14 +163,19 @@
     color: white;
     border: solid 2px white;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     align-items: center;
     display: flex;
     justify-content: center;
     cursor: pointer;
     transition: 1s;
    
+}
+.boton-volver-arriba:hover{
+    transform: rotate(360deg);
+    transform-origin: center;
+    transition: transform 1s;
 }
 @media screen and (max-width: 830px) {
     .contenedor-suscripcion{
@@ -202,4 +207,5 @@
          font-size: 10px!important;
          padding-left: 20px;
      }
+     
 }

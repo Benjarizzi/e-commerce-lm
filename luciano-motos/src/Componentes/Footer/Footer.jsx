@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="contenedor-footer">
 
                 <div style={{ paddingLeft: "20px", paddingTop:"15px" }} className="prueba">
-                    <button onClick={handleScrollToTop} className="boton-volver-arriba"><KeyboardArrowUpIcon style={{ fontSize: "2.8rem" }} /></button>
+                    <button onClick={handleScrollToTop} className="boton-volver-arriba"><KeyboardArrowUpIcon style={{ fontSize: "2.2rem" }} /></button>
                 </div>
 
                 <div className="contenedor-suscripcion">
@@ -93,9 +93,9 @@ const Footer = () => {
                         <Grid item xs={12}>
                             <Box>
                                 <Box className="links-redes" sx={{ alignItems: "center" }}>
-                                    <Link to="https://www.instagram.com/lucianomotos.cdg/" ><InstagramIcon style={{ fontSize: "30px" }} className="redes-sociales" /></Link>
-                                    <Link to="https://www.facebook.com/pages/category/motorcycles/Luciano-Motos-CDG-470665053697008/"><FacebookIcon style={{ fontSize: "30px" }} className="redes-sociales" /></Link>
-                                    <Link to="*"><EmailIcon style={{ fontSize: "30px" }} className="redes-sociales" /></Link>
+                                    <Link to="https://www.instagram.com/lucianomotos.cdg/" target="_blank" ><InstagramIcon style={{ fontSize: "30px" }} className="redes-sociales" /></Link>
+                                    <Link to="https://www.facebook.com/pages/category/motorcycles/Luciano-Motos-CDG-470665053697008/" target="_blank"><FacebookIcon style={{ fontSize: "30px" }} className="redes-sociales" /></Link>
+                                    <Link to="*" target="_blank"><EmailIcon style={{ fontSize: "30px" }} className="redes-sociales" /></Link>
                                     <Link to="https://api.whatsapp.com/send?phone=123456789" className="whatsapp-button" style={{ fontSize: "24px" }} target="_blank"><FontAwesomeIcon icon={faWhatsapp} color="white" /></Link>
                                 </Box>
                             </Box>

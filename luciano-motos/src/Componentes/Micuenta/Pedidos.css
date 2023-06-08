@@ -1,7 +1,8 @@
 .informacion{
-   position: absolute;
-   right: 0;
-   top: 500px;
+   padding: 0!important;
+   
+   margin-top: 30px;
+   
 }
  .contenedor-pedidos{
     width: 100%;

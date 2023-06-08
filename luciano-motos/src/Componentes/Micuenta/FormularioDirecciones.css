@@ -2,6 +2,7 @@
   .contenedor-input{
     display: flex;
     flex-direction: column;
+   
     width: 100%;
   }
   .contenedor-input input{
@@ -27,3 +28,10 @@
     margin-top: 15px;
     text-transform: uppercase;
   }
+  @media screen and (max-width: 772px){
+    .contenedor-input input{
+      
+      width: 100%;
+ 
+    }
+}

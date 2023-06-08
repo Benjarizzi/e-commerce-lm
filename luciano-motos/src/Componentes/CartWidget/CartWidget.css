@@ -13,21 +13,21 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  z-index: 9999;
+  z-index: 9998;
+  background-color: #ff09092d;
 }
 
 .overlay {
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
+  z-index: 9999;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-wrapper {
   background-color: rgb(255, 255, 255);
-  width: 23%;
+  width: 25%;
   height: 100vh;
   /* Utilizamos 100vh para ocupar todo el alto de la pantalla */
   position: fixed;
@@ -43,6 +43,28 @@
   align-items: center;
   width: 100%!important;
 }
+.boton-cerrar{
+display: flex;
+flex-direction: row!important;
+justify-content: end;
+padding-right: 17px;
+padding-top: 10px;
+padding-bottom: 0;
+z-index: 9999;
+}
+.boton-cerrar button{
+ border: none;
+ background-color: transparent;
+ font-size: 25px;
+ font-weight: 500;
+ cursor: pointer;
+ color:rgba(0, 0, 0, 0.575);
+ transition: .4s;
+ z-index: 9999;
+}
+.boton-cerrar button:hover{
+  color: black;
+}
 
 .contenedor-modal h2 {
   color: red;
@@ -51,14 +73,15 @@
 .items{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  
 }
 .items p{
   font-size: 20px;
 }
 .items img{
-  width: 130px;
-  height: 100px;
+  width: 100px;
+  height: 80px;
 }
 .contenedor-items{
   padding-top: 20px;
@@ -69,7 +92,7 @@
 .contenedor-items button{
   color: white;
   background-color: red;
-  width: 300px;
+  width: 100%;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
@@ -86,7 +109,7 @@
 
 
 .boton-ver button {
-  width: 300px;
+  width: max-content;
   display: flex;
   flex-direction: column;
   margin-left: 0;

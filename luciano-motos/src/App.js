@@ -15,7 +15,6 @@ import Register from './Componentes/Register/Register';
 import VerCarrito from './Componentes/VerCarrito/VerCarrito';
 import Pagos from './Componentes/Pagos/Pagos';
 import Micuenta from './Componentes/Micuenta/Micuenta';
-
 import ComoComprar from './Componentes/ComoComprar/ComoComprar';
 import PoliticaDeDevolucion from './Componentes/PoliticaDeDevolucion/PoliticaDeDevolucion';
 
