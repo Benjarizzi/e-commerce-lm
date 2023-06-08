@@ -2,7 +2,7 @@
 
 .header {
     position: fixed;
-    
+
     left: 0px;
     top: 0px;
     display: flex;
@@ -28,50 +28,71 @@
     display: flex;
     align-items: center;
     color: white;
-    justify-content:start;
+    justify-content: start;
     width: max-content;
     height: max-content;
-   
+
 
 }
-.brand_logo img{
+
+.brand_logo img {
     width: 220px;
     height: 175px;
     margin-top: 10px;
-    
-    
-    
+
+
+
 }
+
 /*Menu hamburguesa*/
 .hamburger_container {
-    width: fit-content;
+    width: max-content;
     display: none;
     align-items: center;
     justify-content: center;
     height: 60px;
 }
+
 .hamburger_btn_container {
-    color: rgb(255, 0, 0)!important;
+    color: rgb(255, 0, 0) !important;
     height: 80px;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-   
+
 }
+
 .hamburger_btn {
     height: 24px;
     margin-right: 40px;
 }
 
+.css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper {
+    top: 80px!important;
+    bottom: 0;
+    right: 0 !important;
+    left: auto!important;
+    border-radius: 0px!important;
+    width: 40%!important;
+    margin: 0!important;
+    padding: 0!important;
+}
 
-.menu-hamburguesa a{
+.menu-hamburguesa{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-hamburguesa a {
     text-decoration: none;
 }
-.menu-hamburguesa h5{
-    margin-left: .4rem;
-    margin-top: 1rem;
+
+.menu-hamburguesa h5 {
+    text-align: center;
 }
-.span-menu{
+
+.span-menu {
     margin-left: 1rem;
 }
 
@@ -81,8 +102,9 @@
     padding: 60px;
     margin: 0px;
     align-items: center;
-    
+
 }
+
 .nav a {
     padding: 10px;
     text-decoration: none;
@@ -96,25 +118,31 @@
     transition: .6s;
     list-style: none;
 }
+
 .nav a:hover {
     cursor: pointer;
     color: red;
 }
-@media only screen and (max-width: 768px) and (max-device-aspect-ratio: 1 / 1), (max-aspect-ratio: 1 / 1) {
-  
+
+@media only screen and (max-width: 768px) and (max-device-aspect-ratio: 1 / 1),
+(max-aspect-ratio: 1 / 1) {
+
     .brand_logo img {
-    width: 140px;
-    height: 130px;
-    margin-top: 0;
+        width: 140px;
+        height: 130px;
+        margin-top: 0;
     }
+
     .header_nav_container {
         justify-content: space-between;
     }
+
     .hamburger_container {
         display: flex;
     }
 
 }
+
 @media screen and (max-width: 1024px) {
 
     .brand_logo {
@@ -122,11 +150,13 @@
         top: 0;
     }
 }
-@media screen and (max-width: 877px){
-    .nav a{
+
+@media screen and (max-width: 877px) {
+    .nav a {
         display: none;
     }
-    .header_nav_container li{
+
+    .header_nav_container li {
         display: none;
     }
 }

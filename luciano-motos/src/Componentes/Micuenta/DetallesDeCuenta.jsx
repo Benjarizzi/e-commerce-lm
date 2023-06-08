@@ -9,7 +9,7 @@ const DetallesDeCuenta = () => {
                 <h1 style={{ marginBottom: "19px" }}>Informacion</h1>
                 <div>
                     <div className='contenedor-input'>
-                        <input type="text" placeholder='nombre' />
+                        <input type="text" placeholder='Nombre' />
                     </div>
                     <div className='contenedor-input'>
                        
@@ -17,7 +17,7 @@ const DetallesDeCuenta = () => {
                     </div>
                     <div className='contenedor-input'>
                         
-                        <input type="text" placeholder='Direccion de correo electronico' />
+                        <input type="text" placeholder='Dirección de correo electrónico' />
                     </div>
                    
                     <div className='boton-añadir'><button>Guardar cambios</button></div>
