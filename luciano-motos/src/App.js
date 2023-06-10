@@ -5,14 +5,25 @@ import Motos from './Componentes/Motos/Motos';
 import Navbar from './Componentes/Navbar/Navbar';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Ubicacion from './Componentes/Ubicacion/Ubicacion';
-import { Box } from "@mui/material";
+import { Box, dividerClasses } from "@mui/material";
+import PreguntasFrecuentes from './Componentes/PreguntasFrecuentes/PreguntasFrecuentes';
+import Nosotros from './Componentes/Nosotros/Nosotros';
+import MediosDePago from './Componentes/Medios de Pago/MediosDePago';
+import ItemDetail from './Componentes/ItemDetail/ItemDetail';
+import Bicicletas_container from './Componentes/Bicicletas/Bicicletas_container';
+import Register from './Componentes/Register/Register';
+import VerCarrito from './Componentes/VerCarrito/VerCarrito';
+import Pagos from './Componentes/Pagos/Pagos';
+import Micuenta from './Componentes/Micuenta/Micuenta';
+import ComoComprar from './Componentes/ComoComprar/ComoComprar';
+import PoliticaDeDevolucion from './Componentes/PoliticaDeDevolucion/PoliticaDeDevolucion';
 
 
 
 
 function App() {
   return (
-    <Box sx={{width: "-webkit-fill-available",height: "-webkit-fill-available",display:"block",position:"relative"}}>
+    <div>
       <BrowserRouter>
         <Routes>
           <Route element={<Navbar />}>

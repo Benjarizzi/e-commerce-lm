@@ -2,20 +2,26 @@
 
 .header {
     position: fixed;
+
     left: 0px;
     top: 0px;
     display: flex;
     width: -webkit-fill-available;
-    height: 60px;
+    height: 80px;
     background-color: rgba(26, 23, 23, 0.963);
     z-index: 10000;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .header_nav_container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
+    align-items: center;
 }
+
 
 /*Logo*/
 .brand_logo {
@@ -23,80 +29,134 @@
     align-items: center;
     color: white;
     justify-content: start;
-    background-image: url(http://localhost:3000/icons/luciano.png);
-    width: 100px;
-    height: 60px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: max-content;
+    height: max-content;
+
+
 }
+
+.brand_logo img {
+    width: 220px;
+    height: 175px;
+    margin-top: 10px;
+
+
+
+}
+
 /*Menu hamburguesa*/
 .hamburger_container {
-    width: fit-content;
+    width: max-content;
     display: none;
     align-items: center;
     justify-content: center;
     height: 60px;
 }
+
 .hamburger_btn_container {
-    color: rgb(255, 0, 0);
-    height: 60px;
+    color: rgb(255, 0, 0) !important;
+    height: 80px;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+
 }
+
 .hamburger_btn {
     height: 24px;
+    margin-right: 40px;
 }
 
+.css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper {
+    top: 80px!important;
+    bottom: 0;
+    right: 0 !important;
+    left: auto!important;
+    border-radius: 0px!important;
+    width: 40%!important;
+    margin: 0!important;
+    padding: 0!important;
+}
 
-.menu-hamburguesa a{
+.menu-hamburguesa{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-hamburguesa a {
     text-decoration: none;
 }
-.menu-hamburguesa h5{
-    margin-left: .4rem;
-    margin-top: 1rem;
+
+.menu-hamburguesa h5 {
+    text-align: center;
 }
-.span-menu{
+
+.span-menu {
     margin-left: 1rem;
 }
 
 .nav {
     display: flex;
     padding-left: 0px;
-    height: -webkit-fill-available;
+    padding: 60px;
     margin: 0px;
     align-items: center;
-    justify-content: center;
+
 }
+
 .nav a {
-    padding: 0px;
-    margin: 5px;
+    padding: 10px;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
     text-align: center;
     color: rgb(180, 180, 186);
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 17px;
     font-family: 'Kanit', sans-serif;
     transition: .6s;
     list-style: none;
 }
+
 .nav a:hover {
     cursor: pointer;
     color: red;
 }
-@media only screen and (max-width: 768px) and (max-device-aspect-ratio: 1 / 1), (max-aspect-ratio: 1 / 1) {
-  
-    .brand_logo {
-        position: absolute;
-        left: 0px;
+
+@media only screen and (max-width: 768px) and (max-device-aspect-ratio: 1 / 1),
+(max-aspect-ratio: 1 / 1) {
+
+    .brand_logo img {
+        width: 140px;
+        height: 130px;
+        margin-top: 0;
     }
+
     .header_nav_container {
-        justify-content: flex-end;
+        justify-content: space-between;
     }
+
     .hamburger_container {
         display: flex;
     }
 
+}
+
+@media screen and (max-width: 1024px) {
+
+    .brand_logo {
+        margin-left: 40px;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 877px) {
+    .nav a {
+        display: none;
+    }
+
+    .header_nav_container li {
+        display: none;
+    }
 }

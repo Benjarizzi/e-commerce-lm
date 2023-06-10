@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2? family= Kanit:wght@300 & display=swap');
+
+.product-card {
+    margin-top: 60px;
+    border: solid .1rem rgba(192, 190, 190, 0.256);
+    text-align: center;
+    width: max-content;
+    font-family: 'Kanit', sans-serif;
+    background-color: white;
+    position: relative;
+    padding-bottom: 50px;
+    display: inline-block;
+}
+
+.product-card img {
+    width: 250px;
+    height: 150px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+}
+
+.product-card h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.product-card button {
+    background-color: #323f83;
+    color: white;
+  width: max-content;
+   padding: 10px;
+}
+.boton-ver-detalle{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    display: block;
+    padding-top:10px ;
+   
+}

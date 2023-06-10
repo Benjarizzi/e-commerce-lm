@@ -1,14 +1,15 @@
 body {
     background-color: #ededed;
-    width: -webkit-fill-available;
-    position: absolute;
+    width: 100%!important;
+    max-width: none;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0px;
+    padding: 0;
 }
 #root {
-    width: -webkit-fill-available;
+    width: 100%!important;
     height: max-content;
     position: absolute;
     display: block;

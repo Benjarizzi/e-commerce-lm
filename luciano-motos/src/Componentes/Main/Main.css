@@ -1,37 +1,46 @@
 @import url('https://fonts.googleapis.com/css2? family= Kanit:wght@300 & display=swap');
 
 .landing_container {
-    width: -webkit-fill-available;
-    position: absolute;
+    width: 100%!important;
     left: 0px;
-    top: 60px;
+    top: 80px;
 }
+
 .landing_navigate_container {
     display: flex;
-    position: absolute;
-    top: 0px;
+    bottom: 0px;
     left: 0px;
-    height: 500px;
+    height: max-content;
+
 }
+
 .navigate_options_container {
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    justify-content: space-around;
-    width: 100%; 
+    justify-content: center;
+    width: 100%;
     overflow: hidden;
-    z-index: 5000;
     bottom: 0px;
-    background-color: #323f83bd;
-    height: 100px;
+    background-color: transparent;
+    height:90px;
+    margin-bottom: 0px;
+    background-color: #9b0000cc;
 }
+
 .navigate_item {
     border-radius: 8px;
     padding: 5px;
+    padding-left:20px ;
+    padding-right: 20px;
     margin: 10px;
     transition: 0.2s linear;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    
 }
+
 .navigate_item a {
     display: flex;
     flex-direction: column;
@@ -39,18 +48,22 @@
     align-items: center;
     text-decoration: unset;
     font-family: 'Kanit', sans-serif;
-    color:white;
+    color: rgb(255, 255, 255);
     font-weight: 300;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
     transition: 0.2s linear;
+
 }
+
 .navigate_item svg {
     transition: 0.2s linear;
 }
+
 .navigate_item:hover svg {
     font-size: 45px !important;
 }
+
 .navigate_item p {
     margin: 3px;
 }
@@ -67,21 +80,23 @@
     width: 75%;
     overflow-x: hidden;
 }
+
 .search_box--show {
     opacity: 1;
 }
 
 
-.contenedor-opciones{
+.contenedor-opciones {
     display: flex;
     justify-content: space-around;
     background-color: rgba(255, 0, 0, 0.675);
-    width: 100%; 
+    width: 100%;
     overflow: hidden;
     z-index: 5000;
     margin-top: 20px;
 }
-.contenedor-opciones a{
+
+.contenedor-opciones a {
     color: white;
     text-decoration: none;
     text-align: center;
@@ -91,5 +106,322 @@
 }
 
 .contenedor-footer {
-    top:1200px;
+    top: 1200px;
+}
+
+.sumate-a-nosotros {
+    width: 100%;
+    height: max-content;
+    background-color: rgba(26, 23, 23, 0.963);
+    color: red;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sumate-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.sumate-contenedor-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+
+}
+
+.boton button {
+    background-color: transparent;
+    color: #c31420;
+    font-size: 17px;
+    text-transform: uppercase;
+    transition: .5s;
+    background-color: transparent;
+    border: none;
+    padding-top: 40px;
+
+}
+
+.boton button:hover {
+    color: #ff0011;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contenedor-mas-destacado {
+    
+    background-color: rgba(26, 23, 23, 0.963);
+    font-family: 'Kanit', sans-serif;
+    width: 100%!important;
+    padding-bottom: 50px;
+}
+
+.cambiar-color {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+    font-size: 40px;
+    word-spacing: 1rem;
+    background: linear-gradient(to right, #c31420, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: cambiar-color 3s linear infinite;
+    text-decoration: underline;
+    padding-top: 100px;
+    padding-bottom: 60px;
+
+}
+
+@keyframes cambiar-color {
+    0% {
+        text-shadow: 0 0 1px #c31420, 0 0 2px #c31420, 0 0 3px #c31420, 0 0 4px #c31420;
+    }
+
+    50% {
+        text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px white;
+    }
+
+    100% {
+        text-shadow: 0 0 1px #c31420, 0 0 2px #c31420, 0 0 3px #c31420, 0 0 4px #c31420;
+    }
+}
+
+.contenedor-motos {
+    display: flex;
+    padding: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+.mas-destacado-items {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.963);
+    border: none;
+}
+
+.mas-destacado-logo {
+    width: 500px;
+    height: 300px;
+    background-image: transparent;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.mas-destacado-logo p {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    left: 3%;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 1;
+}
+.img-bicicletas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+.p-bicicletas{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    top: 50%!important;
+    left: 50%!important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.img-motos{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+.p-motos{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    top: 50%!important;
+    left: 50%!important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 1;
+}
+
+.img-cascos{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+.p-cascos{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    top: 50%!important;
+    left: 50%!important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 1;
+}
+.img-equip{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+.p-equip{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    top: 50%!important;
+    left: 50%!important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 1;
+}
+.img-indu{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+.p-indu{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    top: 50%!important;
+    left: 50%!important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 1;
+}
+@media screen and (max-width: 894px){
+
+    .sumate-a-nosotros{
+        padding-top: 50px;
+        padding-bottom: 70px;
+        
+    }
+   .sumate-items{
+    margin-top: 50px;
+   }
+    .sumate-items h2{
+        font-size: 18px!important;
+        text-align: center;
+        
+    }
+    .sumate-items img{
+        height: 30px;
+    }
+    .icono-items{
+        font-size: 50px!important;
+    }
+    .boton button{
+        padding-top: 0;
+    }
+
+    .contenedor-mas-destacado{
+        width: 100%!important;
+        padding-left:15px ;
+        padding-right: 15px;
+    }
+    .contenedor-motos {
+        display: revert;
+        padding: 60px;
+        padding-left:0 ;
+        padding-right: 0;
+        width: 100%;
+    }
+    .contenedor-motos p{font-size: 35px;}
+    .mas-destacado-items{
+        height: 250px;
+        padding-left:0 ;
+        padding-right: 0;
+
+    }
+    .mas-destacado-logo{
+        height: 250px;
+        width: 100%;
+        
+    }
+  
+}
+@media screen and (max-width: 676px){
+    .navigate_item{
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+    .navigate_options_container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        height: 185px;
+    }
+    .sumate-a-nosotros{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .sumate-items h2{
+        font-size: 12px!important;
+        text-align: center;
+    }
+    .sumate-items img{
+        height: 20px;
+    }
+    .icono-items{
+        font-size: 40px!important;
+    }
+    .boton{
+        padding-top: 10px;
+    }
+    .boton button{
+        font-size: 10px;
+    }
+    .cambiar-color{
+        font-size: 30px;
+    }
+
 }
