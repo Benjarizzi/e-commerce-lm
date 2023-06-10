@@ -31,11 +31,19 @@ const handleMotoSearchDisplay = ()  => {
   return (
 
     <Box className="landing_container">
+<<<<<<< Updated upstream
 <Box sx={{ width: "100%", height: "500px", margin: "0 auto" }}>
       <ImageCarousel images={images} />
     </Box>
       <Grid className="landing_navigate_container" container sx={{justifyContent:"center"}}>
       {isMotoSearchDisplayed && (
+=======
+      <Box sx={{ width: "100%", height: "500px", margin: "0 auto", marginTop: "80px" }}>
+        <ImageCarousel images={images} />
+      </Box>
+      <Grid className="landing_navigate_container" container sx={{ justifyContent: "center", position: "relative" }}>
+        {isMotoSearchDisplayed && (
+>>>>>>> Stashed changes
           <div className={`search_box ${isMotoSearchDisplayed ? 'search_box--show' : ''}`}>
             <MotoSearch />
           </div>

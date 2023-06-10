@@ -64,6 +64,8 @@
     bottom: 130px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    width: 75%;
+    overflow-x: hidden;
 }
 .search_box--show {
     opacity: 1;

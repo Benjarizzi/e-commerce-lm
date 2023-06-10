@@ -8,13 +8,19 @@ import { Box, Grid, Button, Radio, FormControlLabel, FormGroup, Switch } from "@
 import "./Motos.css"
 
 const Motos = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({
+    products: [],
+    product_type: ''
+  });
 
   const location = useLocation();
-  const params = location.state;
+  let params = location.state;
+  if(params == null) {
+    params = {};
+  }
   console.log(params);
-
-  const [isFinancingRequired,setFinancingRequirement] = useState(params.finance_req);
+  
+  //const [isFinancingRequired,setFinancingRequirement] = useState(params.finance_req);
 
   const mainContainerRef = useRef(null);
   useEffect(() => {
@@ -28,10 +34,14 @@ const Motos = () => {
   
   const getMotos = () => {
 
-    axios.get('/motos.json')
+    axios.post('http://localhost:8000/fetch/motorbikes/',params)
     .then(response => {
       // Handle the response data here
-      setData(response.data);
+      setData(prevData => ({
+        ...prevData,
+        products: response.data,  // Update the 'products' property
+        product_type: 'moto'
+      }));
       
     })
     .catch(error => {
@@ -50,7 +60,7 @@ const Motos = () => {
         <Button>Crear alerta</Button>
       </Grid>
       <Grid item xs={12} md={8}>
-        <ItemList data={data}/>
+        <ItemList payload={data}/>
       </Grid>
     </Grid>
         
