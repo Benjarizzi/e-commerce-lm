@@ -14,23 +14,6 @@ function App() {
   return (
     <Box sx={{width: "-webkit-fill-available",height: "-webkit-fill-available",display:"block",position:"relative"}}>
       <BrowserRouter>
-<<<<<<< Updated upstream
-      <Navbar />
-      <Routes>
-                <Route path='/cart' element={<h1>Este es el carrito</h1>} />
-                <Route path='/' element={<Main />} />
-                <Route path='/home' element={<Main />} />
-                <Route path='/motos' element={<Motos />} />
-                <Route path='/itemlist' element={<ItemListContainer />} />
-                <Route path='/ubicacion' element={<Ubicacion />} />
-                <Route path="*" element={<Link to="/">La ruta a la que ingresaste no existe si quieres puedes volver a inicio clickeando aquí</Link>} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-    
-    </Box>
-    
-=======
         <Routes>
           <Route element={<Navbar />}>
             <Route element={<Footer />}>
@@ -57,10 +40,7 @@ function App() {
           <Route path="*" element={<Link to="/">La ruta a la que ingresaste no existe si quieres puedes volver a inicio clickeando aquí</Link>} />
         </Routes>
       </BrowserRouter>
-
-    </div>
-
->>>>>>> Stashed changes
+    </Box>
   );
 }
 
