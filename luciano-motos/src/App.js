@@ -51,7 +51,7 @@ function App() {
           <Route path="*" element={<Link to="/">La ruta a la que ingresaste no existe si quieres puedes volver a inicio clickeando aquí</Link>} />
         </Routes>
       </BrowserRouter>
-    </Box>
+    </div>
   );
 }
 
