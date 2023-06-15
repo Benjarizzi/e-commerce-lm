@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import "./Micuenta.css";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import OrderIcon from '@mui/icons-material/ShoppingCart';
+import AddressIcon from '@mui/icons-material/LocationOn';
+import InfoIcon from '@mui/icons-material/Info';
 import Pedidos from './Pedidos';
 import Direcciones from './Direcciones';
 import DetallesDeCuenta from './DetallesDeCuenta';
@@ -14,14 +17,17 @@ const Micuenta = () => {
         {
             nombre: "Pedidos",
             contenido: <Pedidos />,
+            icon: <OrderIcon />
         },
         {
             nombre: "Direcciones",
             contenido:<Direcciones />,
+            icon: <AddressIcon />
         },
         {
             nombre: "Información",
             contenido: <DetallesDeCuenta />,
+            icon: <InfoIcon />
         },
     ];
 
@@ -55,7 +61,7 @@ const Micuenta = () => {
 
                     <div className='opciones-cuenta'>
                         {secciones.map((seccion) => (
-                            <button className='boton-secciones' key={seccion.nombre} onClick={() => handleClick(seccion.nombre)}>{seccion.nombre}</button>
+                            <button className='boton-secciones' key={seccion.nombre} onClick={() => handleClick(seccion.nombre)}> {seccion.icon} {seccion.nombre}</button>
                         ))},
                     </div>
 
