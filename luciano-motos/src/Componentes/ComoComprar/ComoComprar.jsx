@@ -10,9 +10,11 @@ import WestIcon from '@mui/icons-material/West';
 import EastIcon from '@mui/icons-material/East';
 import SouthIcon from '@mui/icons-material/South';
 import { Link } from 'react-router-dom';
+import ScrollToTop from '../global/ScrollToTop';
 const ComoComprar = () => {
     return (
         <div>
+            < ScrollToTop />
             <div className='titulo'>
                 <h1>Cómo comprar ?</h1>
             </div>

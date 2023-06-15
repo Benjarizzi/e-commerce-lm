@@ -13,6 +13,7 @@ import { useState } from "react";
 import MotoSearch from "../Search/motos/motor_search"
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import ArticleIcon from '@mui/icons-material/Article';
+import ScrollToTop from "../global/ScrollToTop";
 
 const images = [];
 const motos_c = [{ "brand": "Honda", "model": "XR150", "year": "2022", "url": "https://http2.mlstatic.com/D_NQ_NP_934472-MLA53362059718_012023-W.webp" }];
@@ -33,6 +34,7 @@ const Main = () => {
   return (
 
     <Box className="landing_container">
+      < ScrollToTop />
       <Box sx={{ width: "100%", height: "500px", margin: "0 auto", marginTop: "80px" }}>
         <ImageCarousel images={images} />
       </Box>
@@ -116,7 +118,7 @@ const Main = () => {
             <ArticleIcon style={{ fontSize: "80px", color: "white" }} className="icono-items" />
           </Box>
           <div className="sumate-items" >
-            <div> <h2 style={{ fontSize: "30px", color: "white" }}>Contamos con servicio de gestoría</h2></div>
+            <div> <h2 style={{ fontSize: "30px", color: "white" }}>Contamos con servicio de gestoría propio.</h2></div>
           </div>
           <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "45px" }}>
             <ArticleIcon style={{ fontSize: "80px", color: "white" }} className="icono-items" />
@@ -124,9 +126,7 @@ const Main = () => {
 
         </div>
 
-        <div className="boton">
-          <button style={{ color: "white" }}>saber mas</button>
-        </div>
+  
 
       </div>
 

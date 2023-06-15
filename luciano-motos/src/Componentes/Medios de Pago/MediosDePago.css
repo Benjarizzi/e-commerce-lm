@@ -1,33 +1,37 @@
-.contenedor-medios-de-pago{
+.container-mp{
+    align-items: center;
+    text-align: start;
+}
+.contenedor-medios-de-pago1{
     width: 100%;
     align-items: center;
     display: flex;
     flex-direction: column;
     padding-top: 40px;
-    padding-bottom: 120px;
+    padding-bottom: 40px;
     text-align: center;
+    border-top: solid 1px black;
    
 }
-.contenedor-medios-de-pago h3{
-    font-size: 40px;
+.contenedor-medios-de-pago1 p{
+    font-size: 20px;
     text-transform: uppercase;
-    
 }
 
 .img-medios {
-    margin-top: 50px;
-    width:700px ;
-    height: 200px;
-    border-radius: 5px;
+    margin-top: 30px;
+    width:400px ;
+    height: 180px;
+    border-radius:0;
 }
 .tarjetas{
-    background-color: white;
+    background-color: transparent;
     margin-top: 20px;
     border-radius: 5px;
 }
 .tarjetas img{
-    width: 80px;
-    height: 40px;
+    width: 60px;
+    height: 30px;
     margin: 10px;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -38,6 +42,38 @@
     filter: none;
     
 }
+.contado-efectivo{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+.contado-efectivo p{
+font-size: 20px;
+text-transform: uppercase;
+
+margin-top: 0;
+font-weight: 700;
+}
+.financiaciones{
+    
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: center;
+    border-top: solid 1px black;
+    
+}
+.financiaciones p{
+font-size: 20px;
+text-transform: uppercase;
+text-align: start;
+}
+.financiaciones span{
+    font-weight: bold;
+}
 @media screen and (max-width: 800px){
     .contenedor-medios-de-pago h3{
         font-size: 20px;
@@ -45,12 +81,13 @@
         padding-right: 60px;
     }
     .img-medios{
-        width: 300px;
-        height: 100px;
+        width: 350px;
+        height: 150px;
     }
 
     .tarjetas img{
-        width:60px ;
-        height: 30px;
+        width:45px ;
+        height: 25px;
+       filter: none;
     }
 }

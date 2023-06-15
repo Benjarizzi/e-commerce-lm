@@ -8,15 +8,42 @@
     background-color: white;
 }
 .contenedor-arriba{
+    width: 100%;
     display: flex;
     color: rgb(0, 0, 0);
     justify-content:space-between;
     padding: 2rem;
     align-items: start;
 }
-.contenedor-arriba img{
-    width:800px ;
+
+.img-grande{
+    width:100% ;
     height:max-content;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.img-grande img{
+    width: 100%;
+    transition: transform 0.3s;
+}
+.img-grande img:hover{
+    transform: scale(1.2);
+    
+}
+.caract-principales{
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding-top: 40px;
+    padding-left: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.caract-principales img{
+    
+    display: none;
 }
 .contenedor-arriba h2{
     text-transform: uppercase;
@@ -90,8 +117,7 @@
     display: flex;
     justify-content: center;
     align-items: end;
-    padding-left: 20px;
-    
+    text-align: center;
 }
 .f-t-derecha{
     text-align: start;
@@ -140,15 +166,6 @@
     background-color: red;
     color: white;
 }
-.caract-principales{
-    width: 100%;
-    text-align: center;
-    background-color: white;
-    padding-top: 40px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
 
 .boton-consultar{
   
@@ -179,4 +196,56 @@
 .boton-consultar button:hover{
     background-color: #25d366;
     color: white;
+}
+@media screen and (max-width: 676px){
+    .contenedor-detail{
+        margin-top: 30px;
+    }
+    .contenedor-arriba{
+        display: flex;
+        flex-direction: column;
+    }
+    .boton-consultar button{
+        background-color: #25d366;
+        color: white;
+    }
+    .img-grande{
+        display: none;
+    }
+    .caract-principales{
+        padding-left: 0;
+    }
+    .caract-principales img{
+        display: flex;
+        width: 100%;
+        padding-right: 30px;
+
+    }
+    .contenedor-arriba h3{
+        padding-top: 40px;
+    }
+    .contenedor-abajo{
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+    .ficha-tecnica{
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .simulador-credito{
+        margin-top: 30px;
+    }
+    .simulador-credito button{
+        width: 200px;
+        background-color: red;
+        color: white;
+    }
+}
+@media screen and (max-width: 392px){
+    .ficha-tecnica{
+        font-size: 8px;
+        font-weight: 600;
+    }
 }

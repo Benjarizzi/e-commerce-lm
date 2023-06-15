@@ -3,9 +3,11 @@ import "./ItemDetail.css";
 import { Grid } from '@mui/material';
 import { Link } from "react-router-dom";
 import { MdOutlineWhatsapp } from "react-icons/md"
+import ScrollToTop from '../global/ScrollToTop';
 const ItemDetail = () => {
     return (
         <div>
+            < ScrollToTop />
             <div className='contenedor-detail'>
                 <Grid container>
 
@@ -13,12 +15,13 @@ const ItemDetail = () => {
 
                         <div className='contenedor-arriba'>
 
-                            <div >
+                            <div className='img-grande'>
                                 <img src="https://http2.mlstatic.com/D_NQ_NP_2X_833308-MLA46012313284_052021-F.webp" alt="" />
                             </div>
                             <div className='caract-principales'>
                                 <h2>honda xr 150l</h2>
                                 <p>2023-0km</p>
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_833308-MLA46012313284_052021-F.webp" alt="" />
                                 <h3>$1.000.000</h3>
                                 <div style={{ paddingTop: "60px" }}>
                                     <div className='agregar-al-carrito'>
@@ -39,10 +42,10 @@ const ItemDetail = () => {
                     <Grid item xs={12}>
                         <div className='contenedor-abajo'>
 
-                            <div>
+                            <div className='contenedor-ficha-tecnica'>
                                 <div className='ficha-tecnica'>
                                     <div className='f-t-derecha'>
-                                        <h3>ficha técnica:</h3>
+                                        <h3>Ficha técnica:</h3>
                                         <p>Motor:	                </p>
                                         <p>Cilindrada:	            </p>
                                         <p>Relación de compresión:</p>

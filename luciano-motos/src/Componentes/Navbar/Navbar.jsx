@@ -31,7 +31,7 @@ const Navbar = ({ onClose }) => {
 
                     <Grid item xs={6} md={4} sm={4} >
                         <Box className="brand_logo">
-                            <Link to="/" style={{ alignItems: "center", display: "flex" }}><img src="http://localhost:3000/icons/luciano.png" alt="" /></Link>
+                            <Link to="/" style={{ alignItems: "center", display: "flex" }}><img src="http://localhost:3000/icons/luciano1.png" alt="" /></Link>
                         </Box>
                     </Grid>
 

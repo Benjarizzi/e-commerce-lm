@@ -17,6 +17,7 @@ import Pagos from './Componentes/Pagos/Pagos';
 import Micuenta from './Componentes/Micuenta/Micuenta';
 import ComoComprar from './Componentes/ComoComprar/ComoComprar';
 import PoliticaDeDevolucion from './Componentes/PoliticaDeDevolucion/PoliticaDeDevolucion';
+import PanelDeControl from './Componentes/PanelDeControl/PanelDeControl';
 
 
 
@@ -44,9 +45,11 @@ function App() {
               <Route path='/politica-de-devolucion' element={<PoliticaDeDevolucion />}/>
               <Route path='/nosotros' element={<Nosotros />} />
               <Route path='/pagos' element={<Pagos />} />
+            
 
             </Route>
           </Route>
+          <Route path='panel' element={<PanelDeControl />} />
           <Route path="*" element={<Link to="/">La ruta a la que ingresaste no existe si quieres puedes volver a inicio clickeando aquí</Link>} />
         </Routes>
       </BrowserRouter>
