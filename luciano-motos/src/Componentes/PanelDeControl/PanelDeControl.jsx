@@ -48,6 +48,10 @@ const PanelDeControl = () => {
         nuevasFichasTecnicas.splice(index, 1);
         setFichasTecnicas(nuevasFichasTecnicas);
     };
+    const [mostrarContenido, setMostrarContenido] = useState(false);
+    const cerrarContenido = () => {
+        setMostrarContenido(false);
+      };
 
     return (
         <div >
@@ -84,8 +88,9 @@ const PanelDeControl = () => {
                     </div>
                     {contenidoBoton1Visible.bicicletas &&
                         <div className='formulario-bicicletas'>
-                            <h2>Rellena el siguiente formulario para añadir una bicicleta:</h2>
+                           
                             <div >
+                            <h2>Rellena el siguiente formulario para añadir una bicicleta:</h2>
                                 <div className='contenedor-input-panel'>
                                     <label htmlFor="Url">Ingrese la URL de la imagen tipo producto como en el siguiente ejemplo:<br />
                                         <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU</a></label>
@@ -118,11 +123,22 @@ const PanelDeControl = () => {
                                     <label htmlFor="stock">Ingrese el stock</label>
                                     <input type="text" placeholder='Cantidad en unidades' />
                                 </div>
+                                <div className='boton-confirmar'>
+                                    <button onClick={() => setMostrarContenido(true)}>AÑADIR PRODUCTO</button>
+                                    <button onClick={cerrarContenido}>MODIFICAR</button>
+                                </div>
+                               
                             </div>
-                            <div className='boton-confirmar'>
-                                <button>AÑADIR PRODUCTO</button>
+                            {mostrarContenido && (
+                                    <div className='contenido-adicional'>
+                                        <img src="" alt="" />
+                                        <h1>Nombre del producto</h1>
+                                        <p>precio</p>
+                                        <p>Ficha técnica</p>
+                                        <button>Confirmar</button>
 
-                            </div>
+                                    </div>
+                                )}
 
                         </div>}
                     {contenidoBoton1Visible.motos &&
