@@ -51,6 +51,30 @@
 .contenido-boton1 p{
     font-size: 25px;
 }
+.contenido-boton1 input{
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 400px;
+}
+.contenido-boton1 button{
+    padding: 10px;
+    border: none;
+    margin-bottom: 20px;
+    width: 150px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition-duration: 0.3s;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.411);
+}
+.contenido-boton1 button:hover{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.466);
+    transform: translateY(-5px);
+}
 .boton1-secciones{
     display: flex;
     justify-content: space-between;
@@ -148,6 +172,85 @@
     width: 300px;
     height: 200px;
 }
+.contenido-adicional p{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.boton-confirmar1 button{
+    width: 100%;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 8px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.411);
+    margin-right: 10px;
+}
+.boton-confirmar1 button:hover{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.466);
+    transform: translateY(-5px);
+}
+.ft{
+    display: flex;
+    justify-content: space-between;
+
+}
+.ft p{
+    font-size: 17px;
+}
+
+.contenido-busqueda{
+    background-color:black;
+    color: white;
+    padding-left:30px;
+    margin-top: 15px;
+}
+.lista-productos{
+    display: flex;
+    justify-content: start;
+    padding: 30px;
+    padding-left: 0;
+    border-bottom: solid 1px white;
+    padding-bottom: 20px;
+}
+.lista-productos p{
+    font-size: 30px;
+    margin-right: 150px;
+    text-transform: uppercase;
+   
+}
+.lista-productos button{
+    padding: 8px;
+    text-transform: uppercase;
+    cursor:pointer;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 15px;
+    width: 100px;
+    transition-duration: 0.3s;
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.616);
+   
+}
+.lista-productos button:hover{
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.61);
+    transform: translateY(-5px);
+}
+.boton-eliminar-producto{
+    background-color: red!important;
+}
+
+
+
+
+
+
+
+
 
 .contenido-boton2{
     display: flex;

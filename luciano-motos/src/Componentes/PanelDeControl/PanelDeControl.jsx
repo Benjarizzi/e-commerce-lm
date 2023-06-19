@@ -4,7 +4,9 @@ import "./PanelDeControl.css";
 const PanelDeControl = () => {
     const [boton1Visible, setBoton1Visible] = useState(false);
     const [botonEliminarVisible, setBotonEliminarVisible] = useState(false);
+    const [busquedaVisible, setBusquedaVisible] = useState(false);
     const [botonModificarVisible, setBotonModificarVisible] = useState(false);
+    const [contenidoBusquedaVisible, setContenidoBusquedaVisible] = useState(false);
     const [contenidoBoton1Visible, setContenidoBoton1Visible] = useState({
         bicicletas: false,
         motos: false,
@@ -24,11 +26,15 @@ const PanelDeControl = () => {
         setBoton1Visible(false);
         setBotonModificarVisible(false);
     };
+    const toggleBusqueda = () => {
+        setBusquedaVisible(!busquedaVisible);
+    };
 
     const toggleContenidoBotonModificar = () => {
         setBotonModificarVisible(!botonModificarVisible);
         setBoton1Visible(false);
         setBotonEliminarVisible(false);
+        setContenidoBusquedaVisible(false);
     };
 
     const toggleContenidoBoton1Adicional = (contenido) => {
@@ -51,7 +57,7 @@ const PanelDeControl = () => {
     const [mostrarContenido, setMostrarContenido] = useState(false);
     const cerrarContenido = () => {
         setMostrarContenido(false);
-      };
+    };
 
     return (
         <div >
@@ -86,11 +92,11 @@ const PanelDeControl = () => {
                             <button onClick={() => toggleContenidoBoton1Adicional("indumentaria")}>INDUMENTARIA</button>
                         </div>
                     </div>
+
                     {contenidoBoton1Visible.bicicletas &&
                         <div className='formulario-bicicletas'>
-                           
                             <div >
-                            <h2>Rellena el siguiente formulario para añadir una bicicleta:</h2>
+                                <h2>Rellena el siguiente formulario para añadir una bicicleta:</h2>
                                 <div className='contenedor-input-panel'>
                                     <label htmlFor="Url">Ingrese la URL de la imagen tipo producto como en el siguiente ejemplo:<br />
                                         <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU</a></label>
@@ -103,6 +109,10 @@ const PanelDeControl = () => {
                                 <div className='contenedor-input-panel'>
                                     <label htmlFor="brand">Ingrese el modelo del producto</label>
                                     <input type="text" placeholder='Modelo' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="color">Ingrese el color del producto</label>
+                                    <input type="text" placeholder='Color' />
                                 </div>
                                 <div className='contenedor-input-panel'>
                                     <label htmlFor="precio">Ingrese el precio del producto</label>
@@ -127,55 +137,365 @@ const PanelDeControl = () => {
                                     <button onClick={() => setMostrarContenido(true)}>AÑADIR PRODUCTO</button>
                                     <button onClick={cerrarContenido}>MODIFICAR</button>
                                 </div>
-                               
                             </div>
                             {mostrarContenido && (
-                                    <div className='contenido-adicional'>
-                                        <img src="" alt="" />
-                                        <h1>Nombre del producto</h1>
-                                        <p>precio</p>
-                                        <p>Ficha técnica</p>
-                                        <button>Confirmar</button>
-
+                                <div className='contenido-adicional'>
+                                    <img src="" alt="" />
+                                    <h1>Nombre del producto</h1>
+                                    <p>color</p>
+                                    <p>precio</p>
+                                    <p>Ficha técnica:</p>
+                                    <div className='ft'>
+                                        <p>ejemplo 1:</p>
+                                        <p>ejemplo 1</p>
                                     </div>
-                                )}
+                                    <p>Cantidad</p>
+
+                                    <div className='boton-confirmar1'>
+                                        <button >Confirmar</button>
+                                    </div>
+                                </div>
+                            )}
 
                         </div>}
+
                     {contenidoBoton1Visible.motos &&
-                        <div>
-                            Contenido adicional para MOTOS
+                        <div className='formulario-bicicletas'>
+
+                            <div >
+                                <h2>Rellena el siguiente formulario para añadir una moto:</h2>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="Url">Ingrese la URL de la imagen tipo producto como en el siguiente ejemplo:<br />
+                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU</a></label>
+                                    <input type="text" placeholder='URL' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese la marca del producto</label>
+                                    <input type="text" placeholder='Marca' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese el modelo del producto</label>
+                                    <input type="text" placeholder='Modelo' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="color">Ingrese el color del producto</label>
+                                    <input type="text" placeholder='Color' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="precio">Ingrese el precio del producto</label>
+                                    <input type="text" placeholder='$' />
+                                </div>
+                                <div className="contenedor-input-panel">
+                                    <label htmlFor="Ficha tecnica">Ingrese la ficha técnica del producto</label>
+                                    {fichasTecnicas.map((ficha, index) => (
+                                        <div className="ficha-tecnica-panel" key={index}>
+                                            <input type="text" />
+                                            <input type="text" />
+                                            <button onClick={() => eliminarFichaTecnica(index)}>X</button>
+                                        </div>
+                                    ))}
+                                    <button className='boton-agregar-div' onClick={agregarFichaTecnica}>Agregar slot</button>
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="stock">Ingrese el stock</label>
+                                    <input type="text" placeholder='Cantidad en unidades' />
+                                </div>
+                                <div className='boton-confirmar'>
+                                    <button onClick={() => setMostrarContenido(true)}>AÑADIR PRODUCTO</button>
+                                    <button onClick={cerrarContenido}>MODIFICAR</button>
+                                </div>
+
+                            </div>
+                            {mostrarContenido && (
+                                <div className='contenido-adicional'>
+                                    <img src="" alt="" />
+                                    <h1>Nombre del producto</h1>
+                                    <p>color</p>
+                                    <p>precio</p>
+                                    <p>Ficha técnica:</p>
+                                    <div className='ft'>
+                                        <p>ejemplo 1:</p>
+                                        <p>ejemplo 1</p>
+                                    </div>
+                                    <p>Cantidad</p>
+
+                                    <div className='boton-confirmar1'>
+                                        <button >Confirmar</button>
+                                    </div>
+                                </div>
+                            )}
+
                         </div>}
+
                     {contenidoBoton1Visible.cascos &&
-                        <div>
-                            Contenido adicional para CASCOS
+                        <div className='formulario-bicicletas'>
+
+                            <div >
+                                <h2>Rellena el siguiente formulario para añadir un casco:</h2>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="Url">Ingrese la URL de la imagen tipo producto como en el siguiente ejemplo:<br />
+                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU</a></label>
+                                    <input type="text" placeholder='URL' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese la marca del producto</label>
+                                    <input type="text" placeholder='Marca' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese el modelo del producto</label>
+                                    <input type="text" placeholder='Modelo' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="color">Ingrese el color del producto</label>
+                                    <input type="text" placeholder='Color' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="color">Ingrese el talle del producto</label>
+                                    <input type="text" placeholder='Talle' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="precio">Ingrese el precio del producto</label>
+                                    <input type="text" placeholder='$' />
+                                </div>
+                                <div className="contenedor-input-panel">
+                                    <label htmlFor="Ficha tecnica">Ingrese las especificaciónes del producto</label>
+                                    {fichasTecnicas.map((ficha, index) => (
+                                        <div className="ficha-tecnica-panel" key={index}>
+                                            <input type="text" />
+                                            <input type="text" />
+                                            <button onClick={() => eliminarFichaTecnica(index)}>X</button>
+                                        </div>
+                                    ))}
+                                    <button className='boton-agregar-div' onClick={agregarFichaTecnica}>Agregar slot</button>
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="stock">Ingrese el stock</label>
+                                    <input type="text" placeholder='Cantidad en unidades' />
+                                </div>
+                                <div className='boton-confirmar'>
+                                    <button onClick={() => setMostrarContenido(true)}>AÑADIR PRODUCTO</button>
+                                    <button onClick={cerrarContenido}>MODIFICAR</button>
+                                </div>
+
+                            </div>
+                            {mostrarContenido && (
+                                <div className='contenido-adicional'>
+                                    <img src="" alt="" />
+                                    <h1>Nombre del producto</h1>
+                                    <p>color</p>
+                                    <p>Talle</p>
+                                    <p>precio</p>
+                                    <p>Especificaciónes:</p>
+                                    <div className='ft'>
+                                        <p>ejemplo 1:</p>
+                                        <p>ejemplo 1</p>
+                                    </div>
+                                    <p>Cantidad</p>
+
+                                    <div className='boton-confirmar1'>
+                                        <button >Confirmar</button>
+                                    </div>
+                                </div>
+                            )}
+
                         </div>}
+
                     {contenidoBoton1Visible.equipamiento &&
-                        <div>
-                            Contenido adicional para EQUIPAMIENTO
+                        <div className='formulario-bicicletas'>
+
+                            <div >
+                                <h2>Rellena el siguiente formulario para añadir equipamiento:</h2>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="Url">Ingrese la URL de la imagen tipo producto como en el siguiente ejemplo:<br />
+                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU</a></label>
+                                    <input type="text" placeholder='URL' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese la marca del producto</label>
+                                    <input type="text" placeholder='Marca' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese el modelo del producto</label>
+                                    <input type="text" placeholder='Modelo' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="color">Ingrese el color del producto</label>
+                                    <input type="text" placeholder='Color' />
+                                </div>
+
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="precio">Ingrese el precio del producto</label>
+                                    <input type="text" placeholder='$' />
+                                </div>
+                                <div className="contenedor-input-panel">
+                                    <label htmlFor="Ficha tecnica">Ingrese las especificaciónes del producto</label>
+                                    {fichasTecnicas.map((ficha, index) => (
+                                        <div className="ficha-tecnica-panel" key={index}>
+                                            <input type="text" />
+                                            <input type="text" />
+                                            <button onClick={() => eliminarFichaTecnica(index)}>X</button>
+                                        </div>
+                                    ))}
+                                    <button className='boton-agregar-div' onClick={agregarFichaTecnica}>Agregar slot</button>
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="stock">Ingrese el stock</label>
+                                    <input type="text" placeholder='Cantidad en unidades' />
+                                </div>
+                                <div className='boton-confirmar'>
+                                    <button onClick={() => setMostrarContenido(true)}>AÑADIR PRODUCTO</button>
+                                    <button onClick={cerrarContenido}>MODIFICAR</button>
+                                </div>
+
+                            </div>
+                            {mostrarContenido && (
+                                <div className='contenido-adicional'>
+                                    <img src="" alt="" />
+                                    <h1>Nombre del producto</h1>
+                                    <p>color</p>
+                                    <p>precio</p>
+                                    <p>Especificaciónes:</p>
+                                    <div className='ft'>
+                                        <p>ejemplo 1:</p>
+                                        <p>ejemplo 1</p>
+                                    </div>
+                                    <p>Cantidad</p>
+                                    <div className='boton-confirmar1'>
+                                        <button >Confirmar</button>
+                                    </div>
+                                </div>
+                            )}
+
                         </div>}
+
                     {contenidoBoton1Visible.indumentaria &&
-                        <div>
-                            Contenido adicional para INDUMENTARIA
+                        <div className='formulario-bicicletas'>
+
+                            <div >
+                                <h2>Rellena el siguiente formulario para añadir indumentaria:</h2>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="Url">Ingrese la URL de la imagen tipo producto como en el siguiente ejemplo:<br />
+                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8-JaVi0Y2Ha8wTwLLo6k7Gt24CV8z_A4BQ&usqp=CAU</a></label>
+                                    <input type="text" placeholder='URL' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese la marca del producto</label>
+                                    <input type="text" placeholder='Marca' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese el modelo del producto</label>
+                                    <input type="text" placeholder='Modelo' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="color">Ingrese el color del producto</label>
+                                    <input type="text" placeholder='Color' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="color">Ingrese el talle del producto</label>
+                                    <input type="text" placeholder='Talle' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="precio">Ingrese el precio del producto</label>
+                                    <input type="text" placeholder='$' />
+                                </div>
+                                <div className="contenedor-input-panel">
+                                    <label htmlFor="Ficha tecnica">Ingrese las especificaciónes del producto</label>
+                                    {fichasTecnicas.map((ficha, index) => (
+                                        <div className="ficha-tecnica-panel" key={index}>
+                                            <input type="text" />
+                                            <input type="text" />
+                                            <button onClick={() => eliminarFichaTecnica(index)}>X</button>
+                                        </div>
+                                    ))}
+                                    <button className='boton-agregar-div' onClick={agregarFichaTecnica}>Agregar slot</button>
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="stock">Ingrese el stock</label>
+                                    <input type="text" placeholder='Cantidad en unidades' />
+                                </div>
+                                <div className='boton-confirmar'>
+                                    <button onClick={() => setMostrarContenido(true)}>AÑADIR PRODUCTO</button>
+                                    <button onClick={cerrarContenido}>MODIFICAR</button>
+                                </div>
+
+                            </div>
+                            {mostrarContenido && (
+                                <div className='contenido-adicional'>
+                                    <img src="" alt="" />
+                                    <h1>Nombre del producto</h1>
+                                    <p>color</p>
+                                    <p>Talle</p>
+                                    <p>precio</p>
+                                    <p>Especificaciónes:</p>
+                                    <div className='ft'>
+                                        <p>ejemplo 1:</p>
+                                        <p>ejemplo 1</p>
+                                    </div>
+                                    <p>Cantidad</p>
+
+                                    <div className='boton-confirmar1'>
+                                        <button >Confirmar</button>
+                                    </div>
+                                </div>
+                            )}
+
                         </div>}
+
                 </div>
             )}
-            {botonEliminarVisible && (
-                <div>
-                    <div className='contenido-boton1'>
-                        <h1>Eliminar</h1>
-                        <input type="text" placeholder="Ingrese el contenido" />
-                    </div>
-                </div>
-            )}
+
+
             {botonModificarVisible && (
                 <div>
                     <div className='contenido-boton1'>
-                        <h1>Modificar</h1>
-                        <input type="text" placeholder="Ingrese el contenido" />
-                        <button>Guardar</button>
+
+                        <p>Ingrese la marca que desea modificar</p>
+                        <input type="text" placeholder="Marca" />
+                        <button onClick={() => setContenidoBusquedaVisible(true)}>Buscar</button>
                     </div>
+                    {contenidoBusquedaVisible && (
+                        <div className="contenido-busqueda">
+                            <h1>Productos cargados de la marca: </h1>
+                            <div className='lista-productos'>
+                                <p>producto 1</p>
+                                <button>modificar</button>
+                            </div>
+                            <div className='lista-productos'>
+                                <p>producto 2</p>
+                                <button>modificar</button>
+                            </div>
+                        </div>
+                    )}
                 </div>
+
             )}
+
+            {botonEliminarVisible && (
+                <div>
+                    <div className='contenido-boton1'>
+                        <p>ingrese la marca del producto que desea eliminar</p>
+                        <input type="text" placeholder='Marca' />
+                        <button onClick={toggleBusqueda}>Buscar</button>
+
+                    </div>
+                    {busquedaVisible && (
+                        <div className='contenido-busqueda'>
+                            <h1>Productos cargados de la marca: </h1>
+                            <div className='lista-productos'>
+                                <p>producto 1</p>
+                                <button className='boton-eliminar-producto'>Eliminar</button>
+                            </div>
+                            <div className='lista-productos'>
+                                <p>producto 2</p>
+                                <button className='boton-eliminar-producto'>Eliminar</button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+
+
+            )}
+
         </div>
     );
 };
