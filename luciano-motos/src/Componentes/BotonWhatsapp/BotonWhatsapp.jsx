@@ -6,7 +6,7 @@ const BotonWhatsapp = () => {
   return (
     <div>
       <button class="whatsapp-button">
-        <Link to="https://api.whatsapp.com/send?phone=123456789" target="_blank" >
+        <Link to="https://wa.me/5493471522202/?text=Hola!, me interesa comprar una moto" target="_blank" >
           <WhatsAppIcon />
         </Link>
       </button>

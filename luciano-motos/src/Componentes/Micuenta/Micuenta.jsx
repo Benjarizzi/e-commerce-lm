@@ -7,6 +7,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import Pedidos from './Pedidos';
 import Direcciones from './Direcciones';
 import DetallesDeCuenta from './DetallesDeCuenta';
+import ScrollToTop from '../global/ScrollToTop';
 
 
 const Micuenta = () => {
@@ -44,8 +45,8 @@ const Micuenta = () => {
 
     return (
         <div>
-
-            <div className='title'>
+< ScrollToTop />
+            <div className='titulo'>
             <h1 id='titulo'>Mi cuenta {seccion && seccion !== "Mi cuenta" && "/"} {seccion}</h1>
             </div>
 

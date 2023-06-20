@@ -75,7 +75,7 @@ const Footer = () => {
 
                                 <Box className="ubi-footer">
                                     <LocalPhoneIcon style={{ paddingBottom: "3px", }} />
-                                    <Link to="/horarios"><li>+54 9 1234567890</li></Link>
+                                    <Link to="https://wa.me/5493471529986/?text=Hola!, me gustaría consultar sobre" target="_blank"><li>+54 9 3471529986</li></Link>
                                 </Box>
 
                                 <Box className="ubi-footer">
@@ -95,8 +95,8 @@ const Footer = () => {
                                 <Box className="links-redes" sx={{ alignItems: "center" }}>
                                     <Link to="https://www.instagram.com/lucianomotos.cdg/" target="_blank" ><InstagramIcon style={{ fontSize: "30px" }} className="redes-sociales" /></Link>
                                     <Link to="https://www.facebook.com/pages/category/motorcycles/Luciano-Motos-CDG-470665053697008/" target="_blank"><FacebookIcon style={{ fontSize: "30px" }} className="redes-sociales" /></Link>
-                                    <Link to="*" target="_blank"><EmailIcon style={{ fontSize: "30px" }} className="redes-sociales" /></Link>
-                                    <Link to="https://api.whatsapp.com/send?phone=123456789" className="whatsapp-button" style={{ fontSize: "24px" }} target="_blank"><FontAwesomeIcon icon={faWhatsapp} color="white" /></Link>
+                                    <Link to="mailto:lucianomotos1@hotmail.com" target="_blank"><EmailIcon style={{ fontSize: "30px" }} className="redes-sociales" /></Link>
+                                    <Link to="https://wa.me/5493471522202/?text=Hola!, me interesa comprar una moto" className="whatsapp-button" style={{ fontSize: "24px" }} target="_blank"><FontAwesomeIcon icon={faWhatsapp} color="white" /></Link>
                                 </Box>
                             </Box>
                         </Grid>
@@ -109,7 +109,7 @@ const Footer = () => {
                         <h4>Copyright 2023</h4>
                         <h4>Luciano Motos</h4>
                         <p>Todos los derechos reservados</p>
-                        <Link to="*"><p>Términos y condiciones</p></Link>
+                        <Link to="terminosycondiciones"><p>Términos y condiciones</p></Link>
                     </div>
                 </Grid>
 

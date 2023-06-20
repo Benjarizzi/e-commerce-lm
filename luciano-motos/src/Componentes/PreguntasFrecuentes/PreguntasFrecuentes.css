@@ -12,50 +12,58 @@ dd {
 }
 .contenedor-pf{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content:center;
     text-align: start;
+    margin: 0;
+    padding: 0;
 }
 .contenedor-pf h1{
     text-align: center;
 }
+.contenedor-conversacion{
+    padding-left:80px ;
+    padding-right: 80px;
+}
 /* Estilos para simular una conversación en Twitter */
 dl.twitter-conversation {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: transparent;
+    
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    margin-top:60px;
+    
     overflow: hidden;
     width: 100%;
     font-family: 'Kanit', sans-serif;
 }
 dt.tweet {
     align-items: center;
-    color: #1da1f2;
+    color: grey;
     display: flex;
     font-size: 18px;
     margin-bottom: 5px;
     padding: 10px;
 }
 dt.tweet:before {
-    content: "\f099";
+    content: "";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-right: 10px;
 }
 
 dd.tweet {
-    background-color: #f5f8fa;
-    border-radius: 4px;
+    background-color: transparent;
+    border-radius: 0;
     color: #14171a;
     font-size: 16px;
     padding: 20px;
+    text-decoration: none;
 }
 dd.tweet:before {
-    content: "\f10e";
+    
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-right: 10px;
@@ -93,14 +101,14 @@ dd.tweet:last-child {
 }
 /* Estilos para las respuestas */
 dd.tweet .response {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: transparent;
+   
     border-radius: 4px;
     margin-top: 10px;
     padding: 10px;
 }
 dd.tweet .response:before {
-    content: "\f10e";
+    
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-right: 10px;

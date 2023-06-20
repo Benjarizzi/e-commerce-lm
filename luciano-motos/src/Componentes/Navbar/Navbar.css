@@ -37,10 +37,7 @@
 
 .brand_logo img {
     width: 220px;
-    height: 175px;
-    margin-top: 10px;
-
-
+    height:75px;
 
 }
 
@@ -100,9 +97,8 @@
     display: flex;
     padding-left: 0px;
     padding: 60px;
-    margin: 0px;
-    align-items: center;
-
+    align-items:center;
+    height: 80px;
 }
 
 .nav a {
@@ -129,7 +125,7 @@
 
     .brand_logo img {
         width: 140px;
-        height: 130px;
+        
         margin-top: 0;
     }
 

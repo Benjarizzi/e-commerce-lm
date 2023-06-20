@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { MdOutlineWhatsapp } from "react-icons/md"
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import ScrollToTop from '../global/ScrollToTop';
 
 const ItemDetail = (payload) => {
     const item_type = payload["item-type"];
@@ -36,6 +37,7 @@ const ItemDetail = (payload) => {
 
     return (
         <div>
+            < ScrollToTop />
             <div className='contenedor-detail'>
                 <Grid container>
 
@@ -43,12 +45,13 @@ const ItemDetail = (payload) => {
 
                         <div className='contenedor-arriba'>
 
-                            <div >
+                            <div className='img-grande'>
                                 <img src="https://http2.mlstatic.com/D_NQ_NP_2X_833308-MLA46012313284_052021-F.webp" alt="" />
                             </div>
                             <div className='caract-principales'>
                                 <h2>honda xr 150l</h2>
                                 <p>2023-0km</p>
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_833308-MLA46012313284_052021-F.webp" alt="" />
                                 <h3>$1.000.000</h3>
                                 <div style={{ paddingTop: "60px" }}>
                                     <div className='agregar-al-carrito'>
@@ -61,7 +64,7 @@ const ItemDetail = (payload) => {
                                     </div>
 
                                 </div>
-                                <div className='boton-consultar'><Link to="https://api.whatsapp.com/send?phone=123456789" target='_blank' style={{ textDecoration: "none" }}><button><MdOutlineWhatsapp style={{ paddingTop: "9px" }} /> <p>Consultar</p></button></Link></div>
+                                <div className='boton-consultar'><Link to="https://wa.me/5493471522202/?text=Hola!, me interesa comprar una moto" target='_blank' style={{ textDecoration: "none" }}><button><MdOutlineWhatsapp style={{ paddingTop: "9px" }} /> <p>Consultar</p></button></Link></div>
                             </div>
 
                         </div>
@@ -69,10 +72,10 @@ const ItemDetail = (payload) => {
                     <Grid item xs={12}>
                         <div className='contenedor-abajo'>
 
-                            <div>
+                            <div className='contenedor-ficha-tecnica'>
                                 <div className='ficha-tecnica'>
                                     <div className='f-t-derecha'>
-                                        <h3>ficha técnica:</h3>
+                                        <h3>Ficha técnica:</h3>
                                         <p>Motor:	                </p>
                                         <p>Cilindrada:	            </p>
                                         <p>Relación de compresión:</p>

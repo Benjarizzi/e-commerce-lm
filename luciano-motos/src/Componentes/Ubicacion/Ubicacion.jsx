@@ -2,10 +2,12 @@ import { Grid } from "@mui/material"
 import PlaceIcon from "@mui/icons-material/Place";
 import EastIcon from '@mui/icons-material/East';
 import "./Ubicacion.css"
+import ScrollToTop from "../global/ScrollToTop";
 
 const Ubicacion = () => {
   return (
     <div>
+      < ScrollToTop />
 
       
     <div className="contenedor-ubicacion">

@@ -3,6 +3,8 @@ import "./Register.css"
 import {Link,useNavigate} from "react-router-dom";
 import { Box, Grid, Button, Radio, FormControlLabel, FormGroup, Switch } from "@mui/material";
 import axios from 'axios';
+import {Link} from "react-router-dom";
+import ScrollToTop from '../global/ScrollToTop';
 const Register = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -32,19 +34,20 @@ const Register = () => {
 
     return (
         <div className='contenedor-registro'>
+            < ScrollToTop />
             <div className='contenedor-registrarse'>
                 <div className='registrarse'>
                     <h1>Registrarse</h1>
                     <div className='contenedor-input-label'>
-                        <label htmlFor="Nombre de usuario">Nombre de usuario</label>
+                        
                         <input type="text" placeholder='Nombre de usuario' />
                     </div>
                     <div className='contenedor-input-label'>
-                        <label htmlFor="Nombre de usuario">Dirección de correo electrónico</label>
+                        
                         <input type="e-mail" placeholder='E-mail'/>
                     </div>
                     <div className='contenedor-input-label'>
-                        <label htmlFor="Nombre de usuario">Contraseña</label>
+                        
                         <input type='password' placeholder='Contraseña' />
                     </div>
 

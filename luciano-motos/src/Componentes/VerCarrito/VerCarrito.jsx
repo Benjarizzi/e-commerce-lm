@@ -2,10 +2,12 @@ import React from 'react'
 import "./VerCarrito.css"
 import DiscountIcon from '@mui/icons-material/Discount';
 import { Link } from 'react-router-dom';
+import ScrollToTop from '../global/ScrollToTop';
 const VerCarrito = () => {
     return (
         <div>
-            <div className='title'>
+            <ScrollToTop />
+            <div className='titulo'>
                     <h1>Carrito de compras</h1>
                 </div>
             <div className='contenedor-ver-carrito' style={{ display: "-webkit-flex", justifyContent: "space-between" }}>
