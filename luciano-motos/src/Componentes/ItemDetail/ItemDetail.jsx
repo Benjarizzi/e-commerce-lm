@@ -34,7 +34,7 @@ const ItemDetail = () => {
                                     </div>
 
                                 </div>
-                                <div className='boton-consultar'><Link to="https://api.whatsapp.com/send?phone=123456789" target='_blank' style={{ textDecoration: "none" }}><button><MdOutlineWhatsapp style={{ paddingTop: "9px" }} /> <p>Consultar</p></button></Link></div>
+                                <div className='boton-consultar'><Link to="https://wa.me/5493471522202/?text=Hola!, me interesa comprar una moto" target='_blank' style={{ textDecoration: "none" }}><button><MdOutlineWhatsapp style={{ paddingTop: "9px" }} /> <p>Consultar</p></button></Link></div>
                             </div>
 
                         </div>

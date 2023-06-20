@@ -18,6 +18,7 @@ import Micuenta from './Componentes/Micuenta/Micuenta';
 import ComoComprar from './Componentes/ComoComprar/ComoComprar';
 import PoliticaDeDevolucion from './Componentes/PoliticaDeDevolucion/PoliticaDeDevolucion';
 import PanelDeControl from './Componentes/PanelDeControl/PanelDeControl';
+import Terminos from './Componentes/Terminos/Terminos';
 
 
 
@@ -45,7 +46,7 @@ function App() {
               <Route path='/politica-de-devolucion' element={<PoliticaDeDevolucion />}/>
               <Route path='/nosotros' element={<Nosotros />} />
               <Route path='/pagos' element={<Pagos />} />
-            
+            <Route path="/terminosycondiciones" element={<Terminos />} />
 
             </Route>
           </Route>
