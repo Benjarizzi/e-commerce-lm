@@ -1,7 +1,20 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom"
 import "./PanelDeControl.css";
-
+import ItemList from "../ItemList/ItemList"
+import CheckroomIcon from '@mui/icons-material/Checkroom';
+import PedalBikeIcon from '@mui/icons-material/PedalBike';
+import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
+import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports';
+import BackpackIcon from '@mui/icons-material/Backpack';
+import { Box, Grid, Button } from "@mui/material";
+import axios from 'axios';
 const PanelDeControl = () => {
+
+    const [inventory, setInventory] = useState({
+        products: [],
+        product_type: ''
+      });
     const [boton1Visible, setBoton1Visible] = useState(false);
     const [botonEliminarVisible, setBotonEliminarVisible] = useState(false);
     const [busquedaVisible, setBusquedaVisible] = useState(false);
@@ -59,27 +72,274 @@ const PanelDeControl = () => {
         setMostrarContenido(false);
     };
 
+    const [currentInv,setCurrentInv] = useState("motorbikes");
+    //API COMS
+
+    //Get Actions
+    const getInventory = (inv) => {
+        console.log(inv)
+        setCurrentInv(inv);
+        const params = {};
+        axios.post('http://localhost:8000/fetch/'+inv+'/',params)
+        .then(response => {
+          // Handle the response data here
+          setInventory(prevInv => ({
+            ...prevInv,
+            products: response.data,  // Update the 'products' property
+            product_type: inv
+          }));
+          console.log(inventory,response.data)
+        })
+        .catch(error => {
+          // Handle any errors here
+          console.warn(error);
+        });
+    }
+
+    const getBrands= () => {
+        const params = {brand_type:currentInv};
+        axios.post('http://localhost:8000/fetch/brands/',params)
+        .then(response => {
+          // Handle the response data here
+          
+        })
+        .catch(error => {
+          // Handle any errors here
+          console.warn(error);
+        });
+    }
+
+    //Submit Actions
+    const submitBrand = () => {
+        axios.post('http://localhost:8000/submit/brand/',brandForm)
+        .then(response => {
+          // Handle the response data here
+          if(response.status) {
+            switchPanelForm();
+          }
+        })
+        .catch(error => {
+          // Handle any errors here
+          console.warn(error);
+        });
+    }
+
+
+    //By Default moto
+    //getInventory("motorbikes");
+
+    //Tabs
+
+    const tabs = [{"label":"Inventario","value":"inventory"},{"label":"Marcas","value":"brands"},{"label":"Modelos","value":"models"}];
+
+    const [activeTab, setActiveTab] = useState("inventory");
+
+    const handleTabClick = (tab) => {
+        setActiveTab(tab.value);
+    };
+
+    //Panels
+    const [showPanel,setShowPanel] = useState(true);
+    const [panelMode,setPanelMode] = useState("inventory");
+    const [showForm,setShowForm] = useState(false);
+
+    const switchPanelForm = () => {
+        setShowPanel(!showPanel);
+        setShowForm(!showForm);
+    }
+
+    //Forms
+    const [brandForm,setBrandForm] = useState({});
+
+    const handleBrandFormChange = (event) => {
+        const { name, value } = event.target;
+        setBrandForm((prevBrandForm) => ({
+        ...prevBrandForm,
+        [name]: value,
+        brand_type: currentInv //Always get brand type for the current inventory
+        }));
+    }
+
+
     return (
-        <div >
-            <div className='titulo-panel'>
-                <img src="http://localhost:3000/icons/luciano1.png" alt="" />
-                <h1>Panel de Control</h1>
-                <img src="http://localhost:3000/icons/luciano1.png" alt="" />
+        <div>
+        {showPanel && (
+            <div>
+             <Box sx={{width: "-webkit-fill-available",position:"relative",top:"90px",height:"1000px",fontFamily:"Kanit"}}>
+             <h>Panel de Control</h>
+             <Grid item xs={12} md={12} sm={12} sx={{ display: "flex", justifyContent: "center", alignItems: "center",top:"50px" }}>
+           <Box className="navigate_options_container">
+ 
+             <div style={{display:"flex"}} >
+               <Box className="navigate_item" onClick={() => getInventory("bikes")}>
+                 <Link>
+                   <PedalBikeIcon style={{ fontSize: "30px", color: "#000" }} />
+                   <p>Bicicletas</p>
+                 </Link>
+               </Box>
+               <Box className="navigate_item" onClick={() => getInventory("motorbikes")}>
+                 <Link>
+                   <TwoWheelerIcon style={{ fontSize: "30px", color: "#000" }} />
+                   <p>Motos</p>
+                 </Link>
+               </Box>
+               <Box className="navigate_item" onClick={() => getInventory("helmets")}>
+                 <Link>
+                   <SportsMotorsportsIcon style={{ fontSize: "30px", color: "#000" }} />
+                   <p>Cascos</p>
+                 </Link>
+               </Box>
+             </div>
+ 
+             <div style={{display:"flex"}}>
+               <Box className="navigate_item" onClick={() => getInventory("equipment")}>
+                 <Link>
+                   <BackpackIcon style={{ fontSize: "30px", color: "#000" }} />
+                   <p>Equipamiento</p>
+                 </Link>
+               </Box>
+               <Box className="navigate_item" onClick={() => getInventory("clothes")}>
+                 <Link>
+                   <CheckroomIcon style={{ fontSize: "30px", color: "#000" }} />
+                   <p>Indumentaria</p>
+                 </Link>
+               </Box>
+             </div>
+ 
+           </Box>
+         </Grid>
+         <div className="tabs-buttons">
+         {tabs.map((tab) => (
+           <button
+             key={tab.value}
+             className={`tab-button ${activeTab === tab.value ? 'active' : ''}`}
+             onClick={() => handleTabClick(tab)}
+           >
+             {tab.label}
+           </button>
+         ))}
+       </div>
+       <Box sx={{width:"75%",display:"flex",justifyContent:"flex-start",marginLeft:"auto",marginRight:"auto"}}>
+       <input type="text" style={{width:"40%"}} placeholder='Buscar' />
+       <Button sx={{backgroundColor:"#ab2f2f",color:"white",marginLeft:"auto"}} onClick={switchPanelForm}>+ Añadir unidad</Button>
+       </Box>
+       <div className="tabs-content">
+         {/* Render content for the active tab */}
+         {/* Example: */}
+         {activeTab === 'inventory' && 
+         
+         <div>
+         <Grid container spacing={2} sx={{width:"-webkit-fill-available",position:"absolute",top:"175px"}}>
+       <Grid item xs={12} md={4} sx={{textAlign:"center"}}>
+         <h2>{inventory.product_type}</h2>
+         
+         </Grid>
+         <Grid item xs={12} md={8}>
+         <ItemList payload={inventory}/>
+       </Grid>
+         </Grid>
+         </div>
+         
+         
+         }
+         {activeTab === 'brands' && <div>Content for Tab 2</div>}
+         {activeTab === 'models' && <div>Content for Tab 3</div>}
+         </div>
+
+        </Box>
+       </div>
+        )}
+
+        { showForm && (
+            <div style={{position:"relative",top:"60px"}}>
+                { activeTab === "inventory" && (
+                    <div>
+                        {currentInv === "motorbikes" &&
+                        <div className='form_ui_container'>
+                            <div>
+                                <h2>Añadir moto</h2>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese la marca del producto</label>
+                                    <input type="text" placeholder='Marca' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese el modelo del producto</label>
+                                    <input type="text" placeholder='Modelo' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="color">Ingrese el color del producto</label>
+                                    <input type="text" placeholder='Color' />
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="precio">Ingrese el precio del producto</label>
+                                    <input type="text" placeholder='$' />
+                                </div>
+                                <div className="contenedor-input-panel">
+                                    <label htmlFor="Ficha tecnica">Ingrese la ficha técnica del producto</label>
+                                    {fichasTecnicas.map((ficha, index) => (
+                                        <div className="ficha-tecnica-panel" key={index}>
+                                            <input type="text" />
+                                            <input type="text" />
+                                            <button onClick={() => eliminarFichaTecnica(index)}>X</button>
+                                        </div>
+                                    ))}
+                                    <button className='boton-agregar-div' onClick={agregarFichaTecnica}>Agregar slot</button>
+                                </div>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="stock">Ingrese el stock</label>
+                                    <input type="text" placeholder='Cantidad en unidades' />
+                                </div>
+                                <div className='boton-confirmar'>
+                                    <button onClick={() => setMostrarContenido(true)}>AÑADIR PRODUCTO</button>
+                                    <button onClick={cerrarContenido}>MODIFICAR</button>
+                                </div>
+                            </div>
+                            {mostrarContenido && (
+                                <div className='contenido-adicional'>
+                                    <img src="" alt="" />
+                                    <h1>Nombre del producto</h1>
+                                    <p>color</p>
+                                    <p>precio</p>
+                                    <p>Ficha técnica:</p>
+                                    <div className='ft'>
+                                        <p>ejemplo 1:</p>
+                                        <p>ejemplo 1</p>
+                                    </div>
+                                    <p>Cantidad</p>
+
+                                    <div className='boton-confirmar1'>
+                                        <button >Confirmar</button>
+                                    </div>
+                                </div>
+                            )}
+
+                        </div>}
+                        </div>
+                )}
+
+                { activeTab === "brands" && (
+                    <div>
+                        <div className='form_ui_container'>
+                            <div>
+                                <h2>Añadir marca de moto</h2>
+                                <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Ingrese la marca del producto</label>
+                                    <input type="text" name="brand" placeholder='Marca' onChange={handleBrandFormChange} />
+                                </div>
+                                <button onClick={submitBrand}>Añadir marca</button>
+                            </div>
+                            </div>
+                        </div>
+                )}
+
+                { activeTab === "models" && (
+                    <div>
+                        </div>
+                )}
+
             </div>
-            <div className='acciones-panel'>
-                <div>
-                    <h2>Acciones:</h2>
-                </div>
-                <div className='botones-panel'>
-                    <button onClick={toggleContenidoBoton1} style={{ backgroundColor: "green" }}>AÑADIR</button>
-                </div>
-                <div className='botones-panel'>
-                    <button onClick={toggleContenidoBotonModificar} style={{ backgroundColor: "blue" }}>Modificar</button>
-                </div>
-                <div className='botones-panel'>
-                    <button onClick={toggleContenidoBotonEliminar} style={{ backgroundColor: "red" }}>Eliminar</button>
-                </div>
-            </div>
+        )}
+
             {boton1Visible && (
                 <div>
                     <div className='contenido-boton1'>
@@ -94,7 +354,7 @@ const PanelDeControl = () => {
                     </div>
 
                     {contenidoBoton1Visible.bicicletas &&
-                        <div className='formulario-bicicletas'>
+                        <div className='form_ui_container'>
                             <div >
                                 <h2>Rellena el siguiente formulario para añadir una bicicleta:</h2>
                                 <div className='contenedor-input-panel'>
@@ -160,7 +420,7 @@ const PanelDeControl = () => {
                         </div>}
 
                     {contenidoBoton1Visible.motos &&
-                        <div className='formulario-bicicletas'>
+                        <div className='form_ui_container'>
 
                             <div >
                                 <h2>Rellena el siguiente formulario para añadir una moto:</h2>
@@ -228,7 +488,7 @@ const PanelDeControl = () => {
                         </div>}
 
                     {contenidoBoton1Visible.cascos &&
-                        <div className='formulario-bicicletas'>
+                        <div className='form_ui_container'>
 
                             <div >
                                 <h2>Rellena el siguiente formulario para añadir un casco:</h2>
@@ -301,7 +561,7 @@ const PanelDeControl = () => {
                         </div>}
 
                     {contenidoBoton1Visible.equipamiento &&
-                        <div className='formulario-bicicletas'>
+                        <div className='form_ui_container'>
 
                             <div >
                                 <h2>Rellena el siguiente formulario para añadir equipamiento:</h2>
@@ -369,7 +629,7 @@ const PanelDeControl = () => {
                         </div>}
 
                     {contenidoBoton1Visible.indumentaria &&
-                        <div className='formulario-bicicletas'>
+                        <div className='form_ui_container'>
 
                             <div >
                                 <h2>Rellena el siguiente formulario para añadir indumentaria:</h2>

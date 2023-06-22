@@ -48,6 +48,7 @@ function App() {
               <Route path='/nosotros' element={<Nosotros />} />
               <Route path='/pagos' element={<Pagos />} />
             <Route path="/terminosycondiciones" element={<Terminos />} />
+            <Route path='/panel' element={<PanelDeControl />} />
 
             </Route>
           </Route>

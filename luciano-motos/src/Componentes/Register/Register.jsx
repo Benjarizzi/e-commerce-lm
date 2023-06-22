@@ -3,7 +3,6 @@ import "./Register.css"
 import {Link,useNavigate} from "react-router-dom";
 import { Box, Grid, Button, Radio, FormControlLabel, FormGroup, Switch } from "@mui/material";
 import axios from 'axios';
-import {Link} from "react-router-dom";
 import ScrollToTop from '../global/ScrollToTop';
 const Register = () => {
     const [username, setUsername] = useState('');
