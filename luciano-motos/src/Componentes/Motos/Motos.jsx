@@ -40,7 +40,7 @@ const Motos = () => {
       setData(prevData => ({
         ...prevData,
         products: response.data,  // Update the 'products' property
-        product_type: 'moto'
+        product_type: 'motorbikes'
       }));
       
     })

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from "react-router-dom"
 import "./PanelDeControl.css";
 import ItemList from "../ItemList/ItemList"
@@ -7,7 +7,9 @@ import PedalBikeIcon from '@mui/icons-material/PedalBike';
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports';
 import BackpackIcon from '@mui/icons-material/Backpack';
+import { Checkbox, FormControlLabel } from '@mui/material';
 import { Box, Grid, Button } from "@mui/material";
+import SaveIcon from '@mui/icons-material/Save';
 import axios from 'axios';
 const PanelDeControl = () => {
 
@@ -96,18 +98,6 @@ const PanelDeControl = () => {
         });
     }
 
-    const getBrands= () => {
-        const params = {brand_type:currentInv};
-        axios.post('http://localhost:8000/fetch/brands/',params)
-        .then(response => {
-          // Handle the response data here
-          
-        })
-        .catch(error => {
-          // Handle any errors here
-          console.warn(error);
-        });
-    }
 
     //Submit Actions
     const submitBrand = () => {
@@ -116,6 +106,37 @@ const PanelDeControl = () => {
           // Handle the response data here
           if(response.status) {
             switchPanelForm();
+          }
+        })
+        .catch(error => {
+          // Handle any errors here
+          console.warn(error);
+        });
+    }
+
+    const submitModel = () => {
+        console.log(modelForm);
+        axios.post('http://localhost:8000/submit/model/',modelForm)
+        .then(response => {
+          // Handle the response data here
+          if(response.status) {
+            switchPanelForm();
+          }
+        })
+        .catch(error => {
+          // Handle any errors here
+          console.warn(error);
+        });
+    }
+
+    const submitMoto = () => {
+        console.log(inventoryForm);
+        axios.post('http://localhost:8000/submit/moto/',inventoryForm)
+        .then(response => {
+          // Handle the response data here
+          if(response.status) {
+            switchPanelForm();
+            getInventory("motorbikes");
           }
         })
         .catch(error => {
@@ -146,9 +167,16 @@ const PanelDeControl = () => {
     const switchPanelForm = () => {
         setShowPanel(!showPanel);
         setShowForm(!showForm);
+
+        fetchBrands();
     }
 
     //Forms
+
+    //Brand ADD
+    const [selectedBrand,setSelectedBrand] = useState(null);
+    const [selectedModel,setSelectedModel] = useState(null);
+
     const [brandForm,setBrandForm] = useState({});
 
     const handleBrandFormChange = (event) => {
@@ -159,7 +187,102 @@ const PanelDeControl = () => {
         brand_type: currentInv //Always get brand type for the current inventory
         }));
     }
+    const [brandList,setBrandList] = useState([]);  
+    
+    const fetchBrands = async () => {
+        // Fetch options from an API using Axios
+        const params = {"brand_type":currentInv}
+        axios.post('http://localhost:8000/fetch/brands/',params)
+        .then(response => {
+          // Handle the response data here
+          if(response.status) {
+            setSelectedBrand(response.data[0].brand_id);
+            setBrandList(response.data);
+          }
+        })
+        .catch(error => {
+          // Handle any errors here
+          console.warn(error);
+        });
+    }
+    
+    useEffect(() => {
+        fetchBrands();
+        // Update the content based on the selected option
+        setModelForm((prevModelForm) => ({
+            ...prevModelForm,
+            brand_id: selectedBrand,
+        }));
 
+        setInventoryForm((prevInventoryForm) => ({
+            ...prevInventoryForm,
+            brand_id: selectedBrand,
+        }));
+        fetchModels();
+    }, [selectedBrand]);
+
+    useEffect(() => {
+        // Update the content based on the selected option
+        setInventoryForm((prevInventoryForm) => ({
+            ...prevInventoryForm,
+            model_id: selectedModel,
+        }));
+        
+    }, [selectedModel]);
+
+    //Models 
+    const [modelList,setModelList] = useState([]);  
+
+    const [modelForm,setModelForm] = useState({
+        brand: brandList[0]
+    });
+
+    const handleModelFormChange = (event) => {
+        const { name, value } = event.target;
+        setModelForm((prevModelForm) => ({
+        ...prevModelForm,
+        [name]: value,
+        }));
+    }
+
+    const fetchModels = async () => {
+        // Fetch options from an API using Axios
+        const params = {"brand_id":selectedBrand}
+        axios.post('http://localhost:8000/fetch/models/',params)
+        .then(response => {
+          // Handle the response data here
+          if(response.status) {
+            setSelectedModel(response.data[0].model_id);
+            setModelList(response.data);
+          }
+        })
+        .catch(error => {
+          // Handle any errors here
+          console.warn(error);
+        });
+    }
+
+
+    //Inventory ADD UNIT
+    const [inventoryForm,setInventoryForm] = useState({});
+    const handleinventoryFormChange = async (event) => {
+        const { name, value, checked, type } = event.target;
+        let v;
+        if(type == "checkbox") {
+            v = checked;
+        }
+        else {
+            v = value;
+        }
+        console.log(name,v);
+        if(name == 'brand') {
+            setSelectedBrand(value);
+        }
+        setInventoryForm((previnventoryForm) => ({
+        ...previnventoryForm,
+        [name]: v,
+        }));
+    }
 
     return (
         <div>
@@ -168,7 +291,7 @@ const PanelDeControl = () => {
              <Box sx={{width: "-webkit-fill-available",position:"relative",top:"90px",height:"1000px",fontFamily:"Kanit"}}>
              <h>Panel de Control</h>
              <Grid item xs={12} md={12} sm={12} sx={{ display: "flex", justifyContent: "center", alignItems: "center",top:"50px" }}>
-           <Box className="navigate_options_container">
+           <Box className="navigate_options_container padm">
  
              <div style={{display:"flex"}} >
                <Box className="navigate_item" onClick={() => getInventory("bikes")}>
@@ -229,9 +352,9 @@ const PanelDeControl = () => {
          {activeTab === 'inventory' && 
          
          <div>
-         <Grid container spacing={2} sx={{width:"-webkit-fill-available",position:"absolute",top:"175px"}}>
+         <Grid container spacing={2} sx={{width:"-webkit-fill-available",position:"relative",top:"15px"}}>
        <Grid item xs={12} md={4} sx={{textAlign:"center"}}>
-         <h2>{inventory.product_type}</h2>
+         <h2>Inventario</h2>
          
          </Grid>
          <Grid item xs={12} md={8}>
@@ -242,8 +365,42 @@ const PanelDeControl = () => {
          
          
          }
-         {activeTab === 'brands' && <div>Content for Tab 2</div>}
-         {activeTab === 'models' && <div>Content for Tab 3</div>}
+         {activeTab === 'brands' && <div>
+            
+         <table>
+        <thead>
+          <tr>
+            <th>Marca</th>
+          </tr>
+        </thead>
+        <tbody>
+          {brandList.map((item) => (
+            <tr key={item.brand_id}>
+              <td>{item.name}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+            
+            
+            </div>}
+         {activeTab === 'models' && <div>
+         <table>
+        <thead>
+          <tr>
+            <th>Modelos</th>
+          </tr>
+        </thead>
+        <tbody>
+          {modelList.map((item) => (
+            <tr key={item.model_id}>
+              <td>{item.name}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+            
+            </div>}
          </div>
 
         </Box>
@@ -256,24 +413,76 @@ const PanelDeControl = () => {
                     <div>
                         {currentInv === "motorbikes" &&
                         <div className='form_ui_container'>
-                            <div>
-                                <h2>Añadir moto</h2>
+                            <div style={{width:"-webkit-fill-available"}}>
+                                <Box sx={{display:"flex"}}><button className="back-button" onClick={switchPanelForm}><svg height="24px" style={{"background-color":"white","border-radius":"50%","enable-background":"new 0 0 512 512;",marginRight:"10px"}} version="1.1" viewBox="0 0 512 512" width="24px" xmlXspace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/></svg></button><h2 style={{marginBottom:"0px"}}>Añadir moto</h2> <Button onClick={() => submitMoto()} sx={{position:"relative",marginLeft:"auto",backgroundColor:"green",color:"white"}} endIcon={<SaveIcon />}>Guardar</Button></Box>
+                                <div className="contenedor-input-group">
                                 <div className='contenedor-input-panel'>
                                     <label htmlFor="brand">Ingrese la marca del producto</label>
-                                    <input type="text" placeholder='Marca' />
+                                    <select name="brand" onChange={handleinventoryFormChange}>
+                                    {brandList.map((option, index) => (
+                                        <option value={option.brand_id}>
+                                            {option.name}
+                                        </option>
+                                        ))}
+                                    </select>
                                 </div>
                                 <div className='contenedor-input-panel'>
-                                    <label htmlFor="brand">Ingrese el modelo del producto</label>
-                                    <input type="text" placeholder='Modelo' />
+                                    <label htmlFor="model">Ingrese el modelo del producto</label>
+                                    <select name="model" onChange={handleinventoryFormChange}>
+                                    {modelList.map((option, index) => (
+                                        <option value={option.model_id}>
+                                            {option.name}
+                                        </option>
+                                        ))}
+                                    </select>
                                 </div>
                                 <div className='contenedor-input-panel'>
-                                    <label htmlFor="color">Ingrese el color del producto</label>
-                                    <input type="text" placeholder='Color' />
+                                    <label htmlFor="stock">Ingrese el año</label>
+                                    <input type="text" placeholder='Año' name="year" onChange={handleinventoryFormChange} />
                                 </div>
                                 <div className='contenedor-input-panel'>
                                     <label htmlFor="precio">Ingrese el precio del producto</label>
-                                    <input type="text" placeholder='$' />
+                                    <input type="number" placeholder='$' name="price" onChange={handleinventoryFormChange} />
                                 </div>
+                                <div className='contenedor-input-panel'>
+                                <label className="checkbox-label">
+                                <FormControlLabel
+                                        control={
+                                        <Checkbox
+                                            name="is_used"
+                                            type="checkbox"
+                                            onChange={handleinventoryFormChange}
+                                            color="primary"
+                                        />
+                                        }
+                                        label="¿Es una moto usada?"
+                                    />
+                                </label>
+                                </div>
+                                </div>
+                                {inventoryForm.is_used && (
+                                    <div>
+                                        <h>Información del vehiculo</h>
+                                        <div className="contenedor-input-group">
+                                        <div className='contenedor-input-panel'>
+                                            <label htmlFor="vehicle_domain">Patente</label>
+                                            <input type="text" placeholder='Patente' name="vehicle_domain" onChange={handleinventoryFormChange} />
+                                        </div>
+                                        <div className='contenedor-input-panel'>
+                                            <label htmlFor="kilometers">Kilometros</label>
+                                            <input type="number" placeholder='Kilometros' name="kilometers" onChange={handleinventoryFormChange} />
+                                        </div>
+                                        <div className='contenedor-input-panel'>
+                                            <label htmlFor="chasis_number">Numero de cuadro</label>
+                                            <input type="text" placeholder='Numero de cuadro' name="chasis_number" onChange={handleinventoryFormChange} />
+                                        </div>
+                                        <div className='contenedor-input-panel'>
+                                            <label htmlFor="motor_number">Numero de motor</label>
+                                            <input type="text" placeholder='Numero de motor' name="motor_number" onChange={handleinventoryFormChange} />
+                                        </div>
+                                        </div>
+                                        </div>
+                                ) }
                                 <div className="contenedor-input-panel">
                                     <label htmlFor="Ficha tecnica">Ingrese la ficha técnica del producto</label>
                                     {fichasTecnicas.map((ficha, index) => (
@@ -287,11 +496,7 @@ const PanelDeControl = () => {
                                 </div>
                                 <div className='contenedor-input-panel'>
                                     <label htmlFor="stock">Ingrese el stock</label>
-                                    <input type="text" placeholder='Cantidad en unidades' />
-                                </div>
-                                <div className='boton-confirmar'>
-                                    <button onClick={() => setMostrarContenido(true)}>AÑADIR PRODUCTO</button>
-                                    <button onClick={cerrarContenido}>MODIFICAR</button>
+                                    <input type="text" placeholder='Cantidad en unidades' name="stock" onChange={handleinventoryFormChange} />
                                 </div>
                             </div>
                             {mostrarContenido && (
@@ -320,21 +525,41 @@ const PanelDeControl = () => {
                 { activeTab === "brands" && (
                     <div>
                         <div className='form_ui_container'>
-                            <div>
-                                <h2>Añadir marca de moto</h2>
+                            <div style={{width:"-webkit-fill-available"}}>
+                            <Box sx={{display:"flex"}}><button className="back-button" onClick={switchPanelForm}><svg height="24px" style={{"background-color":"white","border-radius":"50%","enable-background":"new 0 0 512 512;",marginRight:"10px"}} version="1.1" viewBox="0 0 512 512" width="24px" xmlXspace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/></svg></button><h2 style={{marginBottom:"0px"}}>Añadir marca</h2> <Button onClick={() => submitBrand()} sx={{position:"relative",marginLeft:"auto",backgroundColor:"green",color:"white"}} endIcon={<SaveIcon />}>Guardar</Button></Box>
                                 <div className='contenedor-input-panel'>
                                     <label htmlFor="brand">Ingrese la marca del producto</label>
                                     <input type="text" name="brand" placeholder='Marca' onChange={handleBrandFormChange} />
                                 </div>
-                                <button onClick={submitBrand}>Añadir marca</button>
+                                
                             </div>
                             </div>
                         </div>
                 )}
 
                 { activeTab === "models" && (
-                    <div>
-                        </div>
+                   <div>
+                   <div className='form_ui_container'>
+                       <div style={{width:"-webkit-fill-available"}}>
+                       <Box sx={{display:"flex"}}><button className="back-button" onClick={switchPanelForm}><svg height="24px" style={{"background-color":"white","border-radius":"50%","enable-background":"new 0 0 512 512;",marginRight:"10px"}} version="1.1" viewBox="0 0 512 512" width="24px" xmlXspace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/></svg></button><h2 style={{marginBottom:"0px"}}>Añadir modelo</h2> <Button onClick={() => submitModel()} sx={{position:"relative",marginLeft:"auto",backgroundColor:"green",color:"white"}} endIcon={<SaveIcon />}>Guardar</Button></Box>
+                           <div className='contenedor-input-panel'>
+                                    <label htmlFor="brand">Marca del producto</label>
+                                    <select name="brand" onChange={handleModelFormChange}>
+                                    {brandList.map((option, index) => (
+                                        <option key={index} value={option.brand_id}>
+                                            {option.name}
+                                        </option>
+                                        ))}
+                                    </select>
+                                </div>
+                           <div className='contenedor-input-panel'>
+                               <label htmlFor="brand">Ingrese el modelo del producto</label>
+                               <input type="text" name="model" placeholder='Modelo' onChange={handleModelFormChange} />
+                           </div>
+                           
+                       </div>
+                       </div>
+                   </div>
                 )}
 
             </div>

@@ -1,8 +1,8 @@
-.navigate_options_container {
+.navigate_options_container.padm {
     position: relative;
     background-color: #0000;
 }
-.navigate_item a {
+.navigate_options_container.padm .navigate_item a {
     color: black;
 }
 .tabs-buttons {
@@ -139,19 +139,31 @@
     margin-bottom:15px;
 }
 
+.contenedor-input-group {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: -webkit-fill-available;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto
+}
 .contenedor-input-panel{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 5px;
 }
 .contenedor-input-panel a{
     font-size: 13px;
     color: green;
 }
 .contenedor-input-panel input{
-    width: 700px;
-    margin-top: 8px;
+    margin-top: 5px;
     padding: 5px;
+    font-size: 15px;
+    height: 35px;
+}
+.contenedor-input-panel select {
+    height: 35px;
     font-size: 15px;
 }
 .ficha-tecnica-panel{
@@ -297,4 +309,57 @@
     margin-top: 15px;
     cursor: pointer;
     padding: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .checkbox-input {
+    display: none;
+  }
+  
+  .checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    margin-right: 8px;
+    display: inline-block;
+  }
+  
+  .checkbox-custom:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+  }
+
+
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 676px){ 
+  
+    .contenedor-input-group {
+        grid-template-columns: auto;
+    }
+
 }
