@@ -1,22 +1,45 @@
 import "./ItemList.css";
+import { Box } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
+const ItemList = ( data ) => {
+    console.log(data)
+    const payload = data.payload;
+    const products = payload.products;
+    const navigate = useNavigate();
 
-const ItemList = ({ productos }) => {
-    return (
-        <div className="contenedor-tarjetita" >
-            <div class="card">
-                <div class="card-content">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWWUUiRLKVaITVOWqT_wDn5mwc6Lh_6MBEEA&usqp=CAU" alt="Moto"/>
-                       
+    const goDetail = (product_id) => {
+        console.log(product_id);
+        navigate('/moto/',{state:product_id});
+    }
+
+    if(products != null && products.length > 0) {
+        if(payload.product_type == "motorbikes") {
+            return (
+                <Box sx={{height: "-webkit-fill-available"}}>
+                    <div className="cards_container">
+                {products.map((product) => (
+                    
+                    <div className="card" product-id={product.moto_id} onClick={()=> goDetail(product.moto_id)}>
+                        <div className="card-content">
+                            <img src={product.thumb_url ? `$${product.thumb_url}` : '/icons/default_moto_thumb.png'} alt="Moto"/>
+                               
+                        </div>
+                        <h3>{product.brand} {product.model} </h3>
+                        <p>{product.year} | {product.kilometers}km</p>
+                        <p class="price">$0</p>
+                        <p></p>
+        
                 </div>
-                <h3>HONDA WAVE</h3>
-                <p class="price">$0</p>
-                <p></p>
-                <button>Ver detalle</button>
-            </div>
-
-        </div>
-    )
+                  ))}
+                  </div>
+                </Box>
+                
+            )
+        }
+        
+    }
+    
 }
 
 export default ItemList

@@ -1,0 +1,32 @@
+[{
+    "moto_id": "1",
+    "brand": "Honda",
+    "model": "Wave 110",
+    "is_0km": true,
+    "year": "2022",
+    "can_be_financing": true,
+    "features": {},
+    "thumb_url": "https://http2.mlstatic.com/D_NQ_NP_906290-MLA52371381857_112022-W.webp"
+},
+{
+    "moto_id": "2",
+    "brand": "Yamaha",
+    "model": "Crypton T 110 FUll",
+    "is_0km": true,
+    "year": "2022",
+    "can_be_financing": false,
+    "features": {},
+    "thumb_url": "https://http2.mlstatic.com/D_NQ_NP_951906-MLA46275230082_062021-W.webp"
+},
+{
+    "moto_id": "3",
+    "brand": "Benelli",
+    "model": "502C",
+    "is_0km": true,
+    "year": "2022",
+    "can_be_financing": false,
+    "features": {},
+    "thumb_url": "https://motosportweb.com.ar/wp-content/uploads/2022/04/7-c-respaldo-min-768x513.png"
+}
+
+]

@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom"
-import {MdOutlineWhatsapp} from "react-icons/md"
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import "./BotonWhatsapp.css";
 
 const BotonWhatsapp = () => {
   return (
     <div>
-      <Link to="https://api.whatsapp.com/send?phone=123456789" class="whatsapp-button" target="_blank">
-      <MdOutlineWhatsapp/> 
-      </Link>
+      <button class="whatsapp-button">
+        <Link to="https://wa.me/5493471522202/?text=Hola!, me interesa comprar una moto" target="_blank" >
+          <WhatsAppIcon />
+        </Link>
+      </button>
     </div>
+
   )
 }
-
 export default BotonWhatsapp
