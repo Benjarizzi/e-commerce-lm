@@ -11,6 +11,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
+    display: flex;
 }
 .tab-button {
     margin: 5px;
@@ -18,6 +19,7 @@
     border-radius: 8px;
     border: 1px solid;
     color: #ab2f2f;
+    background-color: #0000;
     transition: 0.2s linear;
 }
 .tab-button:hover {

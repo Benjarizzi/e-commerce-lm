@@ -2,7 +2,6 @@
 
 .header {
     position: fixed;
-
     left: 0px;
     top: 0px;
     display: flex;
@@ -17,9 +16,10 @@
 
 .header_nav_container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     align-items: center;
+    height: auto;
 }
 
 
@@ -31,14 +31,16 @@
     justify-content: start;
     width: max-content;
     height: max-content;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 
 
 }
 
 .brand_logo img {
-    width: 220px;
-    height:75px;
-
+    width: 70px;
+    object-fit: contain;
 }
 
 /*Menu hamburguesa*/
@@ -96,7 +98,6 @@
 .nav {
     display: flex;
     padding-left: 0px;
-    padding: 60px;
     align-items:center;
     height: 80px;
 }
@@ -123,12 +124,6 @@
 @media only screen and (max-width: 768px) and (max-device-aspect-ratio: 1 / 1),
 (max-aspect-ratio: 1 / 1) {
 
-    .brand_logo img {
-        width: 140px;
-        
-        margin-top: 0;
-    }
-
     .header_nav_container {
         justify-content: space-between;
     }
@@ -141,10 +136,6 @@
 
 @media screen and (max-width: 1024px) {
 
-    .brand_logo {
-        margin-left: 40px;
-        top: 0;
-    }
 }
 
 @media screen and (max-width: 877px) {

@@ -3,7 +3,8 @@
     width: -webkit-fill-available;
     height: fit-content !important;
     left: 0;
-    position: inherit;
+    position: relative;
+    top:50vh;
     height: 80%;
     overflow: hidden;
     color: rgb(180, 180, 186);

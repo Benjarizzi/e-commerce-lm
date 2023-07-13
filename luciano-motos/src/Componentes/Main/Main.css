@@ -1,5 +1,37 @@
 @import url('https://fonts.googleapis.com/css2? family= Kanit:wght@300 & display=swap');
 
+/* Buttons */
+button {
+    width: fit-content;
+    font-size: 18px;
+    background-color: #c31420;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 0px;
+    color: white;
+    transition: 0.2s linear;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #f0101fba;
+}
+button.primary {
+    background-color: #c31420;
+}
+
+button.secondary {
+    background-color: #0000;
+    color: #c31420;
+}
+button.secondary:hover {
+    background-color: #f0101fba;
+    color: white;
+}
+
+
 .landing_container {
     width: 100%!important;
     left: 0px;
@@ -103,10 +135,6 @@
     align-items: center;
     justify-content: center;
     display: flex;
-}
-
-.contenedor-footer {
-    top: 1200px;
 }
 
 .sumate-a-nosotros {

@@ -34,7 +34,7 @@ const Motos = () => {
   
   const getMotos = () => {
 
-    axios.post('http://localhost:8000/fetch/motorbikes/',params)
+    axios.post('https://lucianomotos.com/fetch/motorbikes/',params)
     .then(response => {
       // Handle the response data here
       setData(prevData => ({

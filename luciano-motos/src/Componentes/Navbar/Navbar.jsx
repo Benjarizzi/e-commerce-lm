@@ -31,7 +31,7 @@ const Navbar = ({ onClose }) => {
 
                     <Grid item xs={6} md={4} sm={4} >
                         <Box className="brand_logo">
-                            <Link to="/" style={{ alignItems: "center", display: "flex" }}><img src="http://localhost:3000/icons/luciano1.png" alt="" /></Link>
+                            <Link to="/" style={{ alignItems: "center", display: "flex" }}><img src="http://localhost:3000/icons/lm.png" alt="" /></Link>
                         </Box>
                     </Grid>
 
@@ -54,7 +54,7 @@ const Navbar = ({ onClose }) => {
                     <Grid item xs={3} md={4} sm={4} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <Box>
                             <div className="nav">
-                                <Link to="/registro"><li><PersonIcon style={{ fontSize: "32px" }} /></li></Link>
+                                <Link to="/login"><li><PersonIcon style={{ fontSize: "32px" }} /></li></Link>
                                 <li style={{ listStyle: "none" }}><CartWidget /></li>
                             </div>
                         </Box>

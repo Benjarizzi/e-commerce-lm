@@ -82,7 +82,7 @@ const PanelDeControl = () => {
         console.log(inv)
         setCurrentInv(inv);
         const params = {};
-        axios.post('http://localhost:8000/fetch/'+inv+'/',params)
+        axios.post('https://lucianomotos.com/fetch/'+inv+'/',params)
         .then(response => {
           // Handle the response data here
           setInventory(prevInv => ({
@@ -101,7 +101,7 @@ const PanelDeControl = () => {
 
     //Submit Actions
     const submitBrand = () => {
-        axios.post('http://localhost:8000/submit/brand/',brandForm)
+        axios.post('https://lucianomotos.com/submit/brand/',brandForm)
         .then(response => {
           // Handle the response data here
           if(response.status) {
@@ -116,7 +116,7 @@ const PanelDeControl = () => {
 
     const submitModel = () => {
         console.log(modelForm);
-        axios.post('http://localhost:8000/submit/model/',modelForm)
+        axios.post('https://lucianomotos.com/submit/model/',modelForm)
         .then(response => {
           // Handle the response data here
           if(response.status) {
@@ -131,7 +131,7 @@ const PanelDeControl = () => {
 
     const submitMoto = () => {
         console.log(inventoryForm);
-        axios.post('http://localhost:8000/submit/moto/',inventoryForm)
+        axios.post('https://lucianomotos.com/submit/moto/',inventoryForm)
         .then(response => {
           // Handle the response data here
           if(response.status) {
@@ -192,7 +192,7 @@ const PanelDeControl = () => {
     const fetchBrands = async () => {
         // Fetch options from an API using Axios
         const params = {"brand_type":currentInv}
-        axios.post('http://localhost:8000/fetch/brands/',params)
+        axios.post('https://lucianomotos.com/fetch/brands/',params)
         .then(response => {
           // Handle the response data here
           if(response.status) {
@@ -248,7 +248,7 @@ const PanelDeControl = () => {
     const fetchModels = async () => {
         // Fetch options from an API using Axios
         const params = {"brand_id":selectedBrand}
-        axios.post('http://localhost:8000/fetch/models/',params)
+        axios.post('https://lucianomotos.com/fetch/models/',params)
         .then(response => {
           // Handle the response data here
           if(response.status) {

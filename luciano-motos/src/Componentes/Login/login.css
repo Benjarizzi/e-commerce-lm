@@ -30,9 +30,6 @@
     border-radius: 8px;
     border: 1px solid #ccc;
 }
-.contenedor-input-panel input.error {
-    border-color: red;
-}
 .contenedor-input-panel select {
     height: 35px;
     font-size: 15px;

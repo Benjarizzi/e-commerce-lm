@@ -12,6 +12,7 @@ import MediosDePago from './Componentes/Medios de Pago/MediosDePago';
 import ItemDetail from './Componentes/ItemDetail/ItemDetail';
 import Bicicletas_container from './Componentes/Bicicletas/Bicicletas_container';
 import Register from './Componentes/Register/Register';
+import Login from './Componentes/Login/login';
 import VerCarrito from './Componentes/VerCarrito/VerCarrito';
 import Pagos from './Componentes/Pagos/Pagos';
 import Micuenta from './Componentes/Micuenta/Micuenta';
@@ -39,7 +40,8 @@ function App() {
               <Route path='/preguntasfrecuentes' element={<PreguntasFrecuentes />} />
               <Route path='/bicicletas' element={<Bicicletas_container />} />
               <Route path='/detalle' element={<ItemDetail />} />
-              <Route path='/registro' element={<Register />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/register' element={<Register />} />
               <Route path='/carrito' element={<VerCarrito />} />
               <Route path='/micuenta' element={<Micuenta />} />       
               <Route path='/comocomprar' element={<ComoComprar />} />
