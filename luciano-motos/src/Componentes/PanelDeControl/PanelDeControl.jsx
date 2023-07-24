@@ -11,10 +11,7 @@ import { Checkbox, FormControlLabel } from '@mui/material';
 import { Box, Grid, Button } from "@mui/material";
 import SaveIcon from '@mui/icons-material/Save';
 import axios from 'axios';
-<<<<<<< HEAD
 import PhotoUploader from '../PhotoUploader/PhotoUploader';
-=======
->>>>>>> tomas
 const PanelDeControl = () => {
 
     const [inventory, setInventory] = useState({
@@ -105,14 +102,10 @@ const PanelDeControl = () => {
 
     //Submit Actions
     const submitBrand = () => {
-<<<<<<< HEAD
         const formData = new FormData();
         formData.append('files', brandLogo);
         formData.append('payload',JSON.stringify(brandForm));
         axios.post('https://lucianomotos.com/submit/brand/',formData)
-=======
-        axios.post('https://lucianomotos.com/submit/brand/',brandForm)
->>>>>>> tomas
         .then(response => {
           // Handle the response data here
           if(response.status) {
@@ -198,16 +191,12 @@ const PanelDeControl = () => {
         brand_type: currentInv //Always get brand type for the current inventory
         }));
     }
-<<<<<<< HEAD
     const [brandList,setBrandList] = useState([]); 
     const [brandLogo,setBrandLogo] = useState(null);
     
     const handleBrandImg = (event) => {
         setBrandLogo(event[0]);
     }
-=======
-    const [brandList,setBrandList] = useState([]);  
->>>>>>> tomas
     
     const fetchBrands = async () => {
         // Fetch options from an API using Axios
@@ -387,11 +376,7 @@ const PanelDeControl = () => {
          }
          {activeTab === 'brands' && <div>
             
-<<<<<<< HEAD
          <table className='table'>
-=======
-         <table>
->>>>>>> tomas
         <thead>
           <tr>
             <th>Marca</th>
@@ -409,11 +394,7 @@ const PanelDeControl = () => {
             
             </div>}
          {activeTab === 'models' && <div>
-<<<<<<< HEAD
          <table className='table'>
-=======
-         <table>
->>>>>>> tomas
         <thead>
           <tr>
             <th>Modelos</th>
@@ -453,11 +434,8 @@ const PanelDeControl = () => {
                                         </option>
                                         ))}
                                     </select>
-<<<<<<< HEAD
 
                         
-=======
->>>>>>> tomas
                                 </div>
                                 <div className='contenedor-input-panel'>
                                     <label htmlFor="model">Ingrese el modelo del producto</label>
@@ -565,10 +543,7 @@ const PanelDeControl = () => {
                                     <input type="text" name="brand" placeholder='Marca' onChange={handleBrandFormChange} />
                                 </div>
                                 
-<<<<<<< HEAD
                                 <PhotoUploader parameters={{'multiple_allowed':false}} onFileChange={handleBrandImg}></PhotoUploader>
-=======
->>>>>>> tomas
                             </div>
                             </div>
                         </div>
