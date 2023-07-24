@@ -287,25 +287,8 @@
     background-color: red!important;
 }
 
-.table {
-    width: 85%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #ccc;
-    top: 30px;
-    padding: 10px;
-    border-radius: 8px;
-}
-.table>thead th {
-    background-color: #ab2f2f;
-    border-radius: 8px;
-    color: white;
-}
 
-.table>tbody td {
-    border-bottom: 1px solid #ccc;
-}
+
 
 
 
@@ -374,8 +357,6 @@
     color: #007bff;
     cursor: pointer;
   }
-
-
 
   @media screen and (max-width: 676px){ 
   
