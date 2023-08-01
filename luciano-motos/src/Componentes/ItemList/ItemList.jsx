@@ -3,7 +3,6 @@ import { Box } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
 const ItemList = ( data ) => {
-    console.log(data)
     const payload = data.payload;
     const products = payload.products;
     const navigate = useNavigate();

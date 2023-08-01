@@ -144,8 +144,7 @@ function PhotoUploader({parameters,onFileChange}) {
         
       ))}
       </Box>
-      
-      <button onClick={handleUpload}>Upload Photos</button>
+
     </div>
   );
 }

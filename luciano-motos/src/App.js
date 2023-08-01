@@ -26,37 +26,35 @@ import Terminos from './Componentes/Terminos/Terminos';
 
 function App() {
   return (
-    <div>
+    <div style={{position:"absolute",top:"0px",width:"-webkit-fill-available"}}>
+      
       <BrowserRouter>
+      <Navbar></Navbar>
         <Routes>
-          <Route element={<Navbar />}>
-            <Route element={<Footer />}>
-
-              <Route path='/' element={<Main />} />
-              <Route path='/Motos' element={<Motos />} />
-              <Route path='/moto' element={<ItemDetail item-type='moto' />} />
-              <Route path='/itemlist' element={<ItemListContainer />} />
-              <Route path='/ubicacion' element={<Ubicacion />} />
-              <Route path='/preguntasfrecuentes' element={<PreguntasFrecuentes />} />
-              <Route path='/bicicletas' element={<Bicicletas_container />} />
-              <Route path='/detalle' element={<ItemDetail />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/register' element={<Register />} />
-              <Route path='/carrito' element={<VerCarrito />} />
-              <Route path='/micuenta' element={<Micuenta />} />       
-              <Route path='/comocomprar' element={<ComoComprar />} />
-              <Route path='/mediosdepago' element={<MediosDePago />} />
-              <Route path='/politica-de-devolucion' element={<PoliticaDeDevolucion />}/>
-              <Route path='/nosotros' element={<Nosotros />} />
-              <Route path='/pagos' element={<Pagos />} />
-            <Route path="/terminosycondiciones" element={<Terminos />} />
-            <Route path='/panel' element={<PanelDeControl />} />
-
-            </Route>
-          </Route>
-          <Route path='panel' element={<PanelDeControl />} />
-          <Route path="*" element={<Link to="/">La ruta a la que ingresaste no existe si quieres puedes volver a inicio clickeando aquí</Link>} />
+              <Route path='/' exact element={<Main />} />
+              <Route path='/Motos' exact element={<Motos />} />
+              <Route path='/moto' exact element={<ItemDetail item-type='moto' />} />
+              <Route path='/itemlist' exact element={<ItemListContainer />} />
+              <Route path='/ubicacion' exact element={<Ubicacion />} />
+              <Route path='/preguntasfrecuentes' exact element={<PreguntasFrecuentes />} />
+              <Route path='/bicicletas' exact element={<Bicicletas_container />} />
+              <Route path='/detalle' exact element={<ItemDetail />} />
+              <Route path='/login' exact element={<Login />} />
+              <Route path='/register' exact element={<Register />} />
+              <Route path='/carrito' exact element={<VerCarrito />} />
+              <Route path='/micuenta' exact element={<Micuenta />} />       
+              <Route path='/comocomprar' exact element={<ComoComprar />} />
+              <Route path='/mediosdepago' exact element={<MediosDePago />} />
+              <Route path='/politica-de-devolucion' exact element={<PoliticaDeDevolucion />}/>
+              <Route path='/nosotros' exact element={<Nosotros />} />
+              <Route path='/pagos' exact element={<Pagos />} />
+              <Route path="/terminosycondiciones" exact element={<Terminos />} />
+              <Route path='/panel' exact element={<PanelDeControl />} />
+              
+              
+              <Route path="*" element={<Link to="/">La ruta a la que ingresaste no existe si quieres puedes volver a inicio clickeando aquí</Link>} />
         </Routes>
+      <Footer></Footer>
       </BrowserRouter>
     </div>
   );

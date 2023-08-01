@@ -16,13 +16,16 @@ import ArticleIcon from '@mui/icons-material/Article';
 import ScrollToTop from "../global/ScrollToTop";
 
 const images = [];
-const motos_c = [{ "brand": "Honda", "model": "XR150", "year": "2022", "url": "https://http2.mlstatic.com/D_NQ_NP_934472-MLA53362059718_012023-W.webp" }];
-for (let i = 0; i <= 12; i++) {
-  images.push({ url: `http://localhost:3000/img/landing_${i}.jpg` });
-}
-console.log(images)
+  const motos_c = [{ "brand": "Honda", "model": "XR150", "year": "2022", "url": "https://http2.mlstatic.com/D_NQ_NP_934472-MLA53362059718_012023-W.webp" }];
+  for (let i = 0; i <= 12; i++) {
+    images.push({ url: `http://localhost:3000/img/landing_${i}.jpg` });
+  }
+  console.log(images)
 
 const Main = () => {
+  console.log("Loaded main");
+
+  
 
   const [isMotoSearchDisplayed, setIsMotoSearchDisplayed] = useState(false);
 
